@@ -1,0 +1,113 @@
+/* General Styles */
+.min-height-screen {
+    min-height: 100vh;
+  }
+  
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  /* Header Section */
+  .header-section {
+    position: relative;
+    height: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center bottom;
+  }
+  
+  .header-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Content Section */
+  .content-container {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 60rem;
+  }
+  
+  .content-text {
+    font-size: 1.125rem;
+    color: #4a4a4a;
+    line-height: 1.75;
+  }
+  
+  /* About Section */
+  .about-section {
+    margin-top: 3rem;
+  }
+  
+  .about-flex {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  
+  .about-text {
+    flex: 1;
+    margin-right: 2rem;
+  }
+  
+  .about-title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #4a4a4a;
+  }
+  
+  .underline {
+    width: 4rem;
+    height: 0.25rem;
+    background-color: #ff7f50;
+    margin-top: 0.5rem;
+  }
+  
+  .about-description {
+    color: #4a4a4a;
+    line-height: 1.75;
+    margin-top: 1rem;
+  }
+  
+  /* Images */
+  .abens-logo, .ises-logo {
+    width: 18rem;
+    height: auto;
+    display: none;
+  }
+  
+  @media (min-width: 1024px) {
+    .abens-logo, .ises-logo {
+      display: block;
+    }
+  }
+  
+  /* Key Activities */
+  .key-activities-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .key-activities-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .key-activity {
+    display: flex;
+    align-items: start;
+    margin-top: 0.75rem;
+  }
+  
+  .check-mark {
+    color: #ff7f50;
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+  }
+  

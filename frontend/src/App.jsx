@@ -1,26 +1,28 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { gql } from '@apollo/client'
-import { useQuery } from '@apollo/client'
 import Navbar from './components/Navbar/Navbar'
+import { BrowserRouter as Router } from 'react-router-dom'
+import About from './components/About/AboutOrganizers'
+import AboutOrganizers from './components/About/AboutOrganizers'
 function App() {
   const [count, setCount] = useState(0)
-  const {loading,error, data} = useQuery(gql`
-    query Query {
-  abouts {
-    id
-    title
-    description
-  }
-}`);
-console.log(data?.abouts);
+//   const {loading,error, data} = useQuery(gql`
+//     query Query {
+//   abouts {
+//     id
+//     title
+//     description
+//   }
+// }`);
+// console.log(data?.abouts);
 
   return (
     <>
-    <Navbar></Navbar>
-      <h1>Hey It's working</h1>
+    
+    <Navbar />
+    
+    <AboutOrganizers />
     </>
+    
   )
 }
 
