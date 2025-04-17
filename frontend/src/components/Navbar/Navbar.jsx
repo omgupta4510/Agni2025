@@ -50,8 +50,8 @@ const Navbar = () => {
         <li><a href="/">Speakers</a></li>
         <li><a href="/">Events</a></li>
         <li><a href="/">Sponsorship</a></li>
+        <li><a href="/">Publications</a></li>
         <li><a href="/">Contact</a></li>
-        <li><a href="/">Tourist</a></li>
       </ul>
     </nav>
   );

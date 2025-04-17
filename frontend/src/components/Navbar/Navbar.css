@@ -2,10 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
     background-color: white;
-    box-shadow: 5px 2px 4px rgba(38, 111, 1, 0.1);
+    box-shadow: inset 0px 0px 10px 6px rgba(38, 111, 1, 0.1);
     color: #fff;
+
   }
   
   .navbar-logo  .logo{
@@ -21,6 +25,8 @@
     list-style: none;
     display: flex;
     gap: 1rem;
+    margin-bottom: 1px;
+    padding-right: 10px;
   }
   
   .navbar-links li {
@@ -38,11 +44,11 @@
   }
   
   .navbar-links li a:hover {
-    color: #25f229;
+    color: #059108;
   }
   
   .arrow {
-    margin-left: 5px;
+    margin-left: 2px;
     font-size: 1rem;
     color: gray;
   }
@@ -71,5 +77,5 @@
   }
   
   .dropdown li a:hover {
-    color: #25f229;
+    color: #059108;
   }
