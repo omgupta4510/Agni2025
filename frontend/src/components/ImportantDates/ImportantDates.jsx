@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import { useQuery, gql } from '@apollo/client';
 import { CalendarClock } from "lucide-react";
-import { constants } from 'os';
 const Dates = [
   {
     title: 'Application Opens',
@@ -75,7 +74,7 @@ const ImportantDates = () => {
                 📅 Important Dates
                 </h1>
                 <div className="grid gap-6 md:grid-cols-2">
-                {importantDates.map((item, index) => (
+                {Dates.map((item, index) => (
                     <div
                     key={index}
                     className="bg-white rounded-2xl shadow-md p-6 border-l-4 border-green-500 hover:shadow-xl transition"

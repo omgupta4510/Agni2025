@@ -49,9 +49,9 @@ const Navbar = () => {
         </li>
         <li><a href="/speaker">Speakers</a></li>
         <li><a href="/">Events</a></li>
-        <li><a href="/">Sponsorship</a></li>
+        <li><a href="/sponshorship">Sponsorship</a></li>
         <li><a href="/">Publications</a></li>
-        <li><a href="/">Contact</a></li>
+        <li><a href="/venuecontact">Contact</a></li>
       </ul>
     </nav>
   );
