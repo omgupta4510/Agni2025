@@ -2,6 +2,7 @@ import React from 'react';
 import './Speaker.css';
 import { useQuery, gql } from '@apollo/client';
 import { useLocation } from 'react-router-dom';
+import Header from '@components/Header/Header';
 const dummyspeakers = [
   {
     name: 'Prof. Dipti Srinivasan',
@@ -65,8 +66,11 @@ const Speaker = () => {
     console.log(speakers);
     
   return (
+    <div className="speaker-page">
+    <Header />
     <div className="speaker-page-alt">
-      <h1 className="speaker-heading">Speakers</h1>
+      
+      <h1 className="speaker-heading">{speakertype}</h1>
       {speakers.length === 0 && (
         <div className="no-speaker">yet to be announced...</div>
       )}
@@ -85,6 +89,7 @@ const Speaker = () => {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 };

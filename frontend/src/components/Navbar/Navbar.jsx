@@ -12,26 +12,20 @@ const Navbar = () => {
   const closeDropdown = () => {
     setActiveDropdown(null);
   };
-  const {loading:load, error:err, data:speakerdata} = useQuery(gql`
+  const {loading:speakerload, error:speakererr, data:speakerdata} = useQuery(gql`
     query Query {
       speakers {
         type
       }
     }`
   );
-  if(load){
-    return <div>Loading...</div>;
-  }
-  if(err){
-    return <div>Error: {err.message}</div>;
-  }
-  const uniqueTypes = Array.from(new Set(speakerdata?.speakers.map((speaker) => speaker.type)));
-  console.log(uniqueTypes);
+  const uniqueSpeakerTypes = Array.from(new Set(speakerdata?.speakers.map((speaker) => speaker.type)));
+  
   return (
     <nav className="navbar">
-      <div className="flex items-center">
-        <img src="logonitt.png" alt="Logo" className="h-16 w-auto mr-4" />
-        <img src="agni.png" alt="Logo" className="h-16 w-auto" /> 
+      <div className="navbar-logo">
+        <img src="logonitt.png" alt="Logo" className="logo1" />
+        <img src="agni.png" alt="Logo" className="logo2" /> 
       </div>
       <ul className="navbar-links">
         <li><a href="/">Home</a></li>
@@ -44,14 +38,24 @@ const Navbar = () => {
               <li><a href="/about?agnis">About the AGNI-S</a></li>
               <li><a href="/about?nittrichy">About the NIT-Trichy</a></li>
               <li><a href="/about?ceesat">About the CEESAT</a></li>
-              <li><a href="/committee">Organizing Committee</a></li>
+              
               <li><a href="/">AGNI-S Theme</a></li>
               <li><a href="/dates">Important Dates</a></li>
-              <li><a href="/">Tourist Attraction</a></li>
             </ul>
           )}
         </li>
         <li><a href="/">Authors</a></li>
+        <li onMouseLeave={closeDropdown}>
+          <a href="#" onMouseEnter={() => handleDropdown('committees')}>
+            Committees <span className="arrow">&#9662;</span>
+          </a>
+          {activeDropdown === 'committees' && (
+            <ul className="dropdown">
+              <li><a href="/committee?Organising Committee">Organising Committee</a></li>
+              <li><a href="/committee?Technical Committee">Technical Committee</a></li>
+            </ul>
+          )}
+        </li>
         <li onMouseLeave={closeDropdown}>
           <a href="#" onMouseEnter={() => handleDropdown('awards')}>
             Awards <span className="arrow">&#9662;</span>
@@ -69,7 +73,7 @@ const Navbar = () => {
           </a>
           {activeDropdown === 'speakers' && (
             <ul className="dropdown">
-              {uniqueTypes.map((type, index) => (
+              {uniqueSpeakerTypes.map((type, index) => (
                 <li key={index}>
                   <a href={`/speaker?${type}`}>{type}</a>
                 </li>

@@ -4,9 +4,9 @@ const Header=()=>{
         <div className="bg-white  shadow-md px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left Logo */}
           <img
-            src=""
+            src="agni.png"
             alt="agni 2025 Logo"
-            className="h-30 w-30 object-contain"
+            className="h-[15rem] w-[auto] object-contain"
           />
     
           {/* Center Content */}
@@ -17,7 +17,7 @@ const Header=()=>{
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-green-600">
                  Net-Zero, Innovation - Sustainability
             </h1>
-            <h2 className="text-[20px] font-semibold text-green-600 mt-1">
+            <h2 className="text-[30px] font-semibold text-green-600 mt-1">
                AGNI-S 2025
             </h2>
             <p className="text-[23px] text-gray-700 mt-4 font-medium">

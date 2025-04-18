@@ -18,11 +18,22 @@
   box-shadow: inset 0px 0px 10px 6px rgba(38, 111, 1, 0.1);
   color: #fff;
   }
-  
-  .navbar-logo  .logo{
+  .navbar-logo{ 
+    display: flex;
+    align-items: center;
+  }
+  .navbar-logo  .logo1{
     color: #fff;
-    width: 75px;
-    height: auto;
+    width: auto;
+    height: 70px;
+    font-size: 1.5rem;
+    margin-right: 4px;
+    border-radius: 100%;
+  }
+  .navbar-logo  .logo2{
+    color: #fff;
+    width: auto;
+    height:70px;
     font-size: 1.5rem;
     margin-right: 1rem;
     border-radius: 100%;
