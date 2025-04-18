@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { BrowserRouter as Router } from 'react-router-dom'
 import About from './components/About/AboutOrganizers'
-import AboutOrganizers from './components/About/AboutOrganizers'
 function App() {
   const [count, setCount] = useState(0)
 //   const {loading,error, data} = useQuery(gql`
@@ -17,10 +16,8 @@ function App() {
 
   return (
     <>
-    
-    <Navbar />
-    
-    <AboutOrganizers />
+    <Navbar />  
+    <About/>
     </>
     
   )
