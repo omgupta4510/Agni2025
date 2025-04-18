@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
-import { BrowserRouter as Router } from 'react-router-dom'
+import {  Route, Router, Routes } from 'react-router-dom'
 import About from './components/About/AboutOrganizers'
+import Home from './components/Home/Home'
+import ImportantDates from './components/ImportantDates/ImportantDates'
 function App() {
   const [count, setCount] = useState(0)
 //   const {loading,error, data} = useQuery(gql`
@@ -15,11 +17,14 @@ function App() {
 // console.log(data?.abouts);
 
   return (
-    <>
-    <Navbar />  
-    <About/>
-    </>
-    
+    <main>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />}/>
+      <Route path='/dates' element={<ImportantDates/>}/>
+    </Routes>
+  </main>
   )
 }
 

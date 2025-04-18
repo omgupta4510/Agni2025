@@ -15,7 +15,7 @@
   z-index: 50;
   border-radius: 5px;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(2, 81, 9, 0.1);
+  box-shadow: inset 0px 0px 10px 6px rgba(38, 111, 1, 0.1);
   color: #fff;
   }
   

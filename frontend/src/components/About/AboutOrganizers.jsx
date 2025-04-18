@@ -2,8 +2,12 @@
 // File: src/pages/About.js
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
+import { useLocation } from 'react-router-dom';
+
 
 const AboutOrganizers = () => {
+  const location=useLocation();
+console.log(location);
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Hero Image Section */}
