@@ -1,20 +1,22 @@
 .navbar {
-    display: flex;
-    position: fixed;
-    right: 0px;
-    left: 0px;
-    top: 0px;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 2px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: inset 0px 0px 10px 6px rgba(38, 111, 1, 0.1);
-    color: #fff;
-
+   
+  display: flex;
+  position: fixed;
+  right: 0px;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  width: 100%;
+  z-index: 50;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: inset 0px 0px 10px 6px rgba(38, 111, 1, 0.1);
+  color: #fff;
   }
   
   .navbar-logo  .logo{
