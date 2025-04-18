@@ -113,8 +113,10 @@ input UserCreateInput {
 
 type about {
   id: ID!
+  route: String
   title: String
   description: String
+  link: String
 }
 
 input aboutWhereUniqueInput {
@@ -126,19 +128,25 @@ input aboutWhereInput {
   OR: [aboutWhereInput!]
   NOT: [aboutWhereInput!]
   id: IDFilter
+  route: StringFilter
   title: StringFilter
   description: StringFilter
+  link: StringFilter
 }
 
 input aboutOrderByInput {
   id: OrderDirection
+  route: OrderDirection
   title: OrderDirection
   description: OrderDirection
+  link: OrderDirection
 }
 
 input aboutUpdateInput {
+  route: String
   title: String
   description: String
+  link: String
 }
 
 input aboutUpdateArgs {
@@ -147,8 +155,10 @@ input aboutUpdateArgs {
 }
 
 input aboutCreateInput {
+  route: String
   title: String
   description: String
+  link: String
 }
 
 type conferenceTheme {

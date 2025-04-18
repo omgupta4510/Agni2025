@@ -51,9 +51,10 @@ export const lists = {
   about: list({
     access: allowAll,
     fields: {
+      route: text({ validation: { isRequired: true } }),
       title: text({ validation: { isRequired: true } }),
       description: text(textfeild),
-     
+      link: text(),
     },
   }),
   conferenceTheme: list({

@@ -18,13 +18,14 @@ function App() {
 
   return (
     <main>
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />}/>
-      <Route path='/dates' element={<ImportantDates/>}/>
-    </Routes>
-  </main>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dates" element={<ImportantDates/>}/>
+        </Routes>
+    </main>
+    
   )
 }
 

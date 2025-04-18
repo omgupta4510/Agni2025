@@ -21,8 +21,10 @@ model User {
 
 model about {
   id          String @id @default(cuid())
+  route       String @default("")
   title       String @default("")
   description String @default("") @mysql.VarChar(6000)
+  link        String @default("")
 }
 
 model conferenceTheme {
