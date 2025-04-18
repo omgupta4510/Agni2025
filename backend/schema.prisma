@@ -39,6 +39,7 @@ model organizingCommittee {
   designation String  @default("")
   dept        String  @default("")
   desc        String  @default("")
+  photoUrl    String  @default("")
 }
 
 model technicalCommittee {
@@ -61,9 +62,10 @@ model sponsorship {
 }
 
 model importantDates {
-  id    String @id @default(cuid())
-  event String @default("")
-  date  String @default("")
+  id          String @id @default(cuid())
+  event       String @default("")
+  date        String @default("")
+  description String @default("")
 }
 
 model registrationDetails {
