@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src="logonitt.png" alt="Logo" className="logonitt" />
+        <img src="logonitt.png" alt="Logo" className="logo" />
       </div>
       <ul className="navbar-links">
         <li><a href="/">Home</a></li>
