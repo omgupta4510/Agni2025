@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import { useQuery, gql } from '@apollo/client';
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -11,7 +12,21 @@ const Navbar = () => {
   const closeDropdown = () => {
     setActiveDropdown(null);
   };
-
+  const {loading:load, error:err, data:speakerdata} = useQuery(gql`
+    query Query {
+      speakers {
+        type
+      }
+    }`
+  );
+  if(load){
+    return <div>Loading...</div>;
+  }
+  if(err){
+    return <div>Error: {err.message}</div>;
+  }
+  const uniqueTypes = Array.from(new Set(speakerdata?.speakers.map((speaker) => speaker.type)));
+  console.log(uniqueTypes);
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -27,7 +42,7 @@ const Navbar = () => {
             <ul className="dropdown">
               <li><a href="/about?agnis">About the AGNI-S</a></li>
               <li><a href="/about?nittrichy">About the NIT-Trichy</a></li>
-              <li><a href="/">About the CEESAT</a></li>
+              <li><a href="/about?ceesat">About the CEESAT</a></li>
               <li><a href="/committee">Organizing Committee</a></li>
               <li><a href="/">AGNI-S Theme</a></li>
               <li><a href="/dates">Important Dates</a></li>
@@ -47,7 +62,20 @@ const Navbar = () => {
             </ul>
           )}
         </li>
-        <li><a href="/speaker">Speakers</a></li>
+        <li onMouseLeave={closeDropdown}>
+          <a href="#" onMouseEnter={() => handleDropdown('speakers')}>
+            Speakers <span className="arrow">&#9662;</span>
+          </a>
+          {activeDropdown === 'speakers' && (
+            <ul className="dropdown">
+              {uniqueTypes.map((type, index) => (
+                <li key={index}>
+                  <a href={`/speaker?${type}`}>{type}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
         <li><a href="/">Events</a></li>
         <li><a href="/sponshorship">Sponsorship</a></li>
         <li><a href="/">Publications</a></li>

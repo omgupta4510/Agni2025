@@ -496,6 +496,66 @@ input registrationDetailsCreateInput {
   amt_regular: Int
 }
 
+type speakers {
+  id: ID!
+  type: String
+  name: String
+  designation: String
+  title: String
+  bio: String
+  photoUrl: String
+}
+
+input speakersWhereUniqueInput {
+  id: ID
+}
+
+input speakersWhereInput {
+  AND: [speakersWhereInput!]
+  OR: [speakersWhereInput!]
+  NOT: [speakersWhereInput!]
+  id: IDFilter
+  type: StringFilter
+  name: StringFilter
+  designation: StringFilter
+  title: StringFilter
+  bio: StringFilter
+  photoUrl: StringFilter
+}
+
+input speakersOrderByInput {
+  id: OrderDirection
+  type: OrderDirection
+  name: OrderDirection
+  designation: OrderDirection
+  title: OrderDirection
+  bio: OrderDirection
+  photoUrl: OrderDirection
+}
+
+input speakersUpdateInput {
+  type: String
+  name: String
+  designation: String
+  title: String
+  bio: String
+  photoUrl: String
+}
+
+input speakersUpdateArgs {
+  where: speakersWhereUniqueInput!
+  data: speakersUpdateInput!
+}
+
+input speakersCreateInput {
+  type: String
+  name: String
+  designation: String
+  title: String
+  bio: String
+  photoUrl: String
+}
+
 """
 The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 """
@@ -550,6 +610,12 @@ type Mutation {
   updateRegistrationDetails(data: [registrationDetailsUpdateArgs!]!): [registrationDetails]
   deleteregistrationDetails(where: registrationDetailsWhereUniqueInput!): registrationDetails
   deleteRegistrationDetails(where: [registrationDetailsWhereUniqueInput!]!): [registrationDetails]
+  createspeakers(data: speakersCreateInput!): speakers
+  createSpeakers(data: [speakersCreateInput!]!): [speakers]
+  updatespeakers(where: speakersWhereUniqueInput!, data: speakersUpdateInput!): speakers
+  updateSpeakers(data: [speakersUpdateArgs!]!): [speakers]
+  deletespeakers(where: speakersWhereUniqueInput!): speakers
+  deleteSpeakers(where: [speakersWhereUniqueInput!]!): [speakers]
   endSession: Boolean!
   authenticateUserWithPassword(email: String!, password: String!): UserAuthenticationWithPasswordResult
   createInitialUser(data: CreateInitialUserInput!): UserAuthenticationWithPasswordSuccess!
@@ -595,6 +661,8 @@ type Query {
   importantDatesCount(where: importantDatesWhereInput! = {}): Int
   registrationDetails(where: registrationDetailsWhereInput! = {}, orderBy: [registrationDetailsOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: registrationDetailsWhereUniqueInput): [registrationDetails!]
   registrationDetailsCount(where: registrationDetailsWhereInput! = {}): Int
+  speakers(where: speakersWhereInput! = {}, orderBy: [speakersOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: speakersWhereUniqueInput): [speakers!]
+  speakersCount(where: speakersWhereInput! = {}): Int
   keystone: KeystoneMeta!
   authenticatedItem: AuthenticatedItem
 }
