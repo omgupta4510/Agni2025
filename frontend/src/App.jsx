@@ -27,6 +27,7 @@ function App() {
           <Route path="/dates" element={<ImportantDates/>}/>
           <Route path="/speaker" element={<Speaker/>}/>
           <Route path="/committee" element={<Committee/>}/>
+
         </Routes>
     </main>
     
