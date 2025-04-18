@@ -27,7 +27,7 @@ const Navbar = () => {
             <ul className="dropdown">
               <li><a href="/about?agnis">About the AGNI-S</a></li>
               <li><a href="/about?nittrichy">About the NIT-Trichy</a></li>
-              <li><a href="/">About the CEESAT</a></li>
+              <li><a href="/about?ceesat">About the CEESAT</a></li>
               <li><a href="/committee">Organizing Committee</a></li>
               <li><a href="/">AGNI-S Theme</a></li>
               <li><a href="/dates">Important Dates</a></li>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Speaker.css';
-
-const speakers = [
+import { useQuery, gql } from '@apollo/client';
+const dummyspeakers = [
   {
     name: 'Prof. Dipti Srinivasan',
     title: 'Professor, Department of Electrical & Computer Engineering National University of Singapore',
@@ -29,9 +29,37 @@ const speakers = [
 ];
 
 const Speaker = () => {
+  const {loading, error, data} = useQuery(gql`
+    query Query {
+  speakers {
+    name
+    designation
+    title
+    bio
+    photoUrl
+  }
+}
+    `);
+    console.log(data);
+    
+    if(loading){
+      return <div>Loading...</div>;
+    } else if(error){
+      return <div>Error: {error.message}</div>;
+    } 
+    const speakers = data?.speakers;
+    if(speakers.length === 0) {
+      // return <div>yet to be announced...</div>;
+
+    }
+    console.log(speakers);
+    
   return (
     <div className="speaker-page-alt">
       <h1 className="speaker-heading">Speakers</h1>
+      {speakers.length === 0 && (
+        <div className="no-speaker">yet to be announced...</div>
+      )}
       {speakers.map((speaker, index) => (
         <div
           className={`speaker-row ${index % 2 === 0 ? 'row-normal' : 'row-reverse'}`}

@@ -75,3 +75,12 @@ model registrationDetails {
   amt_early_bird Int
   amt_regular    Int
 }
+
+model speakers {
+  id          String @id @default(cuid())
+  name        String @default("") @mysql.VarChar(500)
+  designation String @default("") @mysql.VarChar(500)
+  title       String @default("") @mysql.VarChar(500)
+  bio         String @default("") @mysql.VarChar(6000)
+  photoUrl    String @default("")
+}
