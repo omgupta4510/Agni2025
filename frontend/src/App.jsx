@@ -8,6 +8,7 @@ import Committee from './components/Committee/committee'
 import Speaker from './components/Speaker/Speaker'
 import VenueContact from './components/VenueContact/VenueContact'
 import Sponsorship from './components/Sponsorship/Sponsorship'
+import BestPaperAwards from '@components/Award/paperAward'
 function App() {
   const [count, setCount] = useState(0)
 //   const {loading,error, data} = useQuery(gql`
@@ -31,6 +32,7 @@ function App() {
           <Route path="/committee" element={<Committee/>}/>
           <Route path="/venuecontact" element={<VenueContact/>}/>
           <Route path="/sponshorship" element={<Sponsorship/>}/>
+          <Route path="/awards/paper" element={<BestPaperAwards/>} />
         </Routes>
     </main>
     

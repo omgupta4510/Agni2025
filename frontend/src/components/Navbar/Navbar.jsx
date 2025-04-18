@@ -62,8 +62,8 @@ const Navbar = () => {
           </a>
           {activeDropdown === 'awards' && (
             <ul className="dropdown">
-              <li><a href="/">Best Paper Award</a></li>
-              <li><a href="/">Best Poster Award</a></li>
+              <li><a href="/award/paper">Best Paper Award</a></li>
+              <li><a href="/award/poster">Best Poster Award</a></li>
             </ul>
           )}
         </li>
