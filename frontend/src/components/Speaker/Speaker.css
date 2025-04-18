@@ -1,0 +1,129 @@
+.speaker-page-alt {
+    padding: 5rem 6rem;
+    padding-top: 8rem;  
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fafafa;
+    box-shadow: inset 0px 0px 10px 6px rgba(38, 111, 1, 0.1);
+  }
+  
+  /* .speaker-heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    color: #0d2e77;
+  } */
+   .speaker-heading{
+   text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color: #1a1a1a;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #3f51b5; /* Stylish underline */
+  
+  letter-spacing: 2px;
+   }
+  
+  .speaker-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+      padding-bottom: 2rem;
+    border-bottom: 2px solid #ddd; 
+
+  }
+  
+  .row-normal {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .row-reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .speaker-img {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .speaker-img img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-left: 8rem;
+  }
+  
+  .speaker-info {
+    flex: 1;
+    padding: 0.5rem 1rem;
+  }
+  
+  .speaker-info h2 {
+  display: inline-block;
+  background-color:#d7e9d3;/* Light blue patch (you can change the color) */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  color: #222;
+  font-weight: 600;
+  box-shadow: 0px 0px 10px 6px rgba(38, 111, 1, 0.1);;
+  font-size: 1.8rem; 
+}
+  
+  .speaker-info h4 {
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .speaker-info p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .speaker-row {
+      flex-direction: column !important;
+      text-align: center;
+    }
+  
+    .speaker-info {
+      padding: 1rem;
+    }
+  
+    .speaker-img img {
+      max-width: 80%;
+    }
+  }
+  .speaker-img img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .speaker-img img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .row-normal .speaker-info {
+    padding-left: 1rem; /* reduce left padding between image and text */
+  }
+  
+.row-reverse .speaker-info {
+  padding-right: 0.5rem; /* ⬅️ Tighter spacing from the image */
+}
+  
+  

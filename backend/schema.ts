@@ -69,18 +69,19 @@ export const lists = {
       name: text({ validation: { isRequired: true } }),
       category: select({
         options: [
-          { label: 'Parton', value: 'parton' },
-          {label:'Chair Person',value:'chairperson'},
-          { label: 'Co-Chair Person', value: 'co-chairperson' },
-          {label:'Advisory Committee',value:'advisorycommittee'},
-          { label: 'Organizing Secretary', value: 'organizing-secretary' },
-          { label: 'Joint-Organizing Secretary', value: 'joint-organizing-secretary' },
-          {label:'Treasurer',value:'treasurer'},
+          { label: 'Parton', value: 'Parton' },
+          {label:'Chair Person',value:'Chair Person'},
+          { label: 'Co-Chair Person', value: 'Co-Chair Person' },
+          {label:'Advisory Committee',value:'Advisory Committee'},
+          { label: 'Organizing Secretary', value: 'Organizing Secretary' },
+          { label: 'Joint-Organizing Secretary', value: 'Joint-Organizing Secretary' },
+          {label:'Treasurer',value:'Treasurer'},
         ],
       }),
       designation: text({ validation: { isRequired: true } }),
       dept:text({validation:{isRequired:true}}),
       desc:text({ui: { displayMode: 'textarea' }}),
+      photoUrl: text(),
     },
   }),
   technicalCommittee: list({
@@ -113,6 +114,7 @@ export const lists = {
     fields: {
       event: text({ validation: { isRequired: true } }),
       date: text({ validation: { isRequired: true } }),
+      description: text(),
     },
   }),
   registrationDetails: list({
