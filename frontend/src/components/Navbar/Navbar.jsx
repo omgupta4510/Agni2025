@@ -29,8 +29,9 @@ const Navbar = () => {
   console.log(uniqueTypes);
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <img src="logonitt.png" alt="Logo" className="logo" />
+      <div className="flex items-center">
+        <img src="logonitt.png" alt="Logo" className="h-16 w-auto mr-4" />
+        <img src="agni.png" alt="Logo" className="h-16 w-auto" /> 
       </div>
       <ul className="navbar-links">
         <li><a href="/">Home</a></li>

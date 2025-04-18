@@ -2,7 +2,7 @@ import React from 'react';
 import './Speaker.css';
 import { useQuery, gql } from '@apollo/client';
 import { useLocation } from 'react-router-dom';
-const speakers = [
+const dummyspeakers = [
   {
     name: 'Prof. Dipti Srinivasan',
     title: 'Professor, Department of Electrical & Computer Engineering National University of Singapore',
@@ -62,7 +62,6 @@ const Speaker = () => {
       return <div>Error: {error.message}</div>;
     } 
     const speakers = data?.speakers;
-    
     console.log(speakers);
     
   return (

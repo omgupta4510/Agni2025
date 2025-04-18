@@ -55,7 +55,7 @@ const ImportantDates = () => {
        <Navbar />
     
         <img
-          src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2076&auto=format&fit=crop"
+          src="nitt.png"
           alt="Solar panels under blue sky"
           className="w-full h-full object-cover"
         />
