@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../Header/Header';
 import { Card, CardContent } from '../ui/card';
 import { Mail, MapPin } from "lucide-react";
+import TouristAttraction from '@components/TouristAttraction/TouristAttraction';
 
 const VenueContact= () => {
     return (
@@ -14,7 +15,7 @@ const VenueContact= () => {
            venue and contact details:
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-20 pr-20 pl-20 pb-0">
             {/* Contact Card */}
             <Card className="shadow-lg rounded-2xl">
                 <CardContent className="p-6">
@@ -55,6 +56,8 @@ const VenueContact= () => {
                 </CardContent>
             </Card>
         </div>
+
+        <TouristAttraction/>
   
     </div>
     );
