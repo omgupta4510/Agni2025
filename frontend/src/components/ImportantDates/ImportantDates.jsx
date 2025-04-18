@@ -4,8 +4,6 @@ import Navbar from '../Navbar/Navbar';
 import { useQuery, gql } from '@apollo/client';
 import { CalendarClock } from "lucide-react";
 import { constants } from 'os';
-
-
 const Dates = [
   {
     title: 'Application Opens',
