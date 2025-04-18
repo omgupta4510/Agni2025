@@ -203,6 +203,7 @@ type organizingCommittee {
   designation: String
   dept: String
   desc: String
+  photoUrl: String
 }
 
 input organizingCommitteeWhereUniqueInput {
@@ -219,6 +220,7 @@ input organizingCommitteeWhereInput {
   designation: StringFilter
   dept: StringFilter
   desc: StringFilter
+  photoUrl: StringFilter
 }
 
 input StringNullableFilter {
@@ -242,6 +244,7 @@ input organizingCommitteeOrderByInput {
   designation: OrderDirection
   dept: OrderDirection
   desc: OrderDirection
+  photoUrl: OrderDirection
 }
 
 input organizingCommitteeUpdateInput {
@@ -250,6 +253,7 @@ input organizingCommitteeUpdateInput {
   designation: String
   dept: String
   desc: String
+  photoUrl: String
 }
 
 input organizingCommitteeUpdateArgs {
@@ -263,6 +267,7 @@ input organizingCommitteeCreateInput {
   designation: String
   dept: String
   desc: String
+  photoUrl: String
 }
 
 type technicalCommittee {

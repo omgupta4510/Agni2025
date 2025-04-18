@@ -39,6 +39,7 @@ model organizingCommittee {
   designation String  @default("")
   dept        String  @default("")
   desc        String  @default("")
+  photoUrl    String  @default("")
 }
 
 model technicalCommittee {
