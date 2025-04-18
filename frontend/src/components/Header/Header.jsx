@@ -4,9 +4,9 @@ const Header=()=>{
         <div className="bg-white  shadow-md px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left Logo */}
           <img
-            src="agni.png"
+            src=""
             alt="agni 2025 Logo"
-            className="h-25 w-24 object-contain"
+            className="h-30 w-30 object-contain"
           />
     
           {/* Center Content */}
