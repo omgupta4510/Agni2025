@@ -6,7 +6,7 @@ const Venue = () => {
       <h2 className="text-xl font-semibold text-gray-800 mb-4">Venue</h2>
       <div>
         <h3 className="text-lg font-medium text-gray-700 mb-1">
-          Malaviya National Institute of Technology...
+          National Institute of Technology Trichy
         </h3>
         <a
           href="https://www.google.com/maps/place/Malaviya+National+Institute+of+Technology,+Jaipur/@26.917559,75.822933,17z/data=!3m1!4b1!4m6!3m5!1s0x396db6672c987197:0x2c521044a9799353!8m2!3d26.917559!4d75.822933!16s%2Fg%2F121w87r6"

@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +8,7 @@ const Contact = () => {
       <h2 className="text-xl font-semibold text-gray-800 mb-4">Contact</h2>
       <div>
         <h3 className="text-lg font-medium text-gray-700 mb-1">
-          General Chairs (SeFeT 2025)
+          General Chairs 
         </h3>
         <p className="text-gray-600 mb-2">
           Malaviya National Institute of Technology, Jaipur
