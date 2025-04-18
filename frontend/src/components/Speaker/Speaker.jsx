@@ -1,7 +1,8 @@
 import React from 'react';
 import './Speaker.css';
 import { useQuery, gql } from '@apollo/client';
-const dummyspeakers = [
+import { useLocation } from 'react-router-dom';
+const speakers = [
   {
     name: 'Prof. Dipti Srinivasan',
     title: 'Professor, Department of Electrical & Computer Engineering National University of Singapore',
@@ -29,17 +30,30 @@ const dummyspeakers = [
 ];
 
 const Speaker = () => {
+  const location = useLocation();
+  console.log(location);
+  const speakertype=location.search.replace('?', '').replace('%20', ' ');
+  console.log(speakertype);
+  
   const {loading, error, data} = useQuery(gql`
-    query Query {
-  speakers {
+    query Query($where: speakersWhereInput!) {
+  speakers(where: $where) {
+    type
     name
-    designation
     title
     bio
     photoUrl
   }
 }
-    `);
+    `,{
+      variables:{
+        where:{
+          type:{
+            equals: speakertype
+        }
+      }
+    }
+});
     console.log(data);
     
     if(loading){
@@ -48,10 +62,7 @@ const Speaker = () => {
       return <div>Error: {error.message}</div>;
     } 
     const speakers = data?.speakers;
-    if(speakers.length === 0) {
-      // return <div>yet to be announced...</div>;
-
-    }
+    
     console.log(speakers);
     
   return (
@@ -66,7 +77,7 @@ const Speaker = () => {
           key={index}
         >
           <div className="speaker-img">
-            <img src={speaker.image} alt={speaker.name} />
+            <img src={speaker.photoUrl} alt={speaker.name} />
           </div>
           <div className="speaker-info">
             <h2>{speaker.name}</h2>

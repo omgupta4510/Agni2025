@@ -498,6 +498,7 @@ input registrationDetailsCreateInput {
 
 type speakers {
   id: ID!
+  type: String
   name: String
   designation: String
   title: String
@@ -514,6 +515,7 @@ input speakersWhereInput {
   OR: [speakersWhereInput!]
   NOT: [speakersWhereInput!]
   id: IDFilter
+  type: StringFilter
   name: StringFilter
   designation: StringFilter
   title: StringFilter
@@ -523,6 +525,7 @@ input speakersWhereInput {
 
 input speakersOrderByInput {
   id: OrderDirection
+  type: OrderDirection
   name: OrderDirection
   designation: OrderDirection
   title: OrderDirection
@@ -531,6 +534,7 @@ input speakersOrderByInput {
 }
 
 input speakersUpdateInput {
+  type: String
   name: String
   designation: String
   title: String
@@ -544,6 +548,7 @@ input speakersUpdateArgs {
 }
 
 input speakersCreateInput {
+  type: String
   name: String
   designation: String
   title: String

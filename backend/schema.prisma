@@ -78,6 +78,7 @@ model registrationDetails {
 
 model speakers {
   id          String @id @default(cuid())
+  type        String @default("")
   name        String @default("") @mysql.VarChar(500)
   designation String @default("") @mysql.VarChar(500)
   title       String @default("") @mysql.VarChar(500)

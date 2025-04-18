@@ -134,6 +134,7 @@ export const lists = {
   speakers: list({
     access: allowAll,
     fields: {
+      type:text({validation:{isRequired:true}}),
       name: text(namefeild),
       designation: text(namefeild),
       title: text(namefeild),
