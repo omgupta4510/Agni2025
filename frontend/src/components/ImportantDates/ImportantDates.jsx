@@ -1,8 +1,9 @@
 
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
-// import { CalendarClock } from "lucide-react";
-
+import { useQuery, gql } from '@apollo/client';
+import { CalendarClock } from "lucide-react";
+import { constants } from 'os';
 const Dates = [
   {
     title: 'Application Opens',
@@ -27,6 +28,27 @@ const Dates = [
 ];
 
 const ImportantDates = () => {
+  const {loading,error, data} = useQuery(gql`
+          query ImportantDates {
+        importantDates {
+          event
+          date
+          description
+        }
+      }
+    `);
+  if(loading){
+    return <div>Loading...</div>;
+  }
+  else if(error){
+    return <div>Error: {error.message}</div>;
+  }
+  const importantDates = data?.importantDates;
+  if(importantDates.length === 0) {
+    return <div>No data found</div>;
+  }
+  console.log(importantDates);
+  
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Hero Image Section */}
@@ -53,14 +75,14 @@ const ImportantDates = () => {
                 📅 Important Dates
                 </h1>
                 <div className="grid gap-6 md:grid-cols-2">
-                {Dates.map((item, index) => (
+                {importantDates.map((item, index) => (
                     <div
                     key={index}
                     className="bg-white rounded-2xl shadow-md p-6 border-l-4 border-green-500 hover:shadow-xl transition"
                     >
-                    <h2 className="text-xl font-semibold text-green-600 mb-2">{item.title}</h2>
+                    <h2 className="text-xl font-semibold text-green-600 mb-2">{item.event}</h2>
                     <p className="text-gray-800 font-medium">{item.date}</p>
-                    <p className="text-gray-600 mt-2">{item.description}</p>
+                    { item.description && ( <p className="text-gray-600 mt-2">{item.description}</p>)}
                     </div>
                 ))}
                 </div>

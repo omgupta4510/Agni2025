@@ -203,6 +203,7 @@ type organizingCommittee {
   designation: String
   dept: String
   desc: String
+  photoUrl: String
 }
 
 input organizingCommitteeWhereUniqueInput {
@@ -219,6 +220,7 @@ input organizingCommitteeWhereInput {
   designation: StringFilter
   dept: StringFilter
   desc: StringFilter
+  photoUrl: StringFilter
 }
 
 input StringNullableFilter {
@@ -242,6 +244,7 @@ input organizingCommitteeOrderByInput {
   designation: OrderDirection
   dept: OrderDirection
   desc: OrderDirection
+  photoUrl: OrderDirection
 }
 
 input organizingCommitteeUpdateInput {
@@ -250,6 +253,7 @@ input organizingCommitteeUpdateInput {
   designation: String
   dept: String
   desc: String
+  photoUrl: String
 }
 
 input organizingCommitteeUpdateArgs {
@@ -263,6 +267,7 @@ input organizingCommitteeCreateInput {
   designation: String
   dept: String
   desc: String
+  photoUrl: String
 }
 
 type technicalCommittee {
@@ -400,6 +405,7 @@ type importantDates {
   id: ID!
   event: String
   date: String
+  description: String
 }
 
 input importantDatesWhereUniqueInput {
@@ -413,17 +419,20 @@ input importantDatesWhereInput {
   id: IDFilter
   event: StringFilter
   date: StringFilter
+  description: StringFilter
 }
 
 input importantDatesOrderByInput {
   id: OrderDirection
   event: OrderDirection
   date: OrderDirection
+  description: OrderDirection
 }
 
 input importantDatesUpdateInput {
   event: String
   date: String
+  description: String
 }
 
 input importantDatesUpdateArgs {
@@ -434,6 +443,7 @@ input importantDatesUpdateArgs {
 input importantDatesCreateInput {
   event: String
   date: String
+  description: String
 }
 
 type registrationDetails {
