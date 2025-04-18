@@ -4,21 +4,37 @@
     max-width: 1200px;
     margin: auto;
     background-color: #fafafa;
-    box-shadow: inset 0px 0px 10px 6px rgba(38, 111, 1, 0.1);;
+    box-shadow: inset 0px 0px 10px 6px rgba(38, 111, 1, 0.1);
   }
   
-  .speaker-heading {
+  /* .speaker-heading {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 4rem;
-    color: #222;
-  }
+    color: #0d2e77;
+  } */
+   .speaker-heading{
+   text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color: #1a1a1a;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #3f51b5; /* Stylish underline */
+  
+  letter-spacing: 2px;
+   }
   
   .speaker-row {
     display: flex;
     align-items: center;
     margin-bottom: 3rem;
     gap: 2rem;
+      padding-bottom: 2rem;
+    border-bottom: 2px solid #ddd; 
+
   }
   
   .row-normal {
@@ -50,10 +66,16 @@
   }
   
   .speaker-info h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #111;
-  }
+  display: inline-block;
+  background-color:#d7e9d3;/* Light blue patch (you can change the color) */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  color: #222;
+  font-weight: 600;
+  box-shadow: 0px 0px 10px 6px rgba(38, 111, 1, 0.1);;
+  font-size: 1.8rem; 
+}
   
   .speaker-info h4 {
     color: #555;
@@ -99,5 +121,9 @@
   .row-normal .speaker-info {
     padding-left: 1rem; /* reduce left padding between image and text */
   }
+  
+.row-reverse .speaker-info {
+  padding-right: 0.5rem; /* ⬅️ Tighter spacing from the image */
+}
   
   
