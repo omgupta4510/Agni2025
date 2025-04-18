@@ -30,7 +30,7 @@ const Navbar = () => {
               <li><a href="/">About the CEESAT</a></li>
               <li><a href="/">Organizing Committee</a></li>
               <li><a href="/">AGNI-S Theme</a></li>
-              <li><a href="/">Important Dates</a></li>
+              <li><a href="/dates">Important Dates</a></li>
               <li><a href="/">Tourist Attraction</a></li>
             </ul>
           )}

@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 import {  Route, Router, Routes } from 'react-router-dom'
 import About from './components/About/AboutOrganizers'
 import Home from './components/Home/Home'
-import Committee from './components/Committee/committee'
+import ImportantDates from './components/ImportantDates/ImportantDates'
 function App() {
   const [count, setCount] = useState(0)
 //   const {loading,error, data} = useQuery(gql`
@@ -18,14 +18,12 @@ function App() {
 
   return (
     <main>
-      <Navbar/>
-        <div style={{marginTop:"70px"}}>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About />} />
-          <Route path="/committee" element={<Committee/>} />
+          <Route path="/dates" element={<ImportantDates/>}/>
         </Routes>
-        </div>
     </main>
     
   )
