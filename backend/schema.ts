@@ -113,6 +113,7 @@ export const lists = {
     fields: {
       event: text({ validation: { isRequired: true } }),
       date: text({ validation: { isRequired: true } }),
+      description: text(),
     },
   }),
   registrationDetails: list({
