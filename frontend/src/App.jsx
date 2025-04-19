@@ -42,12 +42,12 @@ function App() {
        
     </main>
     <div className="flex justify-start nit">
-        <img src="new1.PNG" alt="Logo" className="nitlogo" style={{
-          height:'180px',
-          width:'1100px',
+        <img src="c1.PNG" alt="Logo" className="nitlogo" style={{
+          height:'184px',
+          width:'1309px',
            margin: '3px 1px 0px 1px'
         }} />
-        <img src='new2.PNG' style={{height:'180px'}}/>
+        <img src='agni.png' style={{height:'184px', width:'209px'}}/>
       </div>
     <Footer/>
     </div>
