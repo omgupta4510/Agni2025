@@ -44,7 +44,7 @@ const Navbar = () => {
             </ul>
           )}
         </li>
-        <li><a href="/">Authors</a></li>
+        <li><a href="/authors">Authors</a></li>
         <li onMouseLeave={closeDropdown}>
           <a href="#" onMouseEnter={() => handleDropdown('committees')}>
             Committees <span className="arrow">&#9662;</span>
