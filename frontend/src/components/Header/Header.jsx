@@ -1,7 +1,7 @@
 import React from "react";
 const Header=()=>{
     return (
-        <div className="bg-white  shadow-md px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="bg-white  shadow-md px-10 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left Logo */}
           <img
             src="agni.png"

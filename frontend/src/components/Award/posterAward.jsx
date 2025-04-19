@@ -1,29 +1,45 @@
-import React from 'react';
 
-const BestPosterAwards = () => {
+import React from 'react';
+import Navbar from '../Navbar/Navbar';
+import Header from '../Header/Header';
+
+const PosterAward= () => {
   return (
-    <div className="best-Poster-awards" >
-      <img
-        src="BestPosterAward.png"
-        alt="Best Poster Award"
-        className="Poster-award-image"
-      />
-      <div className="guidelines">
-        <h2>Best Poster Awards Guidelines</h2>
-        <ul>
-          <li>
-            <strong>All Posters selected for oral presentations will automatically be nominated for the IEEE SEFET 2025 Best Poster Award.</strong>
-          </li>
-          <li>
-            <strong>In each session, one Poster will be chosen for the Best Poster Award based on the quality of the work, presentation skills, and performance during the question-and-answer session.</strong>
-          </li>
-          <li>
-            <strong>The winners of the Best Poster Award from each session will be announced during the valedictory session.</strong>
-          </li>
-        </ul>
+    <div className="min-h-screen bg-white pt-20"> 
+      <div className="relative w-full">
+        <Navbar /> 
+        <Header/>
+      </div>
+
+      <div className="text-center font-bold bg-green-500 text-white p-4 text-2xl sm:text-3xl shadow-md">
+        BEST POSTER AWARDS
+      </div>
+
+      <div className="flex flex-col items-center p-6 space-y-6">
+          <img
+            src="BestPosterAward.png"
+            alt="Best Poster Award"
+            className="w-90 sm:w-96 md:w-[28rem] lg:w-[60rem] rounded-xl shadow-lg"
+         />
+
+        <div className="guidelines max-w-3xl bg-gray-100 p-6 rounded-xl shadow-md">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-green-700">Best Poster Awards Guidelines</h2>
+          <ul className="list-disc list-inside space-y-4 text-gray-800 text-lg leading-relaxed">
+            <li>
+              <span className="font-semibold text-green-600">All posters selected for oral presentations</span> will automatically be nominated for the <span className="font-semibold text-green-600">AGNI-S 2025 Best Poster Award.</span>
+            </li>
+            <li>
+              In each session, <span className="font-semibold text-green-600">one poster will be chosen</span> for the award based on the <span className="italic">quality of work, presentation skills,</span> and performance during Q&A.
+            </li>
+            <li>
+              <span className="font-semibold text-green-600">Winners will be announced</span> during the valedictory session. Be there to celebrate!
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
 };
 
-export default BestPosterAwards;
+export default PosterAward;
+
