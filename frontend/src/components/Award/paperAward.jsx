@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './paperAward.css'; // Import your CSS file for styling
 const BestPaperAwards = () => {
   return (
     <div className="best-paper-awards" >
