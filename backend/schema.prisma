@@ -85,3 +85,11 @@ model speakers {
   bio         String @default("") @mysql.VarChar(6000)
   photoUrl    String @default("")
 }
+
+model toursit {
+  id       String @id @default(cuid())
+  name     String @default("")
+  location String @default("")
+  photoUrl String @default("")
+  desc     String @default("") @mysql.VarChar(6000)
+}

@@ -1,7 +1,8 @@
 import React from 'react';
 import './TouristAttraction.css';
+import { useQuery,gql } from '@apollo/client';
 
-const attractions = [
+const dummyattractions = [
   {
     name: 'Gold Gopuram',
     location: 'Srirangam, Tamil Nadu, India',
@@ -25,7 +26,23 @@ image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuwORpEMCi7uRAnVK64
   
 ];
 
+
 const TouristAttraction = () => {
+  const {loading,error,data}=useQuery(gql`
+    query Toursits {
+    toursits {
+      name
+      location
+      photoUrl
+      desc
+    }
+  }`);
+  if(loading){
+    return <div>Loading...</div>;
+  }  
+  const attractions=data?.toursits;
+  console.log(attractions);
+  
   return (
     <div className="attractions-page">
       <h1 className="page-title">Tourist Attractions</h1>
@@ -47,12 +64,12 @@ const TouristAttraction = () => {
           key={index}
         >
           <div className="attraction-image">
-            <img src={item.image} alt={item.name} />
+            <img src={"/tourist/"+item.photoUrl} alt={item.name} />
           </div>
           <div className="attraction-details">
             <h2 className="title">{item.name}</h2>
             <h4>{item.location}</h4>
-            <p>{item.description}</p>
+            <p>{item.desc}</p>
           </div>
         </div>
       ))}

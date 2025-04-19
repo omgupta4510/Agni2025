@@ -141,4 +141,13 @@ export const lists = {
       bio: text(textfeild),
       photoUrl: text({validation:{isRequired:true}}),
     }}),
+    toursit:list({
+      access:allowAll,
+      fields:{
+        name:text({validation:{isRequired:true}}),
+        location:text({validation:{isRequired:true}}),
+        photoUrl:text({validation:{isRequired:true}}),
+        desc:text(textfeild)
+      }
+    }),
 } satisfies Lists;
