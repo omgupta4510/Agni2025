@@ -32,7 +32,7 @@ import { document } from '@keystone-6/fields-document'
 import {type Lists} from '.keystone/types'
 
 const textfeild:TextFieldConfig<any>={ ui: { displayMode: 'textarea' },validation: { isRequired: true},db:{ nativeType:`VarChar(${6000})`}};
-
+const namefeild:TextFieldConfig<any>={ ui: { displayMode: 'textarea' },validation: { isRequired: true},db:{ nativeType:`VarChar(${500})`}};
 export const lists = {
   User: list({
     access: allowAll,
@@ -72,9 +72,9 @@ export const lists = {
           { label: 'Parton', value: 'Parton' },
           {label:'Chair Person',value:'Chair Person'},
           { label: 'Co-Chair Person', value: 'Co-Chair Person' },
-          {label:'Advisory Committee',value:'Advisory Committee'},
           { label: 'Organizing Secretary', value: 'Organizing Secretary' },
           { label: 'Joint-Organizing Secretary', value: 'Joint-Organizing Secretary' },
+          {label:'Advisory Committee',value:'Advisory Committee'},
           {label:'Treasurer',value:'Treasurer'},
         ],
       }),
@@ -131,5 +131,14 @@ export const lists = {
       amt_regular: integer({ validation: { isRequired: true } }),
     },
   }),
- 
+  speakers: list({
+    access: allowAll,
+    fields: {
+      type:text({validation:{isRequired:true}}),
+      name: text(namefeild),
+      designation: text(namefeild),
+      title: text(namefeild),
+      bio: text(textfeild),
+      photoUrl: text({validation:{isRequired:true}}),
+    }}),
 } satisfies Lists;
