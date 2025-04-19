@@ -1,0 +1,45 @@
+.track-container {
+    grid-row: auto;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .track-title {
+        text-align: center;
+        font-size: 35px;
+        color: #1a73e8;
+        margin-bottom: 30px;
+        font-weight: bold;
+  }
+  
+  .track-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  
+  .track-card h2 {
+    font-size: 24px;
+  font-weight: 523;
+  color: #3d9416;
+  margin-bottom: 20px;
+  text-decoration:underline;
+  }
+  
+  .track-card ul {
+    list-style-type: none; 
+    padding-left: 1px;       
+    margin: 0;
+  }
+  
+  .track-card li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #444;
+  }
+  
