@@ -8,6 +8,8 @@ import Committee from './components/Committee/committee'
 import Speaker from './components/Speaker/Speaker'
 import Sponsorship from './components/Sponsorship/Sponsorship'
 import VenueContact from './components/VenueContact/VenueContact'
+import Footer from './components/Footer/Footer'
+
 function App() {
   const [count, setCount] = useState(0)
 //   const {loading,error, data} = useQuery(gql`
@@ -21,8 +23,9 @@ function App() {
 // console.log(data?.abouts);
 
   return (
-    <main>
-        <Navbar />
+    <div className="flex flex-col min-h-screen foot">
+              <Navbar />
+    <main className='flex-grow'>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About />} />
@@ -32,7 +35,18 @@ function App() {
           <Route path="/sponshorship" element={<Sponsorship/>}/>
           <Route path="/venuecontact" element={<VenueContact/>}/>
         </Routes>
+       
     </main>
+    <div className="flex justify-start nit">
+        <img src="new1.PNG" alt="Logo" className="nitlogo" style={{
+          height:'180px',
+          width:'1100px',
+           margin: '3px 1px 0px 1px'
+        }} />
+        <img src='new2.PNG' style={{height:'180px'}}/>
+      </div>
+    <Footer/>
+    </div>
     
   )
 }

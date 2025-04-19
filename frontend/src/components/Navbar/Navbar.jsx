@@ -31,7 +31,7 @@ const Navbar = () => {
               <li><a href="/committee">Organizing Committee</a></li>
               <li><a href="/">AGNI-S Theme</a></li>
               <li><a href="/dates">Important Dates</a></li>
-              <li><a href="/">Tourist Attraction</a></li>
+              <li><a href="/touristattraction">Tourist Attraction</a></li>
             </ul>
           )}
         </li>
