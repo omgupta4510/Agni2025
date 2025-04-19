@@ -7,6 +7,8 @@ import ImportantDates from './components/ImportantDates/ImportantDates'
 import Committee from './components/Committee/committee'
 import Speaker from './components/Speaker/Speaker'
 import VenueContact from './components/VenueContact/VenueContact'
+import Footer from './components/Footer/Footer'
+
 import Sponsorship from './components/Sponsorship/Sponsorship'
 import BestPaperAwards from '@components/Award/paperAward'
 import BestPosterAwards from '@components/Award/posterAward'
@@ -23,8 +25,9 @@ function App() {
 // console.log(data?.abouts);
 
   return (
-    <main>
-        <Navbar />
+    <div className="flex flex-col min-h-screen foot">
+              <Navbar />
+    <main className='flex-grow'>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About />} />
@@ -36,7 +39,18 @@ function App() {
           <Route path="/paperaward" element={<BestPaperAwards/>} />
           <Route path="/posteraward" element={<BestPosterAwards/>} />
         </Routes>
+       
     </main>
+    <div className="flex justify-start nit">
+        <img src="c1.PNG" alt="Logo" className="nitlogo" style={{
+          height:'184px',
+          width:'1309px',
+           margin: '3px 1px 0px 1px'
+        }} />
+        <img src='agni.png' style={{height:'184px', width:'209px'}}/>
+      </div>
+    <Footer/>
+    </div>
     
   )
 }
