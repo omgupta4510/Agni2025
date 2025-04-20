@@ -3,12 +3,12 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import Header from '../Header/Header';
 
-const PaperAward= () => {
+const PaperAward = () => {
   return (
-    <div className="min-h-screen bg-white pt-20"> 
+    <div className="min-h-screen bg-white pt-20">
       <div className="relative w-full">
-        <Navbar /> 
-        <Header/>
+        <Navbar />
+        <Header />
       </div>
 
       <div className="text-center font-bold bg-green-500 text-white p-4 text-2xl sm:text-3xl shadow-md">
@@ -16,11 +16,11 @@ const PaperAward= () => {
       </div>
 
       <div className="flex flex-col items-center p-6 space-y-6">
-          <img
-            src="BestPaperAward.png"
-            alt="Best Paper Award"
-            className="w-90 sm:w-96 md:w-[28rem] lg:w-[60rem] rounded-xl shadow-lg"
-         />
+        <img
+          src="BestPaperAward.png"
+          alt="Best Paper Award"
+          className="w-90 sm:w-96 md:w-[28rem] lg:w-[60rem] rounded-xl shadow-lg"
+        />
 
         <div className="guidelines max-w-3xl bg-gray-100 p-6 rounded-xl shadow-md">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-green-700">Best Paper Awards Guidelines</h2>
