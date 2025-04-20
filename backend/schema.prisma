@@ -95,7 +95,7 @@ model toursit {
   desc     String @default("") @mysql.VarChar(6000)
 }
 
-model trecks {
+model tracks {
   id     String @id @default(cuid())
   number Int
   type   String @default("")

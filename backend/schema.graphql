@@ -611,46 +611,46 @@ input toursitCreateInput {
   desc: String
 }
 
-type trecks {
+type tracks {
   id: ID!
   number: Int
   type: String
   name: String
 }
 
-input trecksWhereUniqueInput {
+input tracksWhereUniqueInput {
   id: ID
 }
 
-input trecksWhereInput {
-  AND: [trecksWhereInput!]
-  OR: [trecksWhereInput!]
-  NOT: [trecksWhereInput!]
+input tracksWhereInput {
+  AND: [tracksWhereInput!]
+  OR: [tracksWhereInput!]
+  NOT: [tracksWhereInput!]
   id: IDFilter
   number: IntFilter
   type: StringFilter
   name: StringFilter
 }
 
-input trecksOrderByInput {
+input tracksOrderByInput {
   id: OrderDirection
   number: OrderDirection
   type: OrderDirection
   name: OrderDirection
 }
 
-input trecksUpdateInput {
+input tracksUpdateInput {
   number: Int
   type: String
   name: String
 }
 
-input trecksUpdateArgs {
-  where: trecksWhereUniqueInput!
-  data: trecksUpdateInput!
+input tracksUpdateArgs {
+  where: tracksWhereUniqueInput!
+  data: tracksUpdateInput!
 }
 
-input trecksCreateInput {
+input tracksCreateInput {
   number: Int
   type: String
   name: String
@@ -907,12 +907,12 @@ type Mutation {
   updateToursits(data: [toursitUpdateArgs!]!): [toursit]
   deletetoursit(where: toursitWhereUniqueInput!): toursit
   deleteToursits(where: [toursitWhereUniqueInput!]!): [toursit]
-  createtrecks(data: trecksCreateInput!): trecks
-  createTrecks(data: [trecksCreateInput!]!): [trecks]
-  updatetrecks(where: trecksWhereUniqueInput!, data: trecksUpdateInput!): trecks
-  updateTrecks(data: [trecksUpdateArgs!]!): [trecks]
-  deletetrecks(where: trecksWhereUniqueInput!): trecks
-  deleteTrecks(where: [trecksWhereUniqueInput!]!): [trecks]
+  createtracks(data: tracksCreateInput!): tracks
+  createTracks(data: [tracksCreateInput!]!): [tracks]
+  updatetracks(where: tracksWhereUniqueInput!, data: tracksUpdateInput!): tracks
+  updateTracks(data: [tracksUpdateArgs!]!): [tracks]
+  deletetracks(where: tracksWhereUniqueInput!): tracks
+  deleteTracks(where: [tracksWhereUniqueInput!]!): [tracks]
   createeventDetails(data: eventDetailsCreateInput!): eventDetails
   createEventDetails(data: [eventDetailsCreateInput!]!): [eventDetails]
   updateeventDetails(where: eventDetailsWhereUniqueInput!, data: eventDetailsUpdateInput!): eventDetails
@@ -987,8 +987,8 @@ type Query {
   toursit(where: toursitWhereUniqueInput!): toursit
   toursits(where: toursitWhereInput! = {}, orderBy: [toursitOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: toursitWhereUniqueInput): [toursit!]
   toursitsCount(where: toursitWhereInput! = {}): Int
-  trecks(where: trecksWhereInput! = {}, orderBy: [trecksOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: trecksWhereUniqueInput): [trecks!]
-  trecksCount(where: trecksWhereInput! = {}): Int
+  tracks(where: tracksWhereInput! = {}, orderBy: [tracksOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: tracksWhereUniqueInput): [tracks!]
+  tracksCount(where: tracksWhereInput! = {}): Int
   eventDetails(where: eventDetailsWhereInput! = {}, orderBy: [eventDetailsOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: eventDetailsWhereUniqueInput): [eventDetails!]
   eventDetailsCount(where: eventDetailsWhereInput! = {}): Int
   generalInformation(where: generalInformationWhereUniqueInput!): generalInformation

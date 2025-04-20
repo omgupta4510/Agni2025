@@ -3,12 +3,29 @@ import './Authors.css';
 import Conference from './Conference';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { gql, useQuery } from '@apollo/client';
 
 const Authors = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
-
+  const {loading,error,data}=useQuery(gql`
+    query Query($where: generalInformationWhereInput!) {
+      generalInformations(where: $where) {
+        name
+        desc
+      }
+    }`,{
+      variables:{
+        where:{
+          name:{in:["SubmissionLink","ConferenceDate"]}
+        }
+      }
+    });
+    if(loading)return <div>Loading...</div>
+    if(error)return <div>Error</div>
+    const submissionLink=data?.generalInformations[0].desc;    
+    const confdate=data?.generalInformations[1].desc;
   return (
     <div>
       <div className="author-page" data-aos="fade-in">
@@ -24,7 +41,7 @@ const Authors = () => {
 
   <div className="cfp-text" data-aos="fade-right" data-aos-delay="200">
     <p>
-      🌍 International Conference on <strong>Advances in Green, Net-Zero, Innovation - Sustainability (AGNI-S 2025)</strong> is scheduled from <strong>15 Dec - 17 Dec, 2025</strong>.
+      🌍 International Conference on <strong>Advances in Green, Net-Zero, Innovation - Sustainability (AGNI-S 2025)</strong> is scheduled from <strong>{confdate}</strong>.
     </p>
     <br />
     <p>
@@ -33,7 +50,7 @@ const Authors = () => {
   </div>
 
   <div className="btn-wrapper" data-aos="zoom-in" data-aos-delay="300">
-    <button className="hero-btn glow-btn">🚀 Submission</button>
+    <a href={submissionLink} target="_blank"  rel="noopener noreferrer" className="hero-btn glow-btn">🚀 Submission Portal</a>
   </div>
 
   <div className="conference-card" data-aos="fade-up" data-aos-delay="400">

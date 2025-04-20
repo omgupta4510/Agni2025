@@ -1,5 +1,23 @@
+import { gql, useQuery } from "@apollo/client";
 import React from "react";
 const Header=()=>{
+  const {loading,error,data}=useQuery(gql`
+    query Query($where: generalInformationWhereInput!) {
+  generalInformations(where: $where) {
+    name
+    desc
+  }
+}`,{variables:{
+  where:{
+    name:{
+      equals:"ConferenceDate"
+    }
+  }
+}});
+if(loading)return <div>Loading...</div>
+if(error)return <div>Error</div>
+const conferncedate=data?.generalInformations[0].desc;
+
     return (
         <div className="bg-white  shadow-md px-10 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left Logo */}
@@ -20,8 +38,7 @@ const Header=()=>{
             <h2 className="text-[30px] font-semibold text-green-600 mt-1"  style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.3)"}}>
                AGNI-S 2025
             </h2>
-            <p className="text-[23px] text-gray-800 mt-4 font-medium">
-              15 Dec- 17 Dec, 2025
+            <p className="text-[23px] text-gray-800 mt-4 font-medium">{conferncedate}
             </p>
             <p className="text-[25px] text-gray-800 font-medium">
                Trichy ,Tamil Nadu,India

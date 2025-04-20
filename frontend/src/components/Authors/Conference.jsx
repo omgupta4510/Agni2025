@@ -1,5 +1,6 @@
 import React from 'react';
 import './Conference.css';
+import { useQuery,gql } from '@apollo/client';
 
 const conferenceData = {
   "Conference Trecks": [
@@ -26,20 +27,50 @@ const conferenceData = {
 };
 
 const Conference = () => {
+  const {loading, error, data}=useQuery(gql`
+    query Query {
+  tracks {
+    number
+    type
+    name
+  }
+}`);
+if(loading)return <div>Loading....</div>
+if(error)return <div>Error</div>
+const tracksdata=data?.tracks.reduce((acc, item) => {
+  if (!acc[item.type]) {
+    acc[item.type] = [];
+  }
+  acc[item.type].push(item);
+  return acc;
+}, {});
+console.log(tracksdata);
+
   return (
     <div className="track-container">
-      <div className="track-card-glass" data-aos="fade-up-right">
-        <h2 className="track-heading">🌱 Conference Tracks</h2>
-        <ul>
-          {conferenceData["Conference Trecks"].map((track) => (
-            <li key={track.number}>
-              <span className="bullet">{track.number}.</span> {track.desc}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {Object.entries(tracksdata).map(([type, tracks], index) => (
+  <div
+    className={`track-card-glass ${index % 2 === 0 ? 'left' : 'right'}`}
+    data-aos={index % 2 === 0 ? 'fade-up-right' : 'fade-up-left'}
+    key={type}
+  >
+    <h2 className="track-heading">
+      🌱 {type}
+    </h2>
+    <ul>
+      {tracks
+        .slice()
+        .sort((a, b) => a.number - b.number)
+        .map((track) => (
+          <li key={track.number} >
+            <span className="bullet">{track.number}.</span> {track.name}
+          </li>
+        ))}
+    </ul>
+  </div>
+))}
 
-      <div className="track-card-glass" data-aos="fade-up-left">
+      {/* <div className="track-card-glass" data-aos="fade-up-left">
         <h2 className="track-heading">💡 Special Tracks</h2>
         <ul>
           {conferenceData["Special Trecks"].map((track) => (
@@ -48,7 +79,7 @@ const Conference = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

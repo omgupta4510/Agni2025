@@ -151,7 +151,7 @@ export const lists = {
         desc:text(textfeild)
       }
     }),
-    trecks:list({
+    tracks:list({
       access:allowAll,
       fields:{
         number:integer({validation:{isRequired:true}}),

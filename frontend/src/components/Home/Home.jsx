@@ -182,9 +182,9 @@ const Home = () => {
           {/* Registration */}
           <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center">
             <h2 className=" text-center text-[1.5rem] font-semibold mb-4">Click for Registration</h2>
-            <button className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-semibold px-6 py-2 rounded-full shadow-lg hover:from-red-500 hover:to-red-600 transition-all duration-300 ease-in-out transform hover:scale-105">
+            <a href="/registration" className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-semibold px-6 py-2 rounded-full shadow-lg hover:from-red-500 hover:to-red-600 transition-all duration-300 ease-in-out transform hover:scale-105">
               Register Now
-            </button>
+            </a>
           </div>
 
           {/* Countdown */}

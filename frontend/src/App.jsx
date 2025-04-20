@@ -17,6 +17,7 @@ import Authors from '@components/Authors/Authors'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react'
+import { useQuery,gql } from '@apollo/client'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
       once: true,
     });
   }, []);
+  
 
   return (
     <div className="flex flex-col min-h-screen foot">
@@ -43,7 +45,7 @@ function App() {
           <Route path="/paperaward" element={<BestPaperAwards/>} />
           <Route path="/posteraward" element={<BestPosterAwards/>} />
           <Route path='/events' element={<Events/>}/>
-          <Route path="/authors" element={<Authors/>}/>
+          <Route path="/authors" element={<Authors />}/>
           <Route path="/registration" element={<Registration/>}/>
         </Routes>
 

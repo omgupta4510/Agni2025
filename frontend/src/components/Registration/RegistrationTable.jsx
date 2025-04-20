@@ -21,7 +21,6 @@ const GENERAL_INFORMATION_QUERY = gql`
   }
 }
 `;
-console.log("here");
 
 const RegistrationFee = () => {
   const [regdetails, setRegdetails] = useState({});
@@ -41,7 +40,6 @@ const RegistrationFee = () => {
 
     }
   });
-  console.log(data2);
   
   useEffect(() => {
     const fetchData = async () => {
