@@ -8,7 +8,7 @@ import Committee from './components/Committee/committee'
 import Speaker from './components/Speaker/Speaker'
 import VenueContact from './components/VenueContact/VenueContact'
 import Footer from './components/Footer/Footer'
-
+import Registration from '@components/Registration/Registraion'
 import Sponsorship from './components/Sponsorship/Sponsorship'
 import BestPaperAwards from '@components/Award/paperAward'
 import BestPosterAwards from '@components/Award/posterAward'
@@ -43,6 +43,7 @@ function App() {
           <Route path="/posteraward" element={<BestPosterAwards/>} />
           <Route path='/events' element={<Events/>}/>
           <Route path="/authors" element={<Authors/>}/>
+          <Route path="/registration" element={<Registration/>}/>
         </Routes>
        
     </main>
