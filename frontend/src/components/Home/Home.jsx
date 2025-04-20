@@ -3,8 +3,10 @@ import NotificationBar from "@components/NotificationBar/NotificationBar";
 import Navbar from "@components/Navbar/Navbar";
 import HeroCarousel from "@components/HeroCarousel/HeroCarousel";
 import { CheckCircle } from 'lucide-react';
-import CountdownTimer from "./Clock";
+import CountdownTimer from "./CountdownTimer";
 import Notice from "./Notice";
+import HomeDate from "./HomeDate";
+
 
 const subThemes = [
   "Solar Power Innovations (Perovskite cells, floating solar)",
@@ -156,31 +158,38 @@ const Home = () => {
           </div>
         </section>
       </div>
-
-      <div className="w-full"
-        data-aos="zoom-in-up">
-        <img
-          src="date.png"
-          alt="IMportant date"
-          className="rounded-xl mt-8 mb-0 shadow-lg w-full object-contain"
-        />
+      {/* className="bg-gradient-to-b from-[#f0faff] to-[#bfd6bf] h-auto py-16 px-4 md:px-8 lg:px-12 mt-8 rounded-lg shadow-lg shadow-blue-200 */}
+      <div data-aos="zoom-in-up">
+        <HomeDate />
       </div>
 
       <div
         className="flex flex-col lg:flex-row items-start gap-8 px-4 md:px-8 lg:px-12 py-12 bg-white"
-        data-aos="fade-up">
-          {/* news */}
-          <div className="w-full lg:w-1/2"
-           data-aos="zoom-in-up">
-              <Notice />
+        data-aos="fade-up"
+      >
+        {/* News Section */}
+        <div className="w-full lg:w-1/2" data-aos="zoom-in-up">
+          <Notice />
+        </div>
+
+        {/* Right Section: Registration and Countdown */}
+        <div className="w-full lg:w-1/2 flex flex-col gap-8" data-aos="zoom-in-up">
+          {/* Registration */}
+          <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center">
+            <h2 className=" text-center text-[1.5rem] font-semibold mb-4">Click for Registration</h2>
+            <button className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-semibold px-6 py-2 rounded-full shadow-lg hover:from-red-500 hover:to-red-600 transition-all duration-300 ease-in-out transform hover:scale-105">
+              Register Now
+            </button>
           </div>
 
-          {/* timer */}
-          <div className="min-h-screen lg:w-1/2 mt-0 lg:mt-0 bg-white flex items-top justify-center"
-          data-aos="zoom-in-up">
+          {/* Countdown */}
+          <div className="bg-white p-6 shadow-md rounded-lg">
+            <h2 className="text-xl font-semibold mb-4 text-center">Event Will Start In</h2>
             <CountdownTimer />
           </div>
+        </div>
       </div>
+
     </div>
   );
 };
