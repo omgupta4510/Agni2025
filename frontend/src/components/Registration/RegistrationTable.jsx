@@ -14,12 +14,12 @@ const REGISTRATION_DETAILS_QUERY = gql`
 `;
 
 const GENERAL_INFORMATION_QUERY = gql`
-  query Query {
-    generalInformations {
-      name
-      desc
-    }
+  query Query($where: generalInformationWhereInput!) {
+  generalInformations(where: $where) {
+    name
+    desc
   }
+}
 `;
 
 const RegistrationFee = () => {
@@ -30,8 +30,17 @@ const RegistrationFee = () => {
   const [error, setError] = useState(null);
 
   const { data: data1, loading: load1, error: err1 } = useQuery(REGISTRATION_DETAILS_QUERY);
-  const { data: data2, loading: load2, error: err2 } = useQuery(GENERAL_INFORMATION_QUERY);
-
+  const { data: data2, loading: load2, error: err2 } = useQuery(GENERAL_INFORMATION_QUERY,{
+    variables:{
+      where:{
+        name:{
+          in:["Early bird dates", "Regular dates"]
+        }
+      }
+    }
+  });
+  console.log(data2);
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
