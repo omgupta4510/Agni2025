@@ -12,6 +12,7 @@ import Registration from '@components/Registration/Registraion'
 import Sponsorship from './components/Sponsorship/Sponsorship'
 import BestPaperAwards from '@components/Award/paperAward'
 import BestPosterAwards from '@components/Award/posterAward'
+import Events from '@components/Events/Events'
 import Authors from '@components/Authors/Authors'
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/sponshorship" element={<Sponsorship/>}/>
           <Route path="/paperaward" element={<BestPaperAwards/>} />
           <Route path="/posteraward" element={<BestPosterAwards/>} />
+          <Route path='/events' element={<Events/>}/>
           <Route path="/authors" element={<Authors/>}/>
           <Route path="/registration" element={<Registration/>}/>
         </Routes>
