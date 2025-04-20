@@ -18,6 +18,8 @@ const Events=()=>{
     if(loading)return <div>Loading...</div>
     if(error)return <div>Error..</div>
     const eventdata=data?.eventDetails;
+    console.log(!eventdata);
+    
     return(
         <div className="event-page">
             <Header/>
@@ -34,8 +36,8 @@ const Events=()=>{
             
             }}>
             </h2>
-                {!eventdata && (<h1>Yet to be Announced...</h1>)}
-                {eventdata && (eventdata.map((item, index) => (
+                {eventdata && (<h1>Yet to be Announced...</h1>)}
+                {!eventdata && (eventdata.map((item, index) => (
                     <div
                     className={`event-block ${index % 2 !== 0 ? 'reverse' : ''}`}
                     key={index}
