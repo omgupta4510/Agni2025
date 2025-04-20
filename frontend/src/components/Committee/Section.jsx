@@ -10,6 +10,7 @@ const Section = ({ title, members }) => {
           <div
             key={index}
             className="flex flex-col items-center text-center border rounded-2xl shadow-lg shadow-green-500 p-6 w-[280px] bg-white transition-transform duration-300 hover:scale-105"
+            data-aos="flip-left"
           >
             <img
               src={"/OC/"+member.photoUrl}

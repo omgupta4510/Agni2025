@@ -31,6 +31,7 @@ const Events=()=>{
                     <div
                     className={`event-block ${index % 2 !== 0 ? 'reverse' : ''}`}
                     key={index}
+                    data-aos="zoom-out-right"
                     >
                     <div className="event-image">
                         <img src={item.photoUrl} alt={item.name} />

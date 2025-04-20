@@ -68,7 +68,8 @@ const Speaker = () => {
   return (
     <div className="speaker-page">
     <Header />
-    <div className="speaker-page-alt">
+    <div className="speaker-page-alt"
+     >
       
       <h1 className="speaker-heading">{speakertype}</h1>
       {speakers.length === 0 && (
@@ -78,6 +79,7 @@ const Speaker = () => {
         <div
           className={`speaker-row ${index % 2 === 0 ? 'row-normal' : 'row-reverse'}`}
           key={index}
+          data-aos="fade-up"
         >
           <div className="speaker-img">
             <img src={speaker.photoUrl} alt={speaker.name} />
