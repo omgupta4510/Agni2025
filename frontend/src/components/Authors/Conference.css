@@ -1,45 +1,61 @@
 .track-container {
-    grid-row: auto;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .track-title {
-        text-align: center;
-        font-size: 35px;
-        color: #1a73e8;
-        margin-bottom: 30px;
-        font-weight: bold;
-  }
-  
-  .track-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    font-weight: 500;
-    margin-bottom: 30px;
-  }
-  
-  .track-card h2 {
-    font-size: 24px;
-  font-weight: 523;
-  color: #3d9416;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.track-card-glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.track-card-glass:hover {
+  transform: translateY(-5px);
+}
+
+.track-heading {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #1769aa;
   margin-bottom: 20px;
-  text-decoration:underline;
-  }
-  
-  .track-card ul {
-    list-style-type: none; 
-    padding-left: 1px;       
-    margin: 0;
-  }
-  
-  .track-card li {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #444;
-  }
-  
+  background: linear-gradient(to right, #97ac5a, #9d4747);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
+}
+
+.track-card-glass ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.track-card-glass li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.2s ease-in-out;
+}
+
+.track-card-glass li:hover {
+  padding-left: 8px;
+  color: #26c781;
+}
+
+.bullet {
+  font-weight: bold;
+  margin-right: 6px;
+  color: #e51616;
+}

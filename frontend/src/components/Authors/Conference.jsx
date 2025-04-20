@@ -28,25 +28,23 @@ const conferenceData = {
 const Conference = () => {
   return (
     <div className="track-container">
-      <h1 className="track-title">Conference Tracks</h1>
-
-      <div className="track-card">
-        <h2>Conference Tracks</h2>
+      <div className="track-card-glass" data-aos="fade-up-right">
+        <h2 className="track-heading">🌱 Conference Tracks</h2>
         <ul>
           {conferenceData["Conference Trecks"].map((track) => (
             <li key={track.number}>
-              <strong> {track.number}.</strong> {track.desc}
+              <span className="bullet">{track.number}.</span> {track.desc}
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="track-card">
-        <h2>Special Tracks</h2>
+      <div className="track-card-glass" data-aos="fade-up-left">
+        <h2 className="track-heading">💡 Special Tracks</h2>
         <ul>
           {conferenceData["Special Trecks"].map((track) => (
             <li key={track.number}>
-              <strong> {track.number}.</strong> {track.desc}
+              <span className="bullet">{track.number}.</span> {track.desc}
             </li>
           ))}
         </ul>

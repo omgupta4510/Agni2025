@@ -15,9 +15,9 @@ const VenueContact= () => {
            venue and contact details:
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-20 pr-20 pl-20 pb-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-20 pr-20 pl-8 pb-0">
             {/* Contact Card */}
-            <Card className="shadow-lg rounded-2xl">
+            <Card className="shadow-lg rounded-2xl" data-aos="fade-right">
                 <CardContent className="p-6">
                 <h2 className="text-xl font-semibold mb-4">Contact</h2>
                 <h3 className="text-lg font-bold">General Chairs  AGNI-S 2025 </h3>
@@ -38,7 +38,7 @@ const VenueContact= () => {
             </Card>
 
             {/* Venue Card */}
-            <Card className="shadow-lg rounded-2xl">
+            <Card className="shadow-lg rounded-2xl" data-aos="fade-left">
                 <CardContent className="p-6">
                 <h2 className="text-xl font-semibold mb-4">Venue</h2>
                 <div className="w-full h-64">
@@ -56,9 +56,7 @@ const VenueContact= () => {
                 </CardContent>
             </Card>
         </div>
-
         <TouristAttraction/>
-  
     </div>
     );
   };
