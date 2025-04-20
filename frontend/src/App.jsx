@@ -30,24 +30,29 @@ function App() {
   }, []);
 
   return (
-    <main>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/dates" element={<ImportantDates />} />
-        <Route path="/speaker" element={<Speaker />} />
-        <Route path="/committee" element={<Committee />} />
-        <Route path="/venuecontact" element={<VenueContact />} />
-        <Route path="/sponshorship" element={<Sponsorship />} />
-        <Route path="/paperaward" element={<BestPaperAwards />} />
-        <Route path="/posteraward" element={<BestPosterAwards />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/authors" element={<Authors />} />
-        <Route path="/registration" element={<Registration />} />
-      </Routes>
+    <div className="flex flex-col min-h-screen foot">
+              <Navbar />
+    <main className='flex-grow'>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dates" element={<ImportantDates/>}/>
+          <Route path="/speaker" element={<Speaker/>}/>
+          <Route path="/committee" element={<Committee/>}/>
+          <Route path="/venuecontact" element={<VenueContact/>}/>
+          <Route path="/sponshorship" element={<Sponsorship/>}/>
+          <Route path="/paperaward" element={<BestPaperAwards/>} />
+          <Route path="/posteraward" element={<BestPosterAwards/>} />
+          <Route path='/events' element={<Events/>}/>
+          <Route path="/authors" element={<Authors/>}/>
+          <Route path="/registration" element={<Registration/>}/>
+        </Routes>
+       
     </main>
-  );
+    <Footer/>
+    </div>
+    
+  )
 }
 
 export default App;
