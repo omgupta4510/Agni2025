@@ -1,19 +1,177 @@
-{
-    "Conference Trecks": [
-        {"number":1,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"},
-        {"number":2,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"},
-        {"number":3,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"},
-        {"number":4,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"},
-        {"number":5,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"},
-        {"number":6,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"}
-    ],
-    "Special Trecks": [
-        {"number":1,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"},
-        {"number":2,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"},
-        {"number":3,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"},
-        {"number":4,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"},
-        {"number":5,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"},
-        {"number":6,"desc":"Power and Energy conversions for Sustainable Energy and Transportation Systems"}
-    ]
-
-}
+[
+    {
+      "id": 1,
+      "desc": "Solar Power Innovations (Perovskite cells, floating solar)",
+      "number": 1
+    },
+    {
+      "id": 2,
+      "desc": "Wind Energy Advancements (Offshore wind, high-efficiency turbines)",
+      "number": 2
+    },
+    {
+      "id": 3,
+      "desc": "Green Hydrogen and Fuel Cells",
+      "number": 3
+    },
+    {
+      "id": 4,
+      "desc": "Geothermal and Tidal Energy",
+      "number": 4
+    },
+    {
+      "id": 5,
+      "desc": "Energy Storage & Battery Technologies (Solid-state, flow batteries)",
+      "number": 5
+    },
+    {
+      "id": 6,
+      "desc": "Carbon Capture, Utilization, and Storage (CCUS)",
+      "number": 6
+    },
+    {
+      "id": 7,
+      "desc": "Direct Air Capture (DAC) Technologies",
+      "number": 7
+    },
+    {
+      "id": 8,
+      "desc": "Carbon Offsetting and Trading Mechanisms",
+      "number": 8
+    },
+    {
+      "id": 9,
+      "desc": "Industrial-Decarbonization Strategies",
+      "number": 9
+    },
+    {
+      "id": 10,
+      "desc": "Low-Carbon Manufacturing and Supply Chains",
+      "number": 10
+    },
+    {
+      "id": 11,
+      "desc": "Eco-friendly Materials and Biodegradable Alternatives",
+      "number": 11
+    },
+    {
+      "id": 12,
+      "desc": "Waste-to-Energy and Waste Management Innovations",
+      "number": 12
+    },
+    {
+      "id": 13,
+      "desc": "Circular Economy Business Models (Product life extension, remanufacturing)",
+      "number": 13
+    },
+    {
+      "id": 14,
+      "desc": "Sustainable Packaging Solutions",
+      "number": 14
+    },
+    {
+      "id": 15,
+      "desc": "Blockchain for Sustainable Supply Chains",
+      "number": 15
+    },
+    {
+      "id": 16,
+      "desc": "Energy-Efficient Buildings & Retrofitting",
+      "number": 16
+    },
+    {
+      "id": 17,
+      "desc": "Smart Grids and Decentralized Energy Systems",
+      "number": 17
+    },
+    {
+      "id": 18,
+      "desc": "Sustainable Urban Mobility (EVs, public transport electrification)",
+      "number": 18
+    },
+    {
+      "id": 19,
+      "desc": "Green Roofing & Vertical Forests",
+      "number": 19
+    },
+    {
+      "id": 20,
+      "desc": "Water Management & Conservation Technologies",
+      "number": 20
+    },
+    {
+      "id": 21,
+      "desc": "Nature-Based Solutions (Reforestation, blue carbon initiatives)",
+      "number": 21
+    },
+    {
+      "id": 22,
+      "desc": "Climate Change Adaptation Policies",
+      "number": 22
+    },
+    {
+      "id": 23,
+      "desc": "Sustainable Agriculture & Regenerative Farming",
+      "number": 23
+    },
+    {
+      "id": 24,
+      "desc": "AI & Big Data for Climate Monitoring",
+      "number": 24
+    },
+    {
+      "id": 25,
+      "desc": "Corporate Net-Zero Roadmaps & Sustainability Reporting",
+      "number": 25
+    },
+    {
+      "id": 26,
+      "desc": "Green Finance & Sustainable Investing",
+      "number": 26
+    },
+    {
+      "id": 27,
+      "desc": "ESG Regulations & Compliance",
+      "number": 27
+    },
+    {
+      "id": 28,
+      "desc": "Stakeholder Engagement in Sustainability",
+      "number": 28
+    },
+    {
+      "id": 29,
+      "desc": "Sustainable Supply Chain Management",
+      "number": 29
+    },
+    {
+      "id": 30,
+      "desc": "UN Sustainable Development Goals (SDGs) & Climate Agreements",
+      "number": 30
+    },
+    {
+      "id": 31,
+      "desc": "Green Policy Innovations & Government Incentives",
+      "number": 31
+    },
+    {
+      "id": 32,
+      "desc": "Carbon Taxation & Emission Regulations",
+      "number": 32
+    },
+    {
+      "id": 33,
+      "desc": "Green Technology Accelerators for Climate Action",
+      "number": 33
+    },
+    {
+      "id": 34,
+      "desc": "Green Public Procurement Strategies",
+      "number": 34
+    },
+    {
+      "id": 35,
+      "desc": "Any other topic related to Energy & Sustainability",
+      "number": 35
+    }
+  ]

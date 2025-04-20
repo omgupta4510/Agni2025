@@ -6,7 +6,7 @@ import { CheckCircle } from 'lucide-react';
 import CountdownTimer from "./CountdownTimer";
 import Notice from "./Notice";
 import HomeDate from "./HomeDate";
-
+import { gql, useQuery } from "@apollo/client";
 
 const subThemes = [
   "Solar Power Innovations (Perovskite cells, floating solar)",
@@ -45,8 +45,34 @@ const subThemes = [
   "Green Public Procurement Strategies",
   "Any other topic related to Energy & Sustainability"
 ];
+const ANNOUNCEMENT_QUERY = gql`
+  query Query($where: generalInformationWhereInput!) {
+    generalInformations(where: $where) {
+      name
+      desc
+    }
+  }
+`;
+const Subtheme_Query=gql`
+query Subthemes {
+  subthemes {
+    number
+    desc
+  }
+}
+`;
 
 const Home = () => {
+  const {loading,error,data}=useQuery(Subtheme_Query);
+  if(loading){
+    return <div>Loading....</div>;
+  }
+  if(error){
+    return <div>Error</div>
+  }
+  console.log(data);
+  const subThemesData = data?.subthemes?.slice().sort((a, b) => a.number - b.number);
+  
   return (
     <div className="relative">
       {/* Navbar */}
@@ -70,7 +96,7 @@ const Home = () => {
         {/* Poster Image */}
         <div className="w-full lg:w-1/4">
           <img
-            src="logonitt.png"
+            src="agni.png"
             alt="Environment 2024 Poster"
             className="rounded-xl shadow-lg w-full max-w-[400px] max-h-[400px] object-contain"
           />
@@ -98,35 +124,14 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Remaining Text Content Below */}
-      <div
-        className="px-4 md:px-8 lg:px-16 pb-16 bg-white"
-        data-aos="fade-up" // 
-      >
-        <p className="text-gray-700 mb-4 text-justify leading-relaxed">
-          The conference brings together researchers, industry experts, and policymakers to address
-          critical challenges in energy efficiency, renewable energy systems, carbon neutrality, and
-          environmental sustainability. Key themes include net-zero strategies, energy storage solutions,
-          green hydrogen technologies, smart grids, climate change mitigation, and sustainable materials.
-          The event features keynote addresses by leading experts, technical sessions, poster presentations,
-          and interactive workshops.
-        </p>
-        <p className="text-gray-700 text-justify leading-relaxed">
-          AGNI-S aims to inspire collaboration and innovation, emphasizing actionable solutions for global
-          energy and environmental challenges. With a strong focus on green technologies and sustainability,
-          AGNI-S represents a vital step toward achieving long-term environmental goals and fostering a
-          resilient, low-carbon future.
-        </p>
-      </div>
-
       <div className="mx-auto w-11/12 md:w-5/6 lg:w-4/5">
-        <h1 className="text-center text-3xl font-bold mb-4 text-gray-800 ">AGNIS THEME</h1>
+        {/* <h1 className="text-center text-3xl font-bold mb-4 text-gray-800 ">AGNI-S 2025 THEME</h1> */}
         <div className="w-20 h-1 bg-green-500 mb-6 mx-auto" />
         <section className="relative px-4 py-16 md:px-8 lg:px-10 bg-white shadow-2xl shadow-green-200 rounded-xl border border-green-500 min-h-screen">
           {/* Sub-Themes Heading with Rounded Styling */}
           <div className="relative flex justify-center mb-12">
             <h2 className="relative z-10 px-8 py-3 text-3xl font-bold text-green-700 bg-white rounded-full border border-green-300">
-              Sub-Themes
+              AGNI-S Sub-Themes
             </h2>
 
             {/* Vertical Line (full height, starting from the top of the section) */}
@@ -136,7 +141,7 @@ const Home = () => {
           {/* Timeline Items */}
           <div className="relative z-10">
             <div className="flex flex-col gap-5">
-              {subThemes.map((theme, index) => (
+              {subThemesData.map((theme, index) => (
                 <div
                   key={index}
                   className={`flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
@@ -148,7 +153,7 @@ const Home = () => {
                     <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-green-600">
                       <div className="flex items-center gap-1">
                         <CheckCircle className="text-green-600" />
-                        <p className="text-gray-800 text-lg font-medium">{theme}</p>
+                        <p className="text-gray-800 text-lg font-medium">{theme.desc}</p>
                       </div>
                     </div>
                   </div>

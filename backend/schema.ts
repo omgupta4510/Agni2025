@@ -115,6 +115,7 @@ export const lists = {
       event: text({ validation: { isRequired: true } }),
       date: text({ validation: { isRequired: true } }),
       description: text(),
+      important:checkbox({defaultValue:false}),
     },
   }),
   registrationDetails: list({
@@ -157,19 +158,38 @@ export const lists = {
         type:text({validation:{isRequired:true}}),
         name:text({validation:{isRequired:true}})
       }}),
-      eventDetails:list({
+    eventDetails:list({
+      access:allowAll,
+      fields:{
+        name:text({validation:{isRequired:true}}),
+        desc:text(textfeild),
+        photoUrl:text(),
+        link:text(),
+      }}),
+    generalInformation:list({
+      access:allowAll,
+      fields:{
+        name:text({validation:{isRequired:true}}),
+        desc:text(textfeild)
+      }
+    }),
+    subthemes:list({
+      access:allowAll,
+      fields:{
+        number:integer({validation:{isRequired:true}}),
+        desc:text({validation:{isRequired:true}}),
+      }}),
+      notices:list({
         access:allowAll,
         fields:{
-          name:text({validation:{isRequired:true}}),
+          title:text({validation:{isRequired:true}}),
           desc:text(textfeild),
-          photoUrl:text(),
-          link:text(),
+          date:text({validation:{isRequired:true}}),
+          isNew:checkbox({
+            defaultValue: false
+          }),
+          createdAt: timestamp({
+            defaultValue: { kind: 'now' },
+          }),
         }}),
-      generalInformation:list({
-        access:allowAll,
-        fields:{
-          name:text({validation:{isRequired:true}}),
-          desc:text(textfeild)
-        }
-      })
 } satisfies Lists;

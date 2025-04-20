@@ -62,10 +62,11 @@ model sponsorship {
 }
 
 model importantDates {
-  id          String @id @default(cuid())
-  event       String @default("")
-  date        String @default("")
-  description String @default("")
+  id          String  @id @default(cuid())
+  event       String  @default("")
+  date        String  @default("")
+  description String  @default("")
+  important   Boolean @default(false)
 }
 
 model registrationDetails {
@@ -113,4 +114,19 @@ model generalInformation {
   id   String @id @default(cuid())
   name String @default("")
   desc String @default("") @mysql.VarChar(6000)
+}
+
+model subthemes {
+  id     String @id @default(cuid())
+  number Int
+  desc   String @default("")
+}
+
+model notices {
+  id        String    @id @default(cuid())
+  title     String    @default("")
+  desc      String    @default("") @mysql.VarChar(6000)
+  date      String    @default("")
+  isNew     Boolean   @default(false)
+  createdAt DateTime? @default(now())
 }
