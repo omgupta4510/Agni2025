@@ -83,7 +83,7 @@ const Navbar = () => {
         </li>
         <li><a href="/">Events</a></li>
         <li><a href="/sponshorship">Sponsorship</a></li>
-        <li><a href="/">Publications</a></li>
+        <li><a href="/registration">Publications</a></li>
         <li><a href="/venuecontact">Contact</a></li>
       </ul>
     </nav>
