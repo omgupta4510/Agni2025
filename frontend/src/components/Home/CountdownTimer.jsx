@@ -41,7 +41,7 @@ const CountdownTimer = () => {
     {timeBoxes.map((box, index) => (
       <div
         key={index}
-        className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-lg border-2 border-green-500 shadow-[0_8px_20px_rgba(0,0,0,0.3)] bg-white"
+        className="w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-full aspect-square border-2 border-green-500 shadow-[0_8px_20px_rgba(0,0,0,0.25)] bg-white"
       >
         <p className="text-3xl font-bold text-gray-900">{box.value}</p>
         <span className="text-sm font-medium tracking-wide text-gray-600">
