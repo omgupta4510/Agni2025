@@ -123,7 +123,7 @@ export const lists = {
       native:select({
         options: [
           {label: 'Indian', value: 'indians'},
-          {label: 'foreign', value: 'foreign'},
+          {label: 'Foreign', value: 'foreign'},
         ]
       }),
       particulars: text({ validation: { isRequired: true } }),
@@ -150,4 +150,26 @@ export const lists = {
         desc:text(textfeild)
       }
     }),
+    trecks:list({
+      access:allowAll,
+      fields:{
+        number:integer({validation:{isRequired:true}}),
+        type:text({validation:{isRequired:true}}),
+        name:text({validation:{isRequired:true}})
+      }}),
+      eventDetails:list({
+        access:allowAll,
+        fields:{
+          name:text({validation:{isRequired:true}}),
+          desc:text(textfeild),
+          photoUrl:text(),
+          link:text(),
+        }}),
+      generalInformation:list({
+        access:allowAll,
+        fields:{
+          name:text({validation:{isRequired:true}}),
+          desc:text(textfeild)
+        }
+      })
 } satisfies Lists;
