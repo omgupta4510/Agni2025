@@ -1,7 +1,7 @@
 import React from "react";
 const Header=()=>{
     return (
-        <div className="bg-white  shadow-md px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="bg-white  shadow-md px-10 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left Logo */}
           <img
             src="agni.png"
@@ -30,9 +30,9 @@ const Header=()=>{
     
           {/* Right Logo */}
           <img
-            src="download.png"
+            src="nitlogo1.png"
             alt="NIT Trichy"
-            className="h-30 object-contain"
+            className="h-[13rem] w-[auto] object-contain"
           />
         </div>
       );

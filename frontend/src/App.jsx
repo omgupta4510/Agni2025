@@ -14,18 +14,20 @@ import BestPaperAwards from '@components/Award/paperAward'
 import BestPosterAwards from '@components/Award/posterAward'
 import Events from '@components/Events/Events'
 import Authors from '@components/Authors/Authors'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
-//   const {loading,error, data} = useQuery(gql`
-//     query Query {
-//   abouts {
-//     id
-//     title
-//     description
-//   }
-// }`);
-// console.log(data?.abouts);
+  const [count, setCount] = useState(0);
+
+  // AOS (Animate On Scroll) initialization
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen foot">
@@ -53,4 +55,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
