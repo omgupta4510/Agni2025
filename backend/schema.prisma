@@ -93,3 +93,24 @@ model toursit {
   photoUrl String @default("")
   desc     String @default("") @mysql.VarChar(6000)
 }
+
+model trecks {
+  id     String @id @default(cuid())
+  number Int
+  type   String @default("")
+  name   String @default("")
+}
+
+model eventDetails {
+  id       String @id @default(cuid())
+  name     String @default("")
+  desc     String @default("") @mysql.VarChar(6000)
+  photoUrl String @default("")
+  link     String @default("")
+}
+
+model generalInformation {
+  id   String @id @default(cuid())
+  name String @default("")
+  desc String @default("") @mysql.VarChar(6000)
+}

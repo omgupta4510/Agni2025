@@ -606,6 +606,141 @@ input toursitCreateInput {
   desc: String
 }
 
+type trecks {
+  id: ID!
+  number: Int
+  type: String
+  name: String
+}
+
+input trecksWhereUniqueInput {
+  id: ID
+}
+
+input trecksWhereInput {
+  AND: [trecksWhereInput!]
+  OR: [trecksWhereInput!]
+  NOT: [trecksWhereInput!]
+  id: IDFilter
+  number: IntFilter
+  type: StringFilter
+  name: StringFilter
+}
+
+input trecksOrderByInput {
+  id: OrderDirection
+  number: OrderDirection
+  type: OrderDirection
+  name: OrderDirection
+}
+
+input trecksUpdateInput {
+  number: Int
+  type: String
+  name: String
+}
+
+input trecksUpdateArgs {
+  where: trecksWhereUniqueInput!
+  data: trecksUpdateInput!
+}
+
+input trecksCreateInput {
+  number: Int
+  type: String
+  name: String
+}
+
+type eventDetails {
+  id: ID!
+  name: String
+  desc: String
+  photoUrl: String
+  link: String
+}
+
+input eventDetailsWhereUniqueInput {
+  id: ID
+}
+
+input eventDetailsWhereInput {
+  AND: [eventDetailsWhereInput!]
+  OR: [eventDetailsWhereInput!]
+  NOT: [eventDetailsWhereInput!]
+  id: IDFilter
+  name: StringFilter
+  desc: StringFilter
+  photoUrl: StringFilter
+  link: StringFilter
+}
+
+input eventDetailsOrderByInput {
+  id: OrderDirection
+  name: OrderDirection
+  desc: OrderDirection
+  photoUrl: OrderDirection
+  link: OrderDirection
+}
+
+input eventDetailsUpdateInput {
+  name: String
+  desc: String
+  photoUrl: String
+  link: String
+}
+
+input eventDetailsUpdateArgs {
+  where: eventDetailsWhereUniqueInput!
+  data: eventDetailsUpdateInput!
+}
+
+input eventDetailsCreateInput {
+  name: String
+  desc: String
+  photoUrl: String
+  link: String
+}
+
+type generalInformation {
+  id: ID!
+  name: String
+  desc: String
+}
+
+input generalInformationWhereUniqueInput {
+  id: ID
+}
+
+input generalInformationWhereInput {
+  AND: [generalInformationWhereInput!]
+  OR: [generalInformationWhereInput!]
+  NOT: [generalInformationWhereInput!]
+  id: IDFilter
+  name: StringFilter
+  desc: StringFilter
+}
+
+input generalInformationOrderByInput {
+  id: OrderDirection
+  name: OrderDirection
+  desc: OrderDirection
+}
+
+input generalInformationUpdateInput {
+  name: String
+  desc: String
+}
+
+input generalInformationUpdateArgs {
+  where: generalInformationWhereUniqueInput!
+  data: generalInformationUpdateInput!
+}
+
+input generalInformationCreateInput {
+  name: String
+  desc: String
+}
+
 """
 The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 """
@@ -672,6 +807,24 @@ type Mutation {
   updateToursits(data: [toursitUpdateArgs!]!): [toursit]
   deletetoursit(where: toursitWhereUniqueInput!): toursit
   deleteToursits(where: [toursitWhereUniqueInput!]!): [toursit]
+  createtrecks(data: trecksCreateInput!): trecks
+  createTrecks(data: [trecksCreateInput!]!): [trecks]
+  updatetrecks(where: trecksWhereUniqueInput!, data: trecksUpdateInput!): trecks
+  updateTrecks(data: [trecksUpdateArgs!]!): [trecks]
+  deletetrecks(where: trecksWhereUniqueInput!): trecks
+  deleteTrecks(where: [trecksWhereUniqueInput!]!): [trecks]
+  createeventDetails(data: eventDetailsCreateInput!): eventDetails
+  createEventDetails(data: [eventDetailsCreateInput!]!): [eventDetails]
+  updateeventDetails(where: eventDetailsWhereUniqueInput!, data: eventDetailsUpdateInput!): eventDetails
+  updateEventDetails(data: [eventDetailsUpdateArgs!]!): [eventDetails]
+  deleteeventDetails(where: eventDetailsWhereUniqueInput!): eventDetails
+  deleteEventDetails(where: [eventDetailsWhereUniqueInput!]!): [eventDetails]
+  creategeneralInformation(data: generalInformationCreateInput!): generalInformation
+  createGeneralInformations(data: [generalInformationCreateInput!]!): [generalInformation]
+  updategeneralInformation(where: generalInformationWhereUniqueInput!, data: generalInformationUpdateInput!): generalInformation
+  updateGeneralInformations(data: [generalInformationUpdateArgs!]!): [generalInformation]
+  deletegeneralInformation(where: generalInformationWhereUniqueInput!): generalInformation
+  deleteGeneralInformations(where: [generalInformationWhereUniqueInput!]!): [generalInformation]
   endSession: Boolean!
   authenticateUserWithPassword(email: String!, password: String!): UserAuthenticationWithPasswordResult
   createInitialUser(data: CreateInitialUserInput!): UserAuthenticationWithPasswordSuccess!
@@ -722,6 +875,13 @@ type Query {
   toursit(where: toursitWhereUniqueInput!): toursit
   toursits(where: toursitWhereInput! = {}, orderBy: [toursitOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: toursitWhereUniqueInput): [toursit!]
   toursitsCount(where: toursitWhereInput! = {}): Int
+  trecks(where: trecksWhereInput! = {}, orderBy: [trecksOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: trecksWhereUniqueInput): [trecks!]
+  trecksCount(where: trecksWhereInput! = {}): Int
+  eventDetails(where: eventDetailsWhereInput! = {}, orderBy: [eventDetailsOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: eventDetailsWhereUniqueInput): [eventDetails!]
+  eventDetailsCount(where: eventDetailsWhereInput! = {}): Int
+  generalInformation(where: generalInformationWhereUniqueInput!): generalInformation
+  generalInformations(where: generalInformationWhereInput! = {}, orderBy: [generalInformationOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: generalInformationWhereUniqueInput): [generalInformation!]
+  generalInformationsCount(where: generalInformationWhereInput! = {}): Int
   keystone: KeystoneMeta!
   authenticatedItem: AuthenticatedItem
 }
