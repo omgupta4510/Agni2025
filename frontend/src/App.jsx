@@ -47,14 +47,6 @@ function App() {
         </Routes>
        
     </main>
-    <div className="flex justify-start nit">
-        <img src="c1.PNG" alt="Logo" className="nitlogo" style={{
-          height:'184px',
-          width:'1309px',
-           margin: '3px 1px 0px 1px'
-        }} />
-        <img src='agni.png' style={{height:'184px', width:'209px'}}/>
-      </div>
     <Footer/>
     </div>
     
