@@ -17,7 +17,7 @@ const NoticeBoard = () => {
   return (
     <div className="w-full max-w-2xl mx-auto p-4 bg-background rounded-xl border border-border shadow">
       <h2 className="text-lg font-semibold mb-4 border-b pb-2 border-border">Notices/News</h2>
-      <div className="space-y-4 h-[500px] overflow-y-auto pr-2 custom-scrollbar">
+      <div className="space-y-4 h-[500px] overflow-y-auto pr-2 custom-scrollbar overflow-y-scroll scrollbar-hide">
         {notices.map((notice, idx) => (
           <div key={idx} className="relative p-4 pl-6 bg-card rounded-xl border border-border shadow-sm">
             <div className="absolute top-0 bottom-0 left-0 w-1 bg-green-500 rounded-tl-xl rounded-bl-xl" />

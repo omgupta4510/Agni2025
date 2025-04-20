@@ -55,7 +55,7 @@ const ImportantDates = () => {
        <Navbar />
     
         <img
-          src="nitt.png"
+          src="nitt.jpeg"
           alt="Solar panels under blue sky"
           className="w-full h-full object-cover"
         />
