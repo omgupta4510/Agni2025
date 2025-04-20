@@ -79,7 +79,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const slides = [
   {
-    image: "nitt.png",
+    image: "nitt.jpeg",
     alt: "NIT Trichy",
   },
   {

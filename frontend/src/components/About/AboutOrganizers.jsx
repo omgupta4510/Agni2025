@@ -45,7 +45,7 @@ const AboutOrganizers = () => {
       <div className="relative h-[60vh] w-full">
     
         <img
-          src="nitt.png"
+          src="nitt.jpg"
           alt="Solar panels under blue sky"
           className="w-full h-full object-cover"
         />

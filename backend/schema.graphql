@@ -556,6 +556,56 @@ input speakersCreateInput {
   photoUrl: String
 }
 
+type toursit {
+  id: ID!
+  name: String
+  location: String
+  photoUrl: String
+  desc: String
+}
+
+input toursitWhereUniqueInput {
+  id: ID
+}
+
+input toursitWhereInput {
+  AND: [toursitWhereInput!]
+  OR: [toursitWhereInput!]
+  NOT: [toursitWhereInput!]
+  id: IDFilter
+  name: StringFilter
+  location: StringFilter
+  photoUrl: StringFilter
+  desc: StringFilter
+}
+
+input toursitOrderByInput {
+  id: OrderDirection
+  name: OrderDirection
+  location: OrderDirection
+  photoUrl: OrderDirection
+  desc: OrderDirection
+}
+
+input toursitUpdateInput {
+  name: String
+  location: String
+  photoUrl: String
+  desc: String
+}
+
+input toursitUpdateArgs {
+  where: toursitWhereUniqueInput!
+  data: toursitUpdateInput!
+}
+
+input toursitCreateInput {
+  name: String
+  location: String
+  photoUrl: String
+  desc: String
+}
+
 """
 The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 """
@@ -616,6 +666,12 @@ type Mutation {
   updateSpeakers(data: [speakersUpdateArgs!]!): [speakers]
   deletespeakers(where: speakersWhereUniqueInput!): speakers
   deleteSpeakers(where: [speakersWhereUniqueInput!]!): [speakers]
+  createtoursit(data: toursitCreateInput!): toursit
+  createToursits(data: [toursitCreateInput!]!): [toursit]
+  updatetoursit(where: toursitWhereUniqueInput!, data: toursitUpdateInput!): toursit
+  updateToursits(data: [toursitUpdateArgs!]!): [toursit]
+  deletetoursit(where: toursitWhereUniqueInput!): toursit
+  deleteToursits(where: [toursitWhereUniqueInput!]!): [toursit]
   endSession: Boolean!
   authenticateUserWithPassword(email: String!, password: String!): UserAuthenticationWithPasswordResult
   createInitialUser(data: CreateInitialUserInput!): UserAuthenticationWithPasswordSuccess!
@@ -663,6 +719,9 @@ type Query {
   registrationDetailsCount(where: registrationDetailsWhereInput! = {}): Int
   speakers(where: speakersWhereInput! = {}, orderBy: [speakersOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: speakersWhereUniqueInput): [speakers!]
   speakersCount(where: speakersWhereInput! = {}): Int
+  toursit(where: toursitWhereUniqueInput!): toursit
+  toursits(where: toursitWhereInput! = {}, orderBy: [toursitOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: toursitWhereUniqueInput): [toursit!]
+  toursitsCount(where: toursitWhereInput! = {}): Int
   keystone: KeystoneMeta!
   authenticatedItem: AuthenticatedItem
 }
