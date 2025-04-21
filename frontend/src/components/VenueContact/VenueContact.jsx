@@ -3,8 +3,26 @@ import Header from '../Header/Header';
 import { Card, CardContent } from '../ui/card';
 import { Mail, MapPin } from "lucide-react";
 import TouristAttraction from '@components/TouristAttraction/TouristAttraction';
+import { useQuery, gql } from '@apollo/client';
 
 const VenueContact= () => {
+    const {loading,error,data}=useQuery(gql`
+    query Query($where: generalInformationWhereInput!) {
+  generalInformations(where: $where) {
+    name
+    desc
+  }
+}
+    `,{
+        variables:{
+            where:{
+                name:{equals:"mailid"}
+            }
+        }
+    });
+    if(loading)return <div>Loading...</div>;
+    if(error)return <div>Error...</div>;
+    const mailid=data?.generalInformations[0].desc;
     return (
         <div className="min-h-screen flex flex-col bg-white pt-20">
         <div className="relative w-full">
@@ -26,7 +44,7 @@ const VenueContact= () => {
                 <div className="flex items-center mb-2">
                     <Mail className="w-4 h-4 mr-2 text-green-600" />
                     <a href="" className="text-green-600 hover:underline">
-                        dummmy@gmail.com
+                        {mailid}
                     </a>
                 </div>
 

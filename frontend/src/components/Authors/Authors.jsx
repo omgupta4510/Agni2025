@@ -24,8 +24,10 @@ const Authors = () => {
     });
     if(loading)return <div>Loading...</div>
     if(error)return <div>Error</div>
-    const submissionLink=data?.generalInformations[0].desc;    
-    const confdate=data?.generalInformations[1].desc;
+    console.log(data);
+    
+    const submissionLink=data?.generalInformations[1].desc;    
+    const confdate=data?.generalInformations[0].desc;
   return (
     <div>
       <div className="author-page" data-aos="fade-in">
@@ -50,7 +52,8 @@ const Authors = () => {
   </div>
 
   <div className="btn-wrapper" data-aos="zoom-in" data-aos-delay="300">
-    <a href={submissionLink} target="_blank"  rel="noopener noreferrer" className="hero-btn glow-btn">🚀 Submission Portal</a>
+    {submissionLink=="false" && (<div>Submission Portal  is not active now.</div>)}
+    {submissionLink!="false" && (<a href={submissionLink} target="_blank"  rel="noopener noreferrer" className="hero-btn glow-btn">🚀 Submission Portal</a>)}
   </div>
 
   <div className="conference-card" data-aos="fade-up" data-aos-delay="400">

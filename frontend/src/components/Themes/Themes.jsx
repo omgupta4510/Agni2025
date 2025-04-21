@@ -6,7 +6,7 @@ import { useQuery,gql } from '@apollo/client';
 import { CheckCircle } from 'lucide-react';
 const Themes = () => {
     const Subtheme_Query=gql`
-    query Subthemes {
+    query subthemes {
       subthemes {
         number
         desc

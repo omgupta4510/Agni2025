@@ -401,7 +401,7 @@ input sponsorshipCreateInput {
   addvertisement: String
 }
 
-type importantDates {
+type importantDate {
   id: ID!
   event: String
   date: String
@@ -409,14 +409,14 @@ type importantDates {
   important: Boolean
 }
 
-input importantDatesWhereUniqueInput {
+input importantDateWhereUniqueInput {
   id: ID
 }
 
-input importantDatesWhereInput {
-  AND: [importantDatesWhereInput!]
-  OR: [importantDatesWhereInput!]
-  NOT: [importantDatesWhereInput!]
+input importantDateWhereInput {
+  AND: [importantDateWhereInput!]
+  OR: [importantDateWhereInput!]
+  NOT: [importantDateWhereInput!]
   id: IDFilter
   event: StringFilter
   date: StringFilter
@@ -424,7 +424,7 @@ input importantDatesWhereInput {
   important: BooleanFilter
 }
 
-input importantDatesOrderByInput {
+input importantDateOrderByInput {
   id: OrderDirection
   event: OrderDirection
   date: OrderDirection
@@ -432,26 +432,26 @@ input importantDatesOrderByInput {
   important: OrderDirection
 }
 
-input importantDatesUpdateInput {
+input importantDateUpdateInput {
   event: String
   date: String
   description: String
   important: Boolean
 }
 
-input importantDatesUpdateArgs {
-  where: importantDatesWhereUniqueInput!
-  data: importantDatesUpdateInput!
+input importantDateUpdateArgs {
+  where: importantDateWhereUniqueInput!
+  data: importantDateUpdateInput!
 }
 
-input importantDatesCreateInput {
+input importantDateCreateInput {
   event: String
   date: String
   description: String
   important: Boolean
 }
 
-type registrationDetails {
+type registrationDetail {
   id: ID!
   native: String
   particulars: String
@@ -459,14 +459,14 @@ type registrationDetails {
   amt_regular: Int
 }
 
-input registrationDetailsWhereUniqueInput {
+input registrationDetailWhereUniqueInput {
   id: ID
 }
 
-input registrationDetailsWhereInput {
-  AND: [registrationDetailsWhereInput!]
-  OR: [registrationDetailsWhereInput!]
-  NOT: [registrationDetailsWhereInput!]
+input registrationDetailWhereInput {
+  AND: [registrationDetailWhereInput!]
+  OR: [registrationDetailWhereInput!]
+  NOT: [registrationDetailWhereInput!]
   id: IDFilter
   native: StringNullableFilter
   particulars: StringFilter
@@ -474,7 +474,7 @@ input registrationDetailsWhereInput {
   amt_regular: IntFilter
 }
 
-input registrationDetailsOrderByInput {
+input registrationDetailOrderByInput {
   id: OrderDirection
   native: OrderDirection
   particulars: OrderDirection
@@ -482,26 +482,26 @@ input registrationDetailsOrderByInput {
   amt_regular: OrderDirection
 }
 
-input registrationDetailsUpdateInput {
+input registrationDetailUpdateInput {
   native: String
   particulars: String
   amt_early_bird: Int
   amt_regular: Int
 }
 
-input registrationDetailsUpdateArgs {
-  where: registrationDetailsWhereUniqueInput!
-  data: registrationDetailsUpdateInput!
+input registrationDetailUpdateArgs {
+  where: registrationDetailWhereUniqueInput!
+  data: registrationDetailUpdateInput!
 }
 
-input registrationDetailsCreateInput {
+input registrationDetailCreateInput {
   native: String
   particulars: String
   amt_early_bird: Int
   amt_regular: Int
 }
 
-type speakers {
+type speaker {
   id: ID!
   type: String
   name: String
@@ -511,14 +511,14 @@ type speakers {
   photoUrl: String
 }
 
-input speakersWhereUniqueInput {
+input speakerWhereUniqueInput {
   id: ID
 }
 
-input speakersWhereInput {
-  AND: [speakersWhereInput!]
-  OR: [speakersWhereInput!]
-  NOT: [speakersWhereInput!]
+input speakerWhereInput {
+  AND: [speakerWhereInput!]
+  OR: [speakerWhereInput!]
+  NOT: [speakerWhereInput!]
   id: IDFilter
   type: StringFilter
   name: StringFilter
@@ -528,7 +528,7 @@ input speakersWhereInput {
   photoUrl: StringFilter
 }
 
-input speakersOrderByInput {
+input speakerOrderByInput {
   id: OrderDirection
   type: OrderDirection
   name: OrderDirection
@@ -538,7 +538,7 @@ input speakersOrderByInput {
   photoUrl: OrderDirection
 }
 
-input speakersUpdateInput {
+input speakerUpdateInput {
   type: String
   name: String
   designation: String
@@ -547,12 +547,12 @@ input speakersUpdateInput {
   photoUrl: String
 }
 
-input speakersUpdateArgs {
-  where: speakersWhereUniqueInput!
-  data: speakersUpdateInput!
+input speakerUpdateArgs {
+  where: speakerWhereUniqueInput!
+  data: speakerUpdateInput!
 }
 
-input speakersCreateInput {
+input speakerCreateInput {
   type: String
   name: String
   designation: String
@@ -611,52 +611,52 @@ input toursitCreateInput {
   desc: String
 }
 
-type tracks {
+type track {
   id: ID!
   number: Int
   type: String
   name: String
 }
 
-input tracksWhereUniqueInput {
+input trackWhereUniqueInput {
   id: ID
 }
 
-input tracksWhereInput {
-  AND: [tracksWhereInput!]
-  OR: [tracksWhereInput!]
-  NOT: [tracksWhereInput!]
+input trackWhereInput {
+  AND: [trackWhereInput!]
+  OR: [trackWhereInput!]
+  NOT: [trackWhereInput!]
   id: IDFilter
   number: IntFilter
   type: StringFilter
   name: StringFilter
 }
 
-input tracksOrderByInput {
+input trackOrderByInput {
   id: OrderDirection
   number: OrderDirection
   type: OrderDirection
   name: OrderDirection
 }
 
-input tracksUpdateInput {
+input trackUpdateInput {
   number: Int
   type: String
   name: String
 }
 
-input tracksUpdateArgs {
-  where: tracksWhereUniqueInput!
-  data: tracksUpdateInput!
+input trackUpdateArgs {
+  where: trackWhereUniqueInput!
+  data: trackUpdateInput!
 }
 
-input tracksCreateInput {
+input trackCreateInput {
   number: Int
   type: String
   name: String
 }
 
-type eventDetails {
+type eventDetail {
   id: ID!
   name: String
   desc: String
@@ -664,14 +664,14 @@ type eventDetails {
   link: String
 }
 
-input eventDetailsWhereUniqueInput {
+input eventDetailWhereUniqueInput {
   id: ID
 }
 
-input eventDetailsWhereInput {
-  AND: [eventDetailsWhereInput!]
-  OR: [eventDetailsWhereInput!]
-  NOT: [eventDetailsWhereInput!]
+input eventDetailWhereInput {
+  AND: [eventDetailWhereInput!]
+  OR: [eventDetailWhereInput!]
+  NOT: [eventDetailWhereInput!]
   id: IDFilter
   name: StringFilter
   desc: StringFilter
@@ -679,7 +679,7 @@ input eventDetailsWhereInput {
   link: StringFilter
 }
 
-input eventDetailsOrderByInput {
+input eventDetailOrderByInput {
   id: OrderDirection
   name: OrderDirection
   desc: OrderDirection
@@ -687,19 +687,19 @@ input eventDetailsOrderByInput {
   link: OrderDirection
 }
 
-input eventDetailsUpdateInput {
+input eventDetailUpdateInput {
   name: String
   desc: String
   photoUrl: String
   link: String
 }
 
-input eventDetailsUpdateArgs {
-  where: eventDetailsWhereUniqueInput!
-  data: eventDetailsUpdateInput!
+input eventDetailUpdateArgs {
+  where: eventDetailWhereUniqueInput!
+  data: eventDetailUpdateInput!
 }
 
-input eventDetailsCreateInput {
+input eventDetailCreateInput {
   name: String
   desc: String
   photoUrl: String
@@ -746,141 +746,136 @@ input generalInformationCreateInput {
   desc: String
 }
 
-type subthemes {
+type subtheme {
   id: ID!
   number: Int
   desc: String
 }
 
-input subthemesWhereUniqueInput {
+input subthemeWhereUniqueInput {
   id: ID
 }
 
-input subthemesWhereInput {
-  AND: [subthemesWhereInput!]
-  OR: [subthemesWhereInput!]
-  NOT: [subthemesWhereInput!]
+input subthemeWhereInput {
+  AND: [subthemeWhereInput!]
+  OR: [subthemeWhereInput!]
+  NOT: [subthemeWhereInput!]
   id: IDFilter
   number: IntFilter
   desc: StringFilter
 }
 
-input subthemesOrderByInput {
+input subthemeOrderByInput {
   id: OrderDirection
   number: OrderDirection
   desc: OrderDirection
 }
 
-input subthemesUpdateInput {
+input subthemeUpdateInput {
   number: Int
   desc: String
 }
 
-input subthemesUpdateArgs {
-  where: subthemesWhereUniqueInput!
-  data: subthemesUpdateInput!
+input subthemeUpdateArgs {
+  where: subthemeWhereUniqueInput!
+  data: subthemeUpdateInput!
 }
 
-input subthemesCreateInput {
+input subthemeCreateInput {
   number: Int
   desc: String
 }
 
-type notices {
+type notice {
   id: ID!
   title: String
-  desc: String
   date: String
   isNew: Boolean
   createdAt: DateTime
 }
 
-input noticesWhereUniqueInput {
+input noticeWhereUniqueInput {
   id: ID
 }
 
-input noticesWhereInput {
-  AND: [noticesWhereInput!]
-  OR: [noticesWhereInput!]
-  NOT: [noticesWhereInput!]
+input noticeWhereInput {
+  AND: [noticeWhereInput!]
+  OR: [noticeWhereInput!]
+  NOT: [noticeWhereInput!]
   id: IDFilter
   title: StringFilter
-  desc: StringFilter
   date: StringFilter
   isNew: BooleanFilter
   createdAt: DateTimeNullableFilter
 }
 
-input noticesOrderByInput {
+input noticeOrderByInput {
   id: OrderDirection
   title: OrderDirection
-  desc: OrderDirection
   date: OrderDirection
   isNew: OrderDirection
   createdAt: OrderDirection
 }
 
-input noticesUpdateInput {
+input noticeUpdateInput {
   title: String
-  desc: String
   date: String
   isNew: Boolean
   createdAt: DateTime
 }
 
-input noticesUpdateArgs {
-  where: noticesWhereUniqueInput!
-  data: noticesUpdateInput!
+input noticeUpdateArgs {
+  where: noticeWhereUniqueInput!
+  data: noticeUpdateInput!
 }
 
-input noticesCreateInput {
+input noticeCreateInput {
   title: String
-  desc: String
   date: String
   isNew: Boolean
   createdAt: DateTime
 }
 
-type publications {
+type publication {
   id: ID!
   name: String
   desc: String
   photoUrl: String
 }
 
-input publicationsWhereUniqueInput {
+input publicationWhereUniqueInput {
   id: ID
 }
 
-input publicationsWhereInput {
-  AND: [publicationsWhereInput!]
-  OR: [publicationsWhereInput!]
-  NOT: [publicationsWhereInput!]
+input publicationWhereInput {
+  AND: [publicationWhereInput!]
+  OR: [publicationWhereInput!]
+  NOT: [publicationWhereInput!]
   id: IDFilter
   name: StringFilter
   desc: StringFilter
   photoUrl: StringFilter
 }
 
-input publicationsOrderByInput {
+input publicationOrderByInput {
   id: OrderDirection
   name: OrderDirection
   desc: OrderDirection
   photoUrl: OrderDirection
 }
 
-input publicationsUpdateInput {
+input publicationUpdateInput {
   name: String
   desc: String
   photoUrl: String
 }
 
-input publicationsUpdateArgs {
-  where: publicationsWhereUniqueInput!
-  data: publicationsUpdateInput!
+input publicationUpdateArgs {
+  where: publicationWhereUniqueInput!
+  data: publicationUpdateInput!
 }
 
-input publicationsCreateInput {
+input publicationCreateInput {
   name: String
   desc: String
   photoUrl: String
@@ -928,66 +923,66 @@ type Mutation {
   updateSponsorships(data: [sponsorshipUpdateArgs!]!): [sponsorship]
   deletesponsorship(where: sponsorshipWhereUniqueInput!): sponsorship
   deleteSponsorships(where: [sponsorshipWhereUniqueInput!]!): [sponsorship]
-  createimportantDates(data: importantDatesCreateInput!): importantDates
-  createImportantDates(data: [importantDatesCreateInput!]!): [importantDates]
-  updateimportantDates(where: importantDatesWhereUniqueInput!, data: importantDatesUpdateInput!): importantDates
-  updateImportantDates(data: [importantDatesUpdateArgs!]!): [importantDates]
-  deleteimportantDates(where: importantDatesWhereUniqueInput!): importantDates
-  deleteImportantDates(where: [importantDatesWhereUniqueInput!]!): [importantDates]
-  createregistrationDetails(data: registrationDetailsCreateInput!): registrationDetails
-  createRegistrationDetails(data: [registrationDetailsCreateInput!]!): [registrationDetails]
-  updateregistrationDetails(where: registrationDetailsWhereUniqueInput!, data: registrationDetailsUpdateInput!): registrationDetails
-  updateRegistrationDetails(data: [registrationDetailsUpdateArgs!]!): [registrationDetails]
-  deleteregistrationDetails(where: registrationDetailsWhereUniqueInput!): registrationDetails
-  deleteRegistrationDetails(where: [registrationDetailsWhereUniqueInput!]!): [registrationDetails]
-  createspeakers(data: speakersCreateInput!): speakers
-  createSpeakers(data: [speakersCreateInput!]!): [speakers]
-  updatespeakers(where: speakersWhereUniqueInput!, data: speakersUpdateInput!): speakers
-  updateSpeakers(data: [speakersUpdateArgs!]!): [speakers]
-  deletespeakers(where: speakersWhereUniqueInput!): speakers
-  deleteSpeakers(where: [speakersWhereUniqueInput!]!): [speakers]
+  createimportantDate(data: importantDateCreateInput!): importantDate
+  createImportantDates(data: [importantDateCreateInput!]!): [importantDate]
+  updateimportantDate(where: importantDateWhereUniqueInput!, data: importantDateUpdateInput!): importantDate
+  updateImportantDates(data: [importantDateUpdateArgs!]!): [importantDate]
+  deleteimportantDate(where: importantDateWhereUniqueInput!): importantDate
+  deleteImportantDates(where: [importantDateWhereUniqueInput!]!): [importantDate]
+  createregistrationDetail(data: registrationDetailCreateInput!): registrationDetail
+  createRegistrationDetails(data: [registrationDetailCreateInput!]!): [registrationDetail]
+  updateregistrationDetail(where: registrationDetailWhereUniqueInput!, data: registrationDetailUpdateInput!): registrationDetail
+  updateRegistrationDetails(data: [registrationDetailUpdateArgs!]!): [registrationDetail]
+  deleteregistrationDetail(where: registrationDetailWhereUniqueInput!): registrationDetail
+  deleteRegistrationDetails(where: [registrationDetailWhereUniqueInput!]!): [registrationDetail]
+  createspeaker(data: speakerCreateInput!): speaker
+  createSpeakers(data: [speakerCreateInput!]!): [speaker]
+  updatespeaker(where: speakerWhereUniqueInput!, data: speakerUpdateInput!): speaker
+  updateSpeakers(data: [speakerUpdateArgs!]!): [speaker]
+  deletespeaker(where: speakerWhereUniqueInput!): speaker
+  deleteSpeakers(where: [speakerWhereUniqueInput!]!): [speaker]
   createtoursit(data: toursitCreateInput!): toursit
   createToursits(data: [toursitCreateInput!]!): [toursit]
   updatetoursit(where: toursitWhereUniqueInput!, data: toursitUpdateInput!): toursit
   updateToursits(data: [toursitUpdateArgs!]!): [toursit]
   deletetoursit(where: toursitWhereUniqueInput!): toursit
   deleteToursits(where: [toursitWhereUniqueInput!]!): [toursit]
-  createtracks(data: tracksCreateInput!): tracks
-  createTracks(data: [tracksCreateInput!]!): [tracks]
-  updatetracks(where: tracksWhereUniqueInput!, data: tracksUpdateInput!): tracks
-  updateTracks(data: [tracksUpdateArgs!]!): [tracks]
-  deletetracks(where: tracksWhereUniqueInput!): tracks
-  deleteTracks(where: [tracksWhereUniqueInput!]!): [tracks]
-  createeventDetails(data: eventDetailsCreateInput!): eventDetails
-  createEventDetails(data: [eventDetailsCreateInput!]!): [eventDetails]
-  updateeventDetails(where: eventDetailsWhereUniqueInput!, data: eventDetailsUpdateInput!): eventDetails
-  updateEventDetails(data: [eventDetailsUpdateArgs!]!): [eventDetails]
-  deleteeventDetails(where: eventDetailsWhereUniqueInput!): eventDetails
-  deleteEventDetails(where: [eventDetailsWhereUniqueInput!]!): [eventDetails]
+  createtrack(data: trackCreateInput!): track
+  createTracks(data: [trackCreateInput!]!): [track]
+  updatetrack(where: trackWhereUniqueInput!, data: trackUpdateInput!): track
+  updateTracks(data: [trackUpdateArgs!]!): [track]
+  deletetrack(where: trackWhereUniqueInput!): track
+  deleteTracks(where: [trackWhereUniqueInput!]!): [track]
+  createeventDetail(data: eventDetailCreateInput!): eventDetail
+  createEventDetails(data: [eventDetailCreateInput!]!): [eventDetail]
+  updateeventDetail(where: eventDetailWhereUniqueInput!, data: eventDetailUpdateInput!): eventDetail
+  updateEventDetails(data: [eventDetailUpdateArgs!]!): [eventDetail]
+  deleteeventDetail(where: eventDetailWhereUniqueInput!): eventDetail
+  deleteEventDetails(where: [eventDetailWhereUniqueInput!]!): [eventDetail]
   creategeneralInformation(data: generalInformationCreateInput!): generalInformation
   createGeneralInformations(data: [generalInformationCreateInput!]!): [generalInformation]
   updategeneralInformation(where: generalInformationWhereUniqueInput!, data: generalInformationUpdateInput!): generalInformation
   updateGeneralInformations(data: [generalInformationUpdateArgs!]!): [generalInformation]
   deletegeneralInformation(where: generalInformationWhereUniqueInput!): generalInformation
   deleteGeneralInformations(where: [generalInformationWhereUniqueInput!]!): [generalInformation]
-  createsubthemes(data: subthemesCreateInput!): subthemes
-  createSubthemes(data: [subthemesCreateInput!]!): [subthemes]
-  updatesubthemes(where: subthemesWhereUniqueInput!, data: subthemesUpdateInput!): subthemes
-  updateSubthemes(data: [subthemesUpdateArgs!]!): [subthemes]
-  deletesubthemes(where: subthemesWhereUniqueInput!): subthemes
-  deleteSubthemes(where: [subthemesWhereUniqueInput!]!): [subthemes]
-  createnotices(data: noticesCreateInput!): notices
-  createNotices(data: [noticesCreateInput!]!): [notices]
-  updatenotices(where: noticesWhereUniqueInput!, data: noticesUpdateInput!): notices
-  updateNotices(data: [noticesUpdateArgs!]!): [notices]
-  deletenotices(where: noticesWhereUniqueInput!): notices
-  deleteNotices(where: [noticesWhereUniqueInput!]!): [notices]
-  createpublications(data: publicationsCreateInput!): publications
-  createPublications(data: [publicationsCreateInput!]!): [publications]
-  updatepublications(where: publicationsWhereUniqueInput!, data: publicationsUpdateInput!): publications
-  updatePublications(data: [publicationsUpdateArgs!]!): [publications]
-  deletepublications(where: publicationsWhereUniqueInput!): publications
-  deletePublications(where: [publicationsWhereUniqueInput!]!): [publications]
+  createsubtheme(data: subthemeCreateInput!): subtheme
+  createSubthemes(data: [subthemeCreateInput!]!): [subtheme]
+  updatesubtheme(where: subthemeWhereUniqueInput!, data: subthemeUpdateInput!): subtheme
+  updateSubthemes(data: [subthemeUpdateArgs!]!): [subtheme]
+  deletesubtheme(where: subthemeWhereUniqueInput!): subtheme
+  deleteSubthemes(where: [subthemeWhereUniqueInput!]!): [subtheme]
+  createnotice(data: noticeCreateInput!): notice
+  createNotices(data: [noticeCreateInput!]!): [notice]
+  updatenotice(where: noticeWhereUniqueInput!, data: noticeUpdateInput!): notice
+  updateNotices(data: [noticeUpdateArgs!]!): [notice]
+  deletenotice(where: noticeWhereUniqueInput!): notice
+  deleteNotices(where: [noticeWhereUniqueInput!]!): [notice]
+  createpublication(data: publicationCreateInput!): publication
+  createPublications(data: [publicationCreateInput!]!): [publication]
+  updatepublication(where: publicationWhereUniqueInput!, data: publicationUpdateInput!): publication
+  updatePublications(data: [publicationUpdateArgs!]!): [publication]
+  deletepublication(where: publicationWhereUniqueInput!): publication
+  deletePublications(where: [publicationWhereUniqueInput!]!): [publication]
   endSession: Boolean!
   authenticateUserWithPassword(email: String!, password: String!): UserAuthenticationWithPasswordResult
   createInitialUser(data: CreateInitialUserInput!): UserAuthenticationWithPasswordSuccess!
@@ -1029,28 +1024,36 @@ type Query {
   sponsorship(where: sponsorshipWhereUniqueInput!): sponsorship
   sponsorships(where: sponsorshipWhereInput! = {}, orderBy: [sponsorshipOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: sponsorshipWhereUniqueInput): [sponsorship!]
   sponsorshipsCount(where: sponsorshipWhereInput! = {}): Int
-  importantDates(where: importantDatesWhereInput! = {}, orderBy: [importantDatesOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: importantDatesWhereUniqueInput): [importantDates!]
-  importantDatesCount(where: importantDatesWhereInput! = {}): Int
-  registrationDetails(where: registrationDetailsWhereInput! = {}, orderBy: [registrationDetailsOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: registrationDetailsWhereUniqueInput): [registrationDetails!]
-  registrationDetailsCount(where: registrationDetailsWhereInput! = {}): Int
-  speakers(where: speakersWhereInput! = {}, orderBy: [speakersOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: speakersWhereUniqueInput): [speakers!]
-  speakersCount(where: speakersWhereInput! = {}): Int
+  importantDate(where: importantDateWhereUniqueInput!): importantDate
+  importantDates(where: importantDateWhereInput! = {}, orderBy: [importantDateOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: importantDateWhereUniqueInput): [importantDate!]
+  importantDatesCount(where: importantDateWhereInput! = {}): Int
+  registrationDetail(where: registrationDetailWhereUniqueInput!): registrationDetail
+  registrationDetails(where: registrationDetailWhereInput! = {}, orderBy: [registrationDetailOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: registrationDetailWhereUniqueInput): [registrationDetail!]
+  registrationDetailsCount(where: registrationDetailWhereInput! = {}): Int
+  speaker(where: speakerWhereUniqueInput!): speaker
+  speakers(where: speakerWhereInput! = {}, orderBy: [speakerOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: speakerWhereUniqueInput): [speaker!]
+  speakersCount(where: speakerWhereInput! = {}): Int
   toursit(where: toursitWhereUniqueInput!): toursit
   toursits(where: toursitWhereInput! = {}, orderBy: [toursitOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: toursitWhereUniqueInput): [toursit!]
   toursitsCount(where: toursitWhereInput! = {}): Int
-  tracks(where: tracksWhereInput! = {}, orderBy: [tracksOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: tracksWhereUniqueInput): [tracks!]
-  tracksCount(where: tracksWhereInput! = {}): Int
-  eventDetails(where: eventDetailsWhereInput! = {}, orderBy: [eventDetailsOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: eventDetailsWhereUniqueInput): [eventDetails!]
-  eventDetailsCount(where: eventDetailsWhereInput! = {}): Int
+  track(where: trackWhereUniqueInput!): track
+  tracks(where: trackWhereInput! = {}, orderBy: [trackOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: trackWhereUniqueInput): [track!]
+  tracksCount(where: trackWhereInput! = {}): Int
+  eventDetail(where: eventDetailWhereUniqueInput!): eventDetail
+  eventDetails(where: eventDetailWhereInput! = {}, orderBy: [eventDetailOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: eventDetailWhereUniqueInput): [eventDetail!]
+  eventDetailsCount(where: eventDetailWhereInput! = {}): Int
   generalInformation(where: generalInformationWhereUniqueInput!): generalInformation
   generalInformations(where: generalInformationWhereInput! = {}, orderBy: [generalInformationOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: generalInformationWhereUniqueInput): [generalInformation!]
   generalInformationsCount(where: generalInformationWhereInput! = {}): Int
-  subthemes(where: subthemesWhereInput! = {}, orderBy: [subthemesOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: subthemesWhereUniqueInput): [subthemes!]
-  subthemesCount(where: subthemesWhereInput! = {}): Int
-  notices(where: noticesWhereInput! = {}, orderBy: [noticesOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: noticesWhereUniqueInput): [notices!]
-  noticesCount(where: noticesWhereInput! = {}): Int
-  publications(where: publicationsWhereInput! = {}, orderBy: [publicationsOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: publicationsWhereUniqueInput): [publications!]
-  publicationsCount(where: publicationsWhereInput! = {}): Int
+  subtheme(where: subthemeWhereUniqueInput!): subtheme
+  subthemes(where: subthemeWhereInput! = {}, orderBy: [subthemeOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: subthemeWhereUniqueInput): [subtheme!]
+  subthemesCount(where: subthemeWhereInput! = {}): Int
+  notice(where: noticeWhereUniqueInput!): notice
+  notices(where: noticeWhereInput! = {}, orderBy: [noticeOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: noticeWhereUniqueInput): [notice!]
+  noticesCount(where: noticeWhereInput! = {}): Int
+  publication(where: publicationWhereUniqueInput!): publication
+  publications(where: publicationWhereInput! = {}, orderBy: [publicationOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: publicationWhereUniqueInput): [publication!]
+  publicationsCount(where: publicationWhereInput! = {}): Int
   keystone: KeystoneMeta!
   authenticatedItem: AuthenticatedItem
 }

@@ -50,18 +50,13 @@ import { useQuery, gql } from '@apollo/client';
 // ]
 const Sponsorship = () => {
   const {loading,error, data} = useQuery(gql`
-    query Query {
-  sponsorships {
-    type
-    amount
-    delegates
-    stallarea
-    backdropBanner
-    presentationSlot
-    addvertisement
+    query Query($where: generalInformationWhereInput!) {
+  generalInformations(where: $where) {
+    name
+    desc
   }
 }
-    `);
+    `,{variables:{where:{name:{equals:"sponsorshipclause"}}}});
     console.log(data);
     
     if(loading){
@@ -69,11 +64,8 @@ const Sponsorship = () => {
     }else if(error){
       return <div>Error: {error.message}</div>;
     }
-    const sponsorshipData = data?.sponsorships;
-    if(sponsorshipData.length === 0) {
-      return <div>No data found</div>;
-    } 
-    console.log(sponsorshipData);
+    const clause= data?.generalInformations[0].desc;
+    console.log(clause);
     return (
       <div className="min-h-screen flex flex-col bg-white pt-20">
         <div className="relative w-full">
@@ -86,7 +78,7 @@ const Sponsorship = () => {
   
         {/* Main Content Container */}
         <div className="flex-grow bg-white text-gray-900">
-          <SponsorshipTable data={sponsorshipData} />
+          <SponsorshipTable  />
   
           <div className="bg-gray-50 px-4 sm:px-8 lg:px-16 py-8 mt-6 border-t border-gray-300">
             <h2 className="text-2xl font-bold mb-4 text-gray-800">
@@ -97,6 +89,7 @@ const Sponsorship = () => {
                 Sponsorship may be made directly to NITT via RTGS/NEFT/Cheque/Demand Draft.
               </li>
               <li>No provisions are made in SBI i-Collect.</li>
+              {clause!="NA" && (<li>{clause}</li>)}
             </ul>
           </div>
         </div>

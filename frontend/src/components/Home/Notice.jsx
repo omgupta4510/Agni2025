@@ -19,7 +19,6 @@ const NoticeBoard = () => {
     query Query {
   notices {
     title
-    desc
     date
     isNew
     createdAt
@@ -31,6 +30,7 @@ if(loading){
 if(error){
   return <div>Error</div>
 }
+if(!data)return <div>No Notice</div>
 const noticedata=data?.notices?.slice().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));;
   return (
     <div className="w-full max-w-2xl mx-auto p-4 bg-background rounded-xl border border-border shadow">

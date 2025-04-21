@@ -8,7 +8,7 @@ export default function ImportantDatesModern() {
       { date: "Dec. 4, 2025", event: "Conference Registration Deadline" },
     ];
     const {loading,error,data}=useQuery(gql`
-      query Query($where: importantDatesWhereInput!) {
+      query Query($where: importantDateWhereInput!) {
         importantDates(where: $where) {
           event
           date
@@ -30,9 +30,7 @@ export default function ImportantDatesModern() {
     if(error){
       return <div>error</div>
     }
-    console.log(data);
     const datesdata=data?.importantDates;
-    console.log(datesdata);
     
     return (
         <div className="relative w-full py-24 px-6 md:px-20 bg-gradient-to-b from-[#eafdf5] via-[#f8fffc] to-[#eafdf5] shadow-[0_0_60px_#b8f8d4]">

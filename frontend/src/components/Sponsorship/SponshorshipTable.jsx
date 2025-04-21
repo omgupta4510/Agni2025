@@ -1,7 +1,32 @@
 import React from 'react';
 import { Check, X } from 'lucide-react';
-
-const SponsorshipTable = ({ data }) => {
+import { useQuery,gql } from '@apollo/client';
+const SponsorshipTable = () => {
+  const {loading,error, data} = useQuery(gql`
+      query Query {
+    sponsorships {
+      type
+      amount
+      delegates
+      stallarea
+      backdropBanner
+      presentationSlot
+      addvertisement
+    }
+  }
+      `);
+      console.log(data);
+      
+      if(loading){
+        return <div>Loading...</div>;
+      }else if(error){
+        return <div>Error: {error.message}</div>;
+      }
+      const sponsorshipData = data?.sponsorships;
+      if(sponsorshipData.length === 0) {
+        return <div>No data found</div>;
+      } 
+      console.log(sponsorshipData);
   const renderBoolean = (value) =>
     value ? (
       <div className="flex items-center justify-center gap-1 text-green-600">
@@ -32,7 +57,7 @@ const SponsorshipTable = ({ data }) => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item, index) => (
+            {sponsorshipData.map((item, index) => (
               <tr
                 key={index}
                 className="even:bg-gray-50 odd:bg-white hover:bg-blue-50 transition-colors duration-200"

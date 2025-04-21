@@ -37,7 +37,7 @@ const Navbar = () => {
             <ul className="dropdown">
               <li><a href="/about?agnis">About the AGNI-S</a></li>
               <li><a href="/about?nittrichy">About the NIT-Trichy</a></li>
-              <li><a href="/about?ceesat">About the CEESAT</a></li>
+              <li><a href="/about?dee">About the DEE</a></li>
               
               <li><a href="/themes">AGNI-S Theme</a></li>
               <li><a href="/dates">Important Dates</a></li>

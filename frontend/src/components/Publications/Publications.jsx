@@ -51,9 +51,7 @@ const Publications=()=>{
                             <h2 className="title">{item.name}</h2>
                             <p>{item.desc}</p>
                         </div>
-                        <a href={item.link}   target="_blank"  rel="noopener noreferrer" >
-                        <button className="publication-register-button"> <FaUser/>REGISTER NOW</button>
-                        </a>
+                       
                     </div>
                     </div>
                 )))}

@@ -12,7 +12,7 @@ const Speaker = () => {
   console.log(speakertype);
   
   const {loading, error, data} = useQuery(gql`
-    query Query($where: speakersWhereInput!) {
+    query Query($where: speakerWhereInput!) {
   speakers(where: $where) {
     type
     name

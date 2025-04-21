@@ -74,7 +74,7 @@ const ImportantDates = () => {
                 📅 Important Dates
                 </h1>
                 <div className="grid gap-6 md:grid-cols-1">
-                {Dates.map((item, index) => (
+                {importantDates.map((item, index) => (
                     <div
                     key={index}
                     className="bg-white rounded-2xl shadow-md p-6 border-l-4 border-green-500 hover:shadow-xl transition"

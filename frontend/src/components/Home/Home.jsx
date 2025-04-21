@@ -54,7 +54,7 @@ const ANNOUNCEMENT_QUERY = gql`
   }
 `;
 const Subtheme_Query=gql`
-query Subthemes {
+query subthemes {
   subthemes {
     number
     desc
@@ -70,9 +70,7 @@ const Home = () => {
   if(error){
     return <div>Error</div>
   }
-  console.log(data);
   const subThemesData = data?.subthemes?.slice().sort((a, b) => a.number - b.number);
-  
   return (
     <div className="relative">
       {/* Navbar */}

@@ -109,21 +109,3 @@
     }
   }
   
-.publication-register-button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1.5rem;
-    margin-top: 10px;
-    border-radius: 9999px;
-    font-weight: 600;
-    color: black;
-    background: linear-gradient(to right, #b3ffb3, #d9f3d2); /* Light green gradient */
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-}
-
-.publication-register-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-}

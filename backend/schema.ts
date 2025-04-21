@@ -55,6 +55,7 @@ export const lists = {
       title: text({ validation: { isRequired: true } }),
       description: text(textfeild),
       link: text(),
+      
     },
   }),
   conferenceTheme: list({
@@ -109,7 +110,7 @@ export const lists = {
       addvertisement: text({validation:{isRequired:true}}),
     }
   }),
-  importantDates: list({
+  importantDate: list({
     access: allowAll,
     fields: {
       event: text({ validation: { isRequired: true } }),
@@ -118,7 +119,7 @@ export const lists = {
       important:checkbox({defaultValue:false}),
     },
   }),
-  registrationDetails: list({
+  registrationDetail: list({
     access: allowAll,
     fields: {
       native:select({
@@ -132,7 +133,7 @@ export const lists = {
       amt_regular: integer({ validation: { isRequired: true } }),
     },
   }),
-  speakers: list({
+  speaker: list({
     access: allowAll,
     fields: {
       type:text({validation:{isRequired:true}}),
@@ -151,14 +152,14 @@ export const lists = {
         desc:text(textfeild)
       }
     }),
-    tracks:list({
+    track:list({
       access:allowAll,
       fields:{
         number:integer({validation:{isRequired:true}}),
         type:text({validation:{isRequired:true}}),
         name:text({validation:{isRequired:true}})
       }}),
-    eventDetails:list({
+    eventDetail:list({
       access:allowAll,
       fields:{
         name:text({validation:{isRequired:true}}),
@@ -173,17 +174,16 @@ export const lists = {
         desc:text(textfeild)
       }
     }),
-    subthemes:list({
+    subtheme:list({
       access:allowAll,
       fields:{
         number:integer({validation:{isRequired:true}}),
         desc:text({validation:{isRequired:true}}),
       }}),
-      notices:list({
+      notice:list({
         access:allowAll,
         fields:{
           title:text({validation:{isRequired:true}}),
-          desc:text(textfeild),
           date:text({validation:{isRequired:true}}),
           isNew:checkbox({
             defaultValue: false
@@ -192,7 +192,7 @@ export const lists = {
             defaultValue: { kind: 'now' },
           }),
         }}),
-        publications:list({
+        publication:list({
           access:allowAll,
           fields:{
             name:text({validation:{isRequired:true}}),
