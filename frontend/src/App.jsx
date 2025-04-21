@@ -18,6 +18,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react'
 import { useQuery,gql } from '@apollo/client'
+import Themes from '@components/Themes/Themes'
+import Publications from '@components/Publications/Publications'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -47,6 +49,8 @@ function App() {
           <Route path='/events' element={<Events/>}/>
           <Route path="/authors" element={<Authors />}/>
           <Route path="/registration" element={<Registration/>}/>
+          <Route path='/themes' element={<Themes/>}/>
+          <Route path='/publications' element={<Publications/>}/>
         </Routes>
 
     </main>

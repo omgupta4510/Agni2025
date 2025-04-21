@@ -39,7 +39,7 @@ const Navbar = () => {
               <li><a href="/about?nittrichy">About the NIT-Trichy</a></li>
               <li><a href="/about?ceesat">About the CEESAT</a></li>
               
-              <li><a href="/">AGNI-S Theme</a></li>
+              <li><a href="/themes">AGNI-S Theme</a></li>
               <li><a href="/dates">Important Dates</a></li>
             </ul>
           )}
@@ -83,7 +83,7 @@ const Navbar = () => {
         </li>
         <li><a href="/events">Events</a></li>
         <li><a href="/sponshorship">Sponsorship</a></li>
-        <li><a href="/">Publications</a></li>
+        <li><a href="/publications">Publications</a></li>
         <li><a href="/venuecontact">Contact</a></li>
       </ul>
     </nav>

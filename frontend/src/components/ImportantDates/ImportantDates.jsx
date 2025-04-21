@@ -61,7 +61,7 @@ const ImportantDates = () => {
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white text-center">
-            About Solar World Congress
+            NIT Trichy
           </h1>
         </div>
       </div>

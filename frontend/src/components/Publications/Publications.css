@@ -1,0 +1,129 @@
+
+.publication-page {
+    margin-top: 5%;
+  }
+  .publication-page-start{
+    max-width: 85%;
+    margin: auto;
+    padding-top: 5px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .publication-page-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #4CAF50;
+    text-transform: uppercase;
+    position: relative;
+
+  }
+  .title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+  
+  .publication-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    border-bottom:2px solid #4CAF50;
+  padding-bottom: 20px;
+  }
+  
+  .publication-block.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .publication-image img {
+    width: 250px;
+    max-width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  .publication-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .publication-details {
+    flex: 1;
+    padding-left: 49px;
+  }
+  
+  .publication-details h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  
+  .publication-details p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .publication-block {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .publication-block.reverse {
+      flex-direction: column;
+    }
+  
+    .publication-image img {
+      width: 90%;
+    }
+  
+    .publication-details {
+      margin-top: 1rem;
+    }
+  }
+  
+.publication-register-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    margin-top: 10px;
+    border-radius: 9999px;
+    font-weight: 600;
+    color: black;
+    background: linear-gradient(to right, #b3ffb3, #d9f3d2); /* Light green gradient */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.publication-register-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}

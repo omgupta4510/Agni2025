@@ -192,4 +192,11 @@ export const lists = {
             defaultValue: { kind: 'now' },
           }),
         }}),
+        publications:list({
+          access:allowAll,
+          fields:{
+            name:text({validation:{isRequired:true}}),
+            desc:text(textfeild),
+            photoUrl:text(),
+          }}),
 } satisfies Lists;

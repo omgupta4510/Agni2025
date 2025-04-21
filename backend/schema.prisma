@@ -130,3 +130,10 @@ model notices {
   isNew     Boolean   @default(false)
   createdAt DateTime? @default(now())
 }
+
+model publications {
+  id       String @id @default(cuid())
+  name     String @default("")
+  desc     String @default("") @mysql.VarChar(6000)
+  photoUrl String @default("")
+}

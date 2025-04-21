@@ -141,13 +141,13 @@ const Home = () => {
           {/* Timeline Items */}
           <div className="relative z-10">
             <div className="flex flex-col gap-5">
-              {subThemesData.map((theme, index) => (
+              {subThemesData.slice(0, 7).map((theme, index) => (
                 <div
                   key={index}
                   className={`flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                     } items-center md:items-start gap-3 md:gap-8`}
                   data-aos="fade-up"
-                  style={{ marginBottom: index === subThemes.length - 1 ? 0 : '12px' }} // Remove margin for the last item
+                  style={{ marginBottom: index === subThemesData.length - 1 ? 0 : '12px' }} // Remove margin for the last item
                 >
                   <div className="w-full md:w-1/2 px-4 md:px-8">
                     <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-green-600">
@@ -159,6 +159,11 @@ const Home = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="flex flex-col items-center">
+              <a href="/themes" className="bg-gradient-to-g from-yellow-500 to-yellow-600 text-black font-semibold px-6 py-2 rounded-full shadow-lg hover:from-red-500 hover:to-red-600 transition-all duration-300 ease-in-out transform hover:scale-105">
+                For More Themes...
+            </a>
             </div>
           </div>
         </section>

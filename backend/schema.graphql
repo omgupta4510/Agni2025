@@ -841,6 +841,51 @@ input noticesCreateInput {
   createdAt: DateTime
 }
 
+type publications {
+  id: ID!
+  name: String
+  desc: String
+  photoUrl: String
+}
+
+input publicationsWhereUniqueInput {
+  id: ID
+}
+
+input publicationsWhereInput {
+  AND: [publicationsWhereInput!]
+  OR: [publicationsWhereInput!]
+  NOT: [publicationsWhereInput!]
+  id: IDFilter
+  name: StringFilter
+  desc: StringFilter
+  photoUrl: StringFilter
+}
+
+input publicationsOrderByInput {
+  id: OrderDirection
+  name: OrderDirection
+  desc: OrderDirection
+  photoUrl: OrderDirection
+}
+
+input publicationsUpdateInput {
+  name: String
+  desc: String
+  photoUrl: String
+}
+
+input publicationsUpdateArgs {
+  where: publicationsWhereUniqueInput!
+  data: publicationsUpdateInput!
+}
+
+input publicationsCreateInput {
+  name: String
+  desc: String
+  photoUrl: String
+}
+
 """
 The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 """
@@ -937,6 +982,12 @@ type Mutation {
   updateNotices(data: [noticesUpdateArgs!]!): [notices]
   deletenotices(where: noticesWhereUniqueInput!): notices
   deleteNotices(where: [noticesWhereUniqueInput!]!): [notices]
+  createpublications(data: publicationsCreateInput!): publications
+  createPublications(data: [publicationsCreateInput!]!): [publications]
+  updatepublications(where: publicationsWhereUniqueInput!, data: publicationsUpdateInput!): publications
+  updatePublications(data: [publicationsUpdateArgs!]!): [publications]
+  deletepublications(where: publicationsWhereUniqueInput!): publications
+  deletePublications(where: [publicationsWhereUniqueInput!]!): [publications]
   endSession: Boolean!
   authenticateUserWithPassword(email: String!, password: String!): UserAuthenticationWithPasswordResult
   createInitialUser(data: CreateInitialUserInput!): UserAuthenticationWithPasswordSuccess!
@@ -998,6 +1049,8 @@ type Query {
   subthemesCount(where: subthemesWhereInput! = {}): Int
   notices(where: noticesWhereInput! = {}, orderBy: [noticesOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: noticesWhereUniqueInput): [notices!]
   noticesCount(where: noticesWhereInput! = {}): Int
+  publications(where: publicationsWhereInput! = {}, orderBy: [publicationsOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: publicationsWhereUniqueInput): [publications!]
+  publicationsCount(where: publicationsWhereInput! = {}): Int
   keystone: KeystoneMeta!
   authenticatedItem: AuthenticatedItem
 }
