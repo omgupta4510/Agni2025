@@ -16,6 +16,7 @@ const Header=()=>{
 }});
 if(loading)return <div>Loading...</div>
 if(error)return <div>Error</div>
+if(!data)return <div>NO data</div>
 const conferncedate=data?.generalInformations[0].desc;
 
     return (

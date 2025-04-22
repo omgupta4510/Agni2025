@@ -70,6 +70,7 @@ const Home = () => {
   if(error){
     return <div>Error</div>
   }
+  if(!data)return <div>NO data</div>
   const subThemesData = data?.subthemes?.slice().sort((a, b) => a.number - b.number);
   return (
     <div className="relative">

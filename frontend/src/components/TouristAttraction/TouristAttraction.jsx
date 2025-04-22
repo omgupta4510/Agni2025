@@ -40,8 +40,9 @@ const TouristAttraction = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
+  if(error)return <div>Error</div>
+  if(!data)return <div>NO data</div>
   const attractions = data?.toursits;
-  console.log(attractions);
 
   return (
     <div className="attractions-page">

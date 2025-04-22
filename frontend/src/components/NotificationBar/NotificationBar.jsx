@@ -18,8 +18,9 @@ const NotificationBar = () => {
       }
     }
   });
+  
+  if(!data)return <div>NO data</div>
   const mssg=data?.generalInformations[0].desc;
-  console.log(mssg);
   
   return (
     <div className="bg-gray-600 overflow-hidden w-full py-2">

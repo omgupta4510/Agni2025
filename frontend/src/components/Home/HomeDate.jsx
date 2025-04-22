@@ -30,6 +30,7 @@ export default function ImportantDatesModern() {
     if(error){
       return <div>error</div>
     }
+    if(!data)return <div>NO data</div>
     const datesdata=data?.importantDates;
     
     return (

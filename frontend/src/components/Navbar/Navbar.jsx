@@ -19,6 +19,8 @@ const Navbar = () => {
       }
     }`
   );
+  
+  if(!speakerdata)return <div>NO data</div>
   const uniqueSpeakerTypes = Array.from(new Set(speakerdata?.speakers.map((speaker) => speaker.type)));
   
   return (

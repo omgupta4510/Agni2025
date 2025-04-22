@@ -8,7 +8,6 @@ import { useQuery, gql } from '@apollo/client';
 const AboutOrganizers = () => {
   const location=useLocation();
   const aboutpage=location.search.split("?")[1];
-  console.log(aboutpage);
   const { loading, error, data } = useQuery(gql`
     query Query($where: aboutWhereInput!) {
   abouts(where: $where) {
@@ -37,8 +36,6 @@ const AboutOrganizers = () => {
   if(!aboutData) {
     return <div>No data found</div>;
   }
-  console.log(aboutData);
-  
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Hero Image Section */}

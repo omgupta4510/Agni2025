@@ -15,18 +15,18 @@ const SponsorshipTable = () => {
     }
   }
       `);
-      console.log(data);
       
       if(loading){
         return <div>Loading...</div>;
       }else if(error){
         return <div>Error: {error.message}</div>;
       }
+      
+  if(!data)return <div>NO data</div>
       const sponsorshipData = data?.sponsorships;
       if(sponsorshipData.length === 0) {
         return <div>No data found</div>;
       } 
-      console.log(sponsorshipData);
   const renderBoolean = (value) =>
     value ? (
       <div className="flex items-center justify-center gap-1 text-green-600">

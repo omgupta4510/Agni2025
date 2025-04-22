@@ -22,7 +22,6 @@ import Themes from '@components/Themes/Themes'
 import Publications from '@components/Publications/Publications'
 
 function App() {
-  const [count, setCount] = useState(0);
   // AOS (Animate On Scroll) initialization
   useEffect(() => {
     AOS.init({

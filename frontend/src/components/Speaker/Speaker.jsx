@@ -7,10 +7,7 @@ import Header from '@components/Header/Header';
 
 const Speaker = () => {
   const location = useLocation();
-  console.log(location);
   const speakertype=location.search.replace('?', '').replace('%20', ' ');
-  console.log(speakertype);
-  
   const {loading, error, data} = useQuery(gql`
     query Query($where: speakerWhereInput!) {
   speakers(where: $where) {
@@ -30,15 +27,15 @@ const Speaker = () => {
       }
     }
 });
-    console.log(data);
-    
     if(loading){
       return <div>Loading...</div>;
     } else if(error){
       return <div>Error: {error.message}</div>;
     } 
+    
+  if(!data)return <div>NO data</div>
     const speakers = data?.speakers;
-    console.log(speakers);
+    
     
   return (
     <div className="speaker-page">

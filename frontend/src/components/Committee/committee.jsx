@@ -77,7 +77,6 @@ const Committee = () => {
   }
     
     
-    console.log(categorizedData);
     
         
   return (

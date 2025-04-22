@@ -37,6 +37,7 @@ const Conference = () => {
 }`);
 if(loading)return <div>Loading....</div>
 if(error)return <div>Error</div>
+if(!data)return <div>NO data</div>
 const tracksdata=data?.tracks.reduce((acc, item) => {
   if (!acc[item.type]) {
     acc[item.type] = [];
@@ -44,7 +45,6 @@ const tracksdata=data?.tracks.reduce((acc, item) => {
   acc[item.type].push(item);
   return acc;
 }, {});
-console.log(tracksdata);
 
   return (
     <div className="track-container">

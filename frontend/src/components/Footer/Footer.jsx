@@ -18,8 +18,8 @@ const Footer = () => {
           </div>
 
           <div className="space-x-6 text-center">
-            <a href="#" className="text-green-600 hover:underline font-semibold">Privacy Policy</a>
-            <a href="#" className="text-green-600 hover:underline font-semibold">Terms of Service</a>
+            <a href="https://www.linkedin.com/in/omgupta4510/" >
+            Made with 💙 by <strong>BlueAura</strong></a>
           </div>
 
           <div className="text-sm font-semibold">

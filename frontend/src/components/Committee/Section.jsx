@@ -1,7 +1,5 @@
 import React from 'react';
 const Section = ({ title, members }) => {
-  console.log(title);
-  
   return (
     <div className="mb-12">
     <h2 className="text-2xl font-bold mb-6 border-b pb-2 underline bg-color-blue-700 text-center">{title}</h2>

@@ -18,8 +18,6 @@ const Events=()=>{
     if(loading)return <div>Loading...</div>
     if(error)return <div>Error..</div>
     const eventdata=data?.eventDetails;
-    console.log(eventdata);
-    
     return(
         <div className="event-page">
             <Header/>

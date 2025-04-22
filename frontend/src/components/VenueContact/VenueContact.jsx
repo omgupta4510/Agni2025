@@ -22,6 +22,8 @@ const VenueContact= () => {
     });
     if(loading)return <div>Loading...</div>;
     if(error)return <div>Error...</div>;
+    
+  if(!data)return <div>NO data</div>
     const mailid=data?.generalInformations[0].desc;
     return (
         <div className="min-h-screen flex flex-col bg-white pt-20">

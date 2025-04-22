@@ -17,8 +17,9 @@ const Publications=()=>{
     
     if(loading)return <div>Loading...</div>
     if(error)return <div>Error..</div>
+    
+  if(!data)return <div>NO data</div>
     const publicationdata=data?.publications;
-    console.log(publicationdata);
     
     return(
         <div className="publication-page">

@@ -24,8 +24,7 @@ const Authors = () => {
     });
     if(loading)return <div>Loading...</div>
     if(error)return <div>Error</div>
-    console.log(data);
-    
+    if(!data)return <div>NO data</div>
     const submissionLink=data?.generalInformations[1].desc;    
     const confdate=data?.generalInformations[0].desc;
   return (

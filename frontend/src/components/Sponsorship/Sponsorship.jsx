@@ -57,15 +57,15 @@ const Sponsorship = () => {
   }
 }
     `,{variables:{where:{name:{equals:"sponsorshipclause"}}}});
-    console.log(data);
     
     if(loading){
       return <div>Loading...</div>;
     }else if(error){
       return <div>Error: {error.message}</div>;
     }
+    
+  if(!data)return <div>NO data</div>
     const clause= data?.generalInformations[0].desc;
-    console.log(clause);
     return (
       <div className="min-h-screen flex flex-col bg-white pt-20">
         <div className="relative w-full">

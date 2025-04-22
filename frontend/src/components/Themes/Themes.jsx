@@ -20,9 +20,9 @@ const Themes = () => {
       if(error){
         return <div>Error</div>
       }
-      console.log(data);
+      
+  if(!data)return <div>NO data</div>
       const subThemesData = data?.subthemes?.slice().sort((a, b) => a.number - b.number);
-      console.log(subThemesData);
       
   return (
     <div className="min-h-screen bg-white pt-20">

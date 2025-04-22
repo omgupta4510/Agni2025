@@ -42,12 +42,11 @@ const ImportantDates = () => {
   else if(error){
     return <div>Error: {error.message}</div>;
   }
+  if(!data)return <div>NO data</div>
   const importantDates = data?.importantDates;
   if(importantDates.length === 0) {
     return <div>No data found</div>;
   }
-  console.log(importantDates);
-  
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Hero Image Section */}
