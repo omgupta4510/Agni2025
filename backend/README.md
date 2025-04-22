@@ -15,8 +15,8 @@ This is the backend service powering the **AGNI-S@2025 Website**
 
 ## 🔧 Setup Instructions 
 1. Create .env file inside backend/env/ and reference the parameters from backend/env/.env.example
-
-2. Install the packages
+2. Setup MySQL Database, check whether the db server is running or not
+3. Install the packages
 
 ```bash
 cd backend
@@ -25,7 +25,7 @@ cd backend
 npm install
 ```
 
-3. For development
+4. For development
 
 ```bash
 npm run dev
