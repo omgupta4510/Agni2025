@@ -1,12 +1,35 @@
-# React + Vite
+# AGNI-S@2025 Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official frontend for **AGNI-S@2025**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- ⚡ [Vite](https://vitejs.dev/) — Lightning-fast frontend tooling
+- ⚛️ React (for building interactive UI components)
+---
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔧 Setup & Installation
+
+To get this project running locally, follow the steps below:
+
+## Setup
+
+1. Create an .env file in frontend  directory and reference the parameters from .env.example file
+
+2. Install the packages
+
+```bash
+npm install
+```
+
+## Run Locally:
+
+1. Run the dev server
+
+```bash
+npm run dev
+```
+
+2. Open localhost:5173 (check your terminal to know at what port it is running) in browser.
