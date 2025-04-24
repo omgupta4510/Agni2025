@@ -19,18 +19,22 @@ const NotificationBar = () => {
     }
   });
   
-  if(!data)return <div>NO data</div>
-  const mssg=data?.generalInformations[0].desc;
-  
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+
+  const info = data?.generalInformations?.[0];
+  if (!info) return <div>NO data</div>;
+
   return (
     <div className="bg-gray-600 overflow-hidden w-full py-2">
       <div className="flex animate-marquee whitespace-nowrap">
-          <span className="text-white font-semibold text-sm sm:text-base mx-6">
-            {mssg}
-          </span>
+        <span className="text-white font-semibold text-sm sm:text-base mx-6">
+          {info.desc}
+        </span>
       </div>
     </div>
   );
+  
 };
 
 export default NotificationBar;
