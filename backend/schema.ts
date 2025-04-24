@@ -199,4 +199,12 @@ export const lists = {
             desc:text(textfeild),
             photoUrl:text(),
           }}),
+          homeimage:list({
+            access:allowAll,
+            fields:{
+              name:text({validation:{isRequired:true}}),
+              photoUrl:text({validation:{isRequired:true}}),
+              detail:checkbox({defaultValue:false})
+            }
+          }),
 } satisfies Lists;

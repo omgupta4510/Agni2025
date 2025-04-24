@@ -73,30 +73,49 @@
 
 // export default HeroCarousel;
 
+import { gql, useQuery } from "@apollo/client";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const slides = [
+const slidesdata = [
   {
-    image: "nitt.jpeg",
-    alt: "NIT Trichy",
+    photoUrl: "nitt.jpeg",
+    name: "NIT Trichy",
+    detail:true,
   },
   {
-    image: "ceesat2.jpeg",
-    alt: "CEESAT Building",
+    photoUrl: "ceesat2.jpeg",
+    name: "CEESAT Building",
+    detail:true,
   },
   {
-    image: "library.jpeg",
-    alt: "Library",
+    photoUrl: "library.jpeg",
+    name: "Library",
+    detail:true,
   },
   {
-    image: "orion.jpg",
-    alt: "Orion Building",
+    photoUrl: "orion.jpg",
+    name: "Orion Building",
+    detail:true,
   },
 ];
 
 const HeroCarousel = () => {
+  const {loading,error,data}=useQuery(gql`
+  query Query {
+  homeimages {
+    name
+    photoUrl
+    detail
+  }
+}
+    `);
+    if(loading)return <div>Loading....</div>
+    if(error)return <div>Error...</div>
+    var slides=data?.homeimages;
+    if(slides.length==0)slides=slidesdata;
+    
   return (
     <section className="relative w-full mt-[96px]"> {/* Below fixed Navbar + NotificationBar */}
       <Carousel
@@ -115,12 +134,12 @@ const HeroCarousel = () => {
         {slides.map((slide, index) => (
           <div key={index} className="relative h-[75vh]">
             <img
-              src={slide.image}
-              alt={slide.alt}
+              src={slide.photoUrl}
+              alt={slide.name}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/60" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+            {slide.detail && (<div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
               <img
                 src="nitlogo1.png"
                 alt="Logo"
@@ -137,7 +156,7 @@ const HeroCarousel = () => {
               <p className="text-lg md:text-xl mt-4 font-semibold">
                 AGNI-S 2025 <br /> 15–17 December, 2024
               </p>
-            </div>
+            </div>)}
           </div>
         ))}
       </Carousel>

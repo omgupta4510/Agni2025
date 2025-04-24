@@ -136,3 +136,10 @@ model publication {
   desc     String @default("") @mysql.VarChar(6000)
   photoUrl String @default("")
 }
+
+model homeimage {
+  id       String  @id @default(cuid())
+  name     String  @default("")
+  photoUrl String  @default("")
+  detail   Boolean @default(false)
+}

@@ -881,6 +881,51 @@ input publicationCreateInput {
   photoUrl: String
 }
 
+type homeimage {
+  id: ID!
+  name: String
+  photoUrl: String
+  detail: Boolean
+}
+
+input homeimageWhereUniqueInput {
+  id: ID
+}
+
+input homeimageWhereInput {
+  AND: [homeimageWhereInput!]
+  OR: [homeimageWhereInput!]
+  NOT: [homeimageWhereInput!]
+  id: IDFilter
+  name: StringFilter
+  photoUrl: StringFilter
+  detail: BooleanFilter
+}
+
+input homeimageOrderByInput {
+  id: OrderDirection
+  name: OrderDirection
+  photoUrl: OrderDirection
+  detail: OrderDirection
+}
+
+input homeimageUpdateInput {
+  name: String
+  photoUrl: String
+  detail: Boolean
+}
+
+input homeimageUpdateArgs {
+  where: homeimageWhereUniqueInput!
+  data: homeimageUpdateInput!
+}
+
+input homeimageCreateInput {
+  name: String
+  photoUrl: String
+  detail: Boolean
+}
+
 """
 The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 """
@@ -983,6 +1028,12 @@ type Mutation {
   updatePublications(data: [publicationUpdateArgs!]!): [publication]
   deletepublication(where: publicationWhereUniqueInput!): publication
   deletePublications(where: [publicationWhereUniqueInput!]!): [publication]
+  createhomeimage(data: homeimageCreateInput!): homeimage
+  createHomeimages(data: [homeimageCreateInput!]!): [homeimage]
+  updatehomeimage(where: homeimageWhereUniqueInput!, data: homeimageUpdateInput!): homeimage
+  updateHomeimages(data: [homeimageUpdateArgs!]!): [homeimage]
+  deletehomeimage(where: homeimageWhereUniqueInput!): homeimage
+  deleteHomeimages(where: [homeimageWhereUniqueInput!]!): [homeimage]
   endSession: Boolean!
   authenticateUserWithPassword(email: String!, password: String!): UserAuthenticationWithPasswordResult
   createInitialUser(data: CreateInitialUserInput!): UserAuthenticationWithPasswordSuccess!
@@ -1054,6 +1105,9 @@ type Query {
   publication(where: publicationWhereUniqueInput!): publication
   publications(where: publicationWhereInput! = {}, orderBy: [publicationOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: publicationWhereUniqueInput): [publication!]
   publicationsCount(where: publicationWhereInput! = {}): Int
+  homeimage(where: homeimageWhereUniqueInput!): homeimage
+  homeimages(where: homeimageWhereInput! = {}, orderBy: [homeimageOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: homeimageWhereUniqueInput): [homeimage!]
+  homeimagesCount(where: homeimageWhereInput! = {}): Int
   keystone: KeystoneMeta!
   authenticatedItem: AuthenticatedItem
 }
