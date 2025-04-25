@@ -6,8 +6,8 @@ import { useLocation } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
 
 const AboutOrganizers = () => {
-  const location=useLocation();
-  const aboutpage=location.search.split("?")[1];
+  const location = useLocation();
+  const aboutpage = location.search.split("?")[1];
   const { loading, error, data } = useQuery(gql`
     query Query($where: aboutWhereInput!) {
   abouts(where: $where) {
@@ -17,8 +17,8 @@ const AboutOrganizers = () => {
     link
   }
 }
-  `,{
-    variables: { 
+  `, {
+    variables: {
       where: {
         route: {
           equals: aboutpage
@@ -26,25 +26,24 @@ const AboutOrganizers = () => {
       }
     }
   });
-  
-  if(loading){
+
+  if (loading) {
     return <div>Loading...</div>;
-  }else if(error){
+  } else if (error) {
     return <div>Error: {error.message}</div>;
   }
   const aboutData = data?.abouts[0];
-  if(!aboutData) {
+  if (!aboutData) {
     return <div>No data found</div>;
   }
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Hero Image Section */}
       <div className="relative h-[60vh] w-full">
-    
         <img
           src="nitt.jpeg"
-          alt="Solar panels under blue sky"
-          className="w-full h-full object-cover"
+          alt="NIT TRICHY"
+          className="w-full h-full object-cover filter blur-[2px]" // or blur-md, blur-lg for more blur
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white text-center">
@@ -61,18 +60,18 @@ const AboutOrganizers = () => {
               Our Vision & Mission
             </h2>
             <div className="w-24 h-1 bg-solar-blue mb-8"></div>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-gray-600 mb-6 text-justify">
               {aboutData.description}
             </p>
             {aboutData.link && (
               <div className="text-center">
-              <a
-                href={aboutData.link}
-                className="inline-block bg-solar-green text-white py-2 px-4 rounded-lg hover:bg-solar-blue transition duration-300"
-              >
-                Learn More
-              </a>
-            </div>
+                <a
+                  href={aboutData.link}
+                  className="inline-block bg-solar-green text-white py-2 px-4 rounded-lg hover:bg-solar-blue transition duration-300"
+                >
+                  Learn More
+                </a>
+              </div>
             )}
           </div>
         </div>
@@ -114,7 +113,7 @@ const AboutOrganizers = () => {
           </div>
         </div>
       </section> */}
-    </div> 
+    </div>
   );
 };
 

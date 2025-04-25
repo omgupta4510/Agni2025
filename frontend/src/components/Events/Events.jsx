@@ -34,7 +34,7 @@ const Events=()=>{
             
             }}>
             </h2>
-                {eventdata.length==0 && (<h1>Yet to be Announced...</h1>)}
+                {eventdata.length==0 && (<h1 className="flex flex-col items-center">Yet to be Announced...</h1>)}
                 {eventdata && (eventdata.map((item, index) => (
                     <div
                     className={`event-block ${index % 2 !== 0 ? 'reverse' : ''}`}

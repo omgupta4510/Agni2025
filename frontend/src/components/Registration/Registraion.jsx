@@ -6,7 +6,7 @@ import RegistrationFee from './RegistrationTable';
 const Registration = () => {
   return (
     <div style={{paddingTop:"20px"}}>
-        <div className="relative w-full">
+        <div className="relative w-full mt-10">
           <Header />
         </div>
         <div>

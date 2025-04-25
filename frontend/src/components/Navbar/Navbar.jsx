@@ -75,7 +75,12 @@ const Navbar = () => {
           </a>
           {activeDropdown === 'speakers' && (
             <ul className="dropdown">
-              {uniqueSpeakerTypes.map((type, index) => (
+              {uniqueSpeakerTypes.length == 0 && (
+                <li >
+                  <h4 className='text-black'>Yet to be Announced..</h4>
+                </li>
+              )}
+              {uniqueSpeakerTypes.length !== 0 && uniqueSpeakerTypes.map((type, index) => (
                 <li key={index}>
                   <a href={`/speaker?${type}`}>{type}</a>
                 </li>

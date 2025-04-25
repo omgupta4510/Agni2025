@@ -37,7 +37,7 @@ const Publications=()=>{
             
             }}>
             </h2>
-                {publicationdata.length==0 && (<h1>Yet to be Announced...</h1>)}
+                {publicationdata.length==0 && (<h1 className="flex flex-col items-center">Yet to be Announced...</h1>)}
                 {publicationdata && (publicationdata.map((item, index) => (
                     <div
                     className={`publication-block ${index % 2 !== 0 ? 'reverse' : ''}`}
