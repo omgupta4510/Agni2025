@@ -33,6 +33,7 @@ export default withAuth(
     server: {
       cors: {
         origin: [process.env.FRONTEND_URL || ''],  /// frontend url
+        credentials: true,
       },
       extendExpressApp: (app) => {
         app.use(express.static('public')); // Serve static files from site/public/
