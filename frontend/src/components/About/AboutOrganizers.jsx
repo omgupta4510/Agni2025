@@ -39,7 +39,7 @@ const AboutOrganizers = () => {
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Hero Image Section */}
-      <div className="relative h-[60vh] w-full">
+      <div className="relative lg:h-[60vh] md:h-[45vh]  w-full">
         <img
           src="nitt.jpeg"
           alt="NIT TRICHY"
@@ -59,7 +59,7 @@ const AboutOrganizers = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
               Our Vision & Mission
             </h2>
-            <div className="w-24 h-1 bg-solar-blue mb-8"></div>
+            <div className="w-24 h-1 bg-solar-blue mb-2"></div>
             <p className="text-lg text-gray-600 mb-6 text-justify">
               {aboutData.description}
             </p>

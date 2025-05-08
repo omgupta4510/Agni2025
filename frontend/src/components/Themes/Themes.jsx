@@ -27,7 +27,7 @@ const Themes = () => {
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Hero Image Section */}
-      <div className="relative h-[60vh] w-full">
+      <div className="relative lg:h-[60vh] md:h-[45vh]  w-full">
        <Navbar />
         <img
             src="nitt.jpeg"
