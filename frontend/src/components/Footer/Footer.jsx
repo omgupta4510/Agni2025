@@ -2,28 +2,30 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div>
-      <div className="flex justify-start nit">
-        <img src="c1.PNG" alt="Logo" className="nitlogo" style={{
-          height: '184px',
-          width: '1309px',
-          margin: '3px 1px 0px 1px'
-        }} />
-        <img src='agni.png' style={{ height: '184px', width: '209px' }} />
+    <div className="w-full flex flex-col mt-10 ">
+      {/* Image Row */}
+      <div className="w-full flex flex-row p-0 m-0 gap-0 overflow-hidden ">
+          <img
+            src="footer_img.png"
+            alt="Banner"
+            className="w-full h-full object-contain object-left p-0 m-0"
+          />
       </div>
-      <footer className="bg-green-100 text-black py-4">
-        <div className="max-w-8xl mt-2 mb-0 flex flex-col md:flex-row items-center justify-between px-8 gap-y-">
-          <div className="text-sm font-semibold">
-            Agni-S © 2025
+
+      {/* Tight Footer */}
+      <footer className="bg-green-100 p-2 py-6">
+        <div className="flex justify-between items-center px-4 text-sm">
+        <div className="flex flex-col md:flex-row items-center gap-2">
+            <div className="text-sm font-semibold">AGNI-S 2025</div>
+            <div className="hidden md:block">|</div>
+            <div className="text-sm">NIT-TRICHY</div>
           </div>
 
-          <div className="space-x-6 text-center">
-            <a href="https://www.linkedin.com/in/omgupta4510/" >
-            Made with 💙 by <strong>BlueAura</strong></a>
-          </div>
-
-          <div className="text-sm font-semibold">
-            NIT-Trichy
+          {/* Center Link */}
+          <div className="text-sm order-first md:order-none">
+            <a href="https://www.linkedin.com/in/omgupta4510/">
+              Developed by <strong>BlueAura</strong>
+            </a>
           </div>
         </div>
       </footer>

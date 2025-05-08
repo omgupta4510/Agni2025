@@ -72,7 +72,7 @@ const Sponsorship = () => {
           <Header />
         </div>
   
-        <div className="text-center font-bold bg-blue-300 text-white p-4 text-xl sm:text-2xl">
+        <div className="text-center font-bold bg-green-600 text-white p-4 text-xl sm:text-2xl">
           Sponsorship Details
         </div>
   

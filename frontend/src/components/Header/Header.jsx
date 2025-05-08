@@ -34,7 +34,7 @@ const conferncedate=data?.generalInformations[0].desc;
                 International Conference on Advances in Green,
             </h1>
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-green-600"  style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.2)"}}>
-                 Net-Zero, Innovation - Sustainability
+                 Net-Zero Innovation - Sustainability
             </h1>
             <h2 className="text-[30px] font-semibold text-green-600 mt-1"  style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.3)"}}>
                AGNI-S 2025
@@ -42,7 +42,7 @@ const conferncedate=data?.generalInformations[0].desc;
             <p className="text-[23px] text-gray-800 mt-4 font-medium">{conferncedate}
             </p>
             <p className="text-[25px] text-gray-800 font-medium">
-               Trichy ,Tamil Nadu,India
+            Tiruchirappalli, Tamil Nadu,India
             </p>
           </div>
     

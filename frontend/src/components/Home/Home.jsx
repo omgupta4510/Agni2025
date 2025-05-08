@@ -97,7 +97,7 @@ const Home = () => {
           <img
             src="agni.png"
             alt="Environment 2024 Poster"
-            className="rounded-xl shadow-lg w-full max-w-[400px] max-h-[400px] object-contain"
+            className="rounded-xl shadow-lg w-full max-w-[250px] max-h-[250px] object-contain"
           />
         </div>
 
@@ -138,7 +138,7 @@ const Home = () => {
           </div>
 
           {/* Timeline Items */}
-          <div className="relative z-10">
+          <div className="relative z-10 ">
             <div className="flex flex-col gap-5">
               {subThemesData.slice(0, 7).map((theme, index) => (
                 <div

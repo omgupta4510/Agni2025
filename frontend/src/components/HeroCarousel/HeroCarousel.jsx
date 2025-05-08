@@ -132,7 +132,7 @@ const HeroCarousel = () => {
         stopOnHover={false}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="relative h-[75vh]">
+          <div key={index} className="relative  lg:h-[82vh] md:h-[50vh]  sm:h-[50vh]">
             <img
               src={slide.photoUrl}
               alt={slide.name}

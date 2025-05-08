@@ -31,8 +31,8 @@ const VenueContact= () => {
           <Header />
         </div>
   
-        <div className="text-center font-bold bg-blue-300 text-white p-4 text-xl sm:text-2xl">
-           venue and contact details:
+        <div className="text-center font-bold bg-green-600 text-white p-4 text-xl sm:text-2xl">
+           Venue and Contact Details:
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-20 pr-20 pl-8 pb-0">
