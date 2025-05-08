@@ -154,7 +154,7 @@ const HeroCarousel = () => {
                 Innovation - Sustainability
               </h1>
               <p className="text-lg md:text-xl mt-4 font-semibold">
-                AGNI-S 2025 <br /> 15–17 December, 2024
+                AGNI-S 2025 <br /> 10–12 December, 2024
               </p>
             </div>)}
           </div>

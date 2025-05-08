@@ -9,7 +9,7 @@ services:
     networks:
       - app_network
     ports:
-      - "3306:3306"  # Host port mapped to container port 3306
+      - "3307:3306"  # Host port mapped to container port 3306
     volumes:
       - mysql-data:/var/lib/mysql
     restart: always
@@ -33,7 +33,7 @@ services:
     depends_on:
       - database
     ports:
-      - "4000:4000"  # Expose backend on port 4000
+      - "4004:4004"  # Expose backend on port 4000
     restart: unless-stopped
     command: >
       sh -c "

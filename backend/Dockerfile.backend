@@ -15,8 +15,8 @@ RUN npm config set strict-ssl false
 
 RUN npx prisma generate && npm run build
 
-EXPOSE 4000
+EXPOSE 4004
 ENV NODE_ENV=production
-ENV PORT=4000
+ENV PORT=4004
 
 CMD ["sh", "-c", "if [ \"$NODE_ENV\" = 'development' ]; then npm run dev; else npm run start; fi"]
