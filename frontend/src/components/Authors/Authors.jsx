@@ -28,8 +28,8 @@ const Authors = () => {
   const submissionLink = data?.generalInformations[1].desc;
   const confdate = data?.generalInformations[0].desc;
   return (
-    <div className="min-h-screen bg-white pt-20">
-      <div className="relative h-[60vh] w-full">
+    <div className="bg-white pt-20">
+      <div className="relative lg:h-[60vh] md:h-[40vh] w-full">
         <img
           src="nitt.jpeg"
           alt="NIT TRICHY"
@@ -37,7 +37,7 @@ const Authors = () => {
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white text-center">
-            Authors
+            Authors Corner
           </h1>
         </div>
       </div>

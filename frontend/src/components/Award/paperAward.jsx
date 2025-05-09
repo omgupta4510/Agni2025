@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 
 const PaperAward = () => {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className=" bg-white pt-20">
       <div className="relative w-full">
         <Navbar />
         <Header />

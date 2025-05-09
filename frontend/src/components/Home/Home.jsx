@@ -53,7 +53,7 @@ const ANNOUNCEMENT_QUERY = gql`
     }
   }
 `;
-const Subtheme_Query=gql`
+const Subtheme_Query = gql`
 query subthemes {
   subthemes {
     number
@@ -63,21 +63,17 @@ query subthemes {
 `;
 
 const Home = () => {
-  const {loading,error,data}=useQuery(Subtheme_Query);
-  if(loading){
+  const { loading, error, data } = useQuery(Subtheme_Query);
+  if (loading) {
     return <div>Loading....</div>;
   }
-  if(error){
+  if (error) {
     return <div>Error</div>
   }
-  if(!data)return <div>NO data</div>
+  if (!data) return <div>NO data</div>
   const subThemesData = data?.subthemes?.slice().sort((a, b) => a.number - b.number);
   return (
     <div className="relative">
-      {/* Navbar */}
-      <div className="fixed top-0 left-0 w-full z-50">
-        <Navbar />
-      </div>
 
       {/* Notification Bar */}
       <div className="fixed top-16 left-0 w-full z-40">
@@ -85,40 +81,34 @@ const Home = () => {
       </div>
 
       {/* Hero Carousel */}
-      <HeroCarousel />
+      <HeroCarousel className="mt-[calc(4rem_+_4rem)]" />
 
       {/* About Section */}
-      <div
-        className="flex flex-col lg:flex-row items-start gap-8 px-4 md:px-8 lg:px-12 py-12 bg-white"
-        data-aos="fade-up" // 
-      >
-        {/* Poster Image */}
-        <div className="w-full lg:w-1/4">
+      <div className="flex flex-col lg:flex-row items-start gap-3 md:gap-8 px-4 md:px-8 lg:px-12 py-6 md:py-12 bg-white">
+        {/* Poster Image - Hidden on mobile, shown from lg */}
+        <div className="hidden lg:block lg:w-1/4 mb-4 lg:mb-0">
           <img
             src="agni.png"
-            alt="Environment 2024 Poster"
-            className="rounded-xl shadow-lg w-full max-w-[250px] max-h-[250px] object-contain"
+            alt="Conference Poster"
+            className="rounded-xl shadow-lg w-full max-w-[180px] md:max-w-[250px] h-auto mx-auto"
           />
         </div>
 
-        {/* Initial Text Content */}
-        <div className="w-full lg:w-3/4 mt-8 lg:mt-0">
-          <h2 className="text-3xl font-bold mb-4 text-gray-800">
+        {/* Text Content */}
+        <div className="w-full lg:w-3/4">
+          <h2 className="text-lg md:text-3xl font-bold mb-3 text-gray-800">
             About the Conference
           </h2>
-          <div className="w-20 h-1 bg-green-500 mb-6" />
+          <div className="w-16 md:w-20 h-1 bg-green-500 mb-3 md:mb-6" />
 
-          <p className="text-gray-700 mb-4 text-justify leading-relaxed">
+          <p className="text-gray-700 text-base md:text-[16px] leading-normal md:leading-relaxed text-left md:text-justify">
             The Advances in Green, Net-Zero Innovation - Sustainability (AGNI-S) conference,
             organized by the Energy and Environment Department at NIT Trichy, is a platform
             dedicated to fostering innovation and sustainable development. AGNI-S focuses
             on advancing research and technologies that support the transition to a green,
-            net-zero future. The conference brings together researchers, industry experts, and policymakers to address
-            critical challenges in energy efficiency, renewable energy systems, carbon neutrality, and
-            environmental sustainability. Key themes include net-zero strategies, energy storage solutions,
-            green hydrogen technologies, smart grids, climate change mitigation, and sustainable materials.
-            The event features keynote addresses by leading experts, technical sessions, poster presentations,
-            and interactive workshops.
+            net-zero future. The conference brings together researchers, industry experts,
+            and policymakers to address critical challenges in energy efficiency, renewable
+            energy systems, carbon neutrality, and environmental sustainability.
           </p>
         </div>
       </div>
@@ -126,7 +116,7 @@ const Home = () => {
       <div className="mx-auto w-11/12 md:w-5/6 lg:w-4/5">
         {/* <h1 className="text-center text-3xl font-bold mb-4 text-gray-800 ">AGNI-S 2025 THEME</h1> */}
         <div className="w-20 h-1 bg-green-500 mb-6 mx-auto" />
-        <section className="relative px-4 py-16 md:px-8 lg:px-10 bg-white shadow-2xl shadow-green-200 rounded-xl border border-green-500 min-h-screen">
+        <section className="relative px-4 py-16 md:px-8 lg:px-10 bg-white shadow-2xl shadow-green-200 rounded-xl border border-green-500">
           {/* Sub-Themes Heading with Rounded Styling */}
           <div className="relative flex justify-center mb-12">
             <h2 className="relative z-10 px-8 py-3 text-3xl font-bold text-green-700 bg-white rounded-full border border-green-300">
@@ -162,7 +152,7 @@ const Home = () => {
             <div className="flex flex-col items-center">
               <a href="/themes" className="bg-gradient-to-g from-yellow-500 to-yellow-600 text-black font-semibold px-6 py-2 rounded-full shadow-lg hover:from-red-500 hover:to-red-600 transition-all duration-300 ease-in-out transform hover:scale-105">
                 For More Themes...
-            </a>
+              </a>
             </div>
           </div>
         </section>
@@ -184,7 +174,7 @@ const Home = () => {
         {/* Right Section: Registration and Countdown */}
         <div className="w-full lg:w-1/2 flex flex-col gap-8" data-aos="zoom-in-up">
           {/* Registration */}
-          <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center">
+          <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center mb-5">
             <h2 className=" text-center text-[1.5rem] font-semibold mb-4">Click for Registration</h2>
             <a href="/registration" className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-semibold px-6 py-2 rounded-full shadow-lg hover:from-red-500 hover:to-red-600 transition-all duration-300 ease-in-out transform hover:scale-105">
               Register Now

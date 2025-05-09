@@ -48,9 +48,9 @@ const ImportantDates = () => {
     return <div>No data found</div>;
   }
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className=" bg-white pt-20">
       {/* Hero Image Section */}
-      <div className="relative h-[60vh] w-full">
+      <div className="relative lg:h-[60vh] md:h-[45vh]  w-full">
        <Navbar />
     
         <img
