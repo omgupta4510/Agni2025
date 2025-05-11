@@ -25,7 +25,7 @@ function App() {
   // AOS (Animate On Scroll) initialization
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 1500,
       once: true,
     });
   }, []);

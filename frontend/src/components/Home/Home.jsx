@@ -7,7 +7,9 @@ import CountdownTimer from "./CountdownTimer";
 import Notice from "./Notice";
 import HomeDate from "./HomeDate";
 import { gql, useQuery } from "@apollo/client";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const subThemes = [
   "Solar Power Innovations (Perovskite cells, floating solar)",
   "Wind Energy Advancements (Offshore wind, high-efficiency turbines)",
@@ -64,6 +66,13 @@ query subthemes {
 
 const Home = () => {
   const { loading, error, data } = useQuery(Subtheme_Query);
+  useEffect(() => {
+      AOS.init({
+        duration: 1500,
+        once: true,
+      });
+    }, []);
+    
   if (loading) {
     return <div>Loading....</div>;
   }
@@ -95,7 +104,7 @@ const Home = () => {
         </div>
 
         {/* Text Content */}
-        <div className="w-full lg:w-3/4">
+        <div className="w-full lg:w-3/4" data-aos="fade-down">
           <h2 className="text-lg md:text-3xl font-bold mb-3 text-gray-800">
             About the Conference
           </h2>
@@ -113,7 +122,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mx-auto w-11/12 md:w-5/6 lg:w-4/5">
+      <div className="mx-auto w-11/12 md:w-5/6 lg:w-4/5" data-aos="fade-up">
         {/* <h1 className="text-center text-3xl font-bold mb-4 text-gray-800 ">AGNI-S 2025 THEME</h1> */}
         <div className="w-20 h-1 bg-green-500 mb-6 mx-auto" />
         <section className="relative px-4 py-16 md:px-8 lg:px-10 bg-white shadow-2xl shadow-green-200 rounded-xl border border-green-500">
