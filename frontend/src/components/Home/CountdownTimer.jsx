@@ -4,7 +4,7 @@ const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   function calculateTimeLeft() {
-    const targetDate = new Date("2025-12-15T00:00:00");
+    const targetDate = new Date("2025-12-10T00:00:00");
     const now = new Date();
     const difference = targetDate - now;
 
