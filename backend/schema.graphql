@@ -841,6 +841,8 @@ type publication {
   name: String
   desc: String
   photoUrl: String
+  linkname: String
+  link: String
 }
 
 input publicationWhereUniqueInput {
@@ -855,6 +857,8 @@ input publicationWhereInput {
   name: StringFilter
   desc: StringFilter
   photoUrl: StringFilter
+  linkname: StringFilter
+  link: StringFilter
 }
 
 input publicationOrderByInput {
@@ -862,12 +866,16 @@ input publicationOrderByInput {
   name: OrderDirection
   desc: OrderDirection
   photoUrl: OrderDirection
+  linkname: OrderDirection
+  link: OrderDirection
 }
 
 input publicationUpdateInput {
   name: String
   desc: String
   photoUrl: String
+  linkname: String
+  link: String
 }
 
 input publicationUpdateArgs {
@@ -879,6 +887,8 @@ input publicationCreateInput {
   name: String
   desc: String
   photoUrl: String
+  linkname: String
+  link: String
 }
 
 type homeimage {

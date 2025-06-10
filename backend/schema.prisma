@@ -135,6 +135,8 @@ model publication {
   name     String @default("")
   desc     String @default("") @mysql.VarChar(6000)
   photoUrl String @default("")
+  linkname String @default("")
+  link     String @default("")
 }
 
 model homeimage {

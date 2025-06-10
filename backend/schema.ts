@@ -198,6 +198,8 @@ export const lists = {
             name:text({validation:{isRequired:true}}),
             desc:text(textfeild),
             photoUrl:text(),
+            linkname:text(),
+            link:text(),
           }}),
           homeimage:list({
             access:allowAll,
