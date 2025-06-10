@@ -18,15 +18,18 @@ const Authors = () => {
     }`, {
     variables: {
       where: {
-        name: { in: ["SubmissionLink", "ConferenceDate"] }
+        name: { in: ["SubmissionLink", "ConferenceDate","PaperSubmissionGuideline Link"] }
       }
     }
   });
   if (loading) return <div>Loading...</div>
   if (error) return <div>Error</div>
   if (!data) return <div>NO data</div>
+  console.log(data);
+  
   const submissionLink = data?.generalInformations[1].desc;
   const confdate = data?.generalInformations[0].desc;
+  const paperSubmissionGuidelineLink = data?.generalInformations[2].desc;
   return (
     <div className="bg-white pt-20">
       <div className="relative lg:h-[60vh] md:h-[40vh] w-full">
@@ -59,8 +62,18 @@ const Authors = () => {
           <p>
             The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
           </p>
+          
         </div>
-
+        {paperSubmissionGuidelineLink !== "false" && (
+          <a
+            href={paperSubmissionGuidelineLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cfp-guideline-link" data-aos="zoom-in" data-aos-delay="300"
+          >
+            <span style={{ color: "#2563eb" }}>Click here</span> for paper submission guideline
+          </a>
+        )}
         <div className="btn-wrapper" data-aos="zoom-in" data-aos-delay="300">
           {submissionLink == "false" && (<div>Submission Portal  is not active now.</div>)}
           {submissionLink != "false" && (<a href={submissionLink} target="_blank" rel="noopener noreferrer" className="hero-btn glow-btn">🚀 Submission Portal</a>)}

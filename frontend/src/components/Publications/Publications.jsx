@@ -11,6 +11,8 @@ const Publications=()=>{
                 name
                 desc
                 photoUrl
+                link
+                linkname
             }
             }
     `);
@@ -52,7 +54,9 @@ const Publications=()=>{
                             <h2 className="title">{item.name}</h2>
                             <p>{item.desc}</p>
                         </div>
-                       
+                       <a href={item.link}   target="_blank"  rel="noopener noreferrer" >
+                        <button className="publication-register-button">{item.linkname}</button>
+                        </a>
                     </div>
                     </div>
                 )))}
