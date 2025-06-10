@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `publication` ADD COLUMN `link` VARCHAR(191) NOT NULL DEFAULT '',
+    ADD COLUMN `linkname` VARCHAR(191) NOT NULL DEFAULT '';
