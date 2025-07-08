@@ -178,6 +178,15 @@ const Navbar = () => {
                     Important Dates
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://www.nitt.edu/home/DEE_AGNI-S_2025.pdf"
+                    className="block px-3 py-2 rounded-md text-gray-700 hover:text-green-600 hover:bg-gray-50 transition-colors"
+                    onClick={closeAll}
+                  >
+                    Brochure
+                  </a>
+                </li>
               </ul>
             )}
           </li>

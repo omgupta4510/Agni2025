@@ -120,9 +120,20 @@ const RegistrationFee = () => {
   return (
     <div className="Reg-container">
       <div>
+        
         <h2 className="headf">Registration Details</h2>
+        
         {regdetails["indians"] && (
           <div className="fee-table-section">
+            <p style={{ 
+              color: "#d32f2f", 
+              fontWeight: "bold", 
+              marginBottom: "10px", 
+              fontSize: "20px",
+              textAlign: "center"
+            }}>
+              * Two papers allowed under one registration
+            </p>
             <h3 className="head1" style={{ color: "#3d9416" }}>For Indians</h3>
             <table className="fee-table">
               <thead>
