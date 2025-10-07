@@ -26,7 +26,7 @@ const PaperAward = () => {
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-green-700">Best Paper Awards Guidelines</h2>
           <ul className="list-disc list-inside space-y-4 text-gray-800 text-lg leading-relaxed">
             <li>
-              <span className="font-semibold text-green-600">All papers selected for oral presentations</span> will automatically be nominated for the <span className="font-semibold text-green-600">AGNI-S 2025 Best Paper Award.</span>
+              <span className="font-semibold text-green-600">All papers selected for oral presentations</span> will automatically be nominated for the <span className="font-semibold text-green-600">AGNI-S 2026 Best Paper Award.</span>
             </li>
             <li>
               In each session, <span className="font-semibold text-green-600">one paper will be chosen</span> for the award based on the <span className="italic">quality of work, presentation skills,</span> and performance during Q&A.

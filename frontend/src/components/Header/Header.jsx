@@ -37,7 +37,7 @@ const conferncedate=data?.generalInformations[0].desc;
                  Net-Zero Innovation - Sustainability
             </h1>
             <h2 className="text-[30px] font-semibold text-green-600 mt-1"  style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.3)"}}>
-               AGNI-S 2025
+               AGNI-S 2026
             </h2>
             <p className="text-[23px] text-gray-800 mt-4 font-medium">{conferncedate}
             </p>

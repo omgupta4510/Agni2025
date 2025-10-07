@@ -16,14 +16,14 @@ const Footer = () => {
       <footer className="bg-green-100 p-2 py-6">
         <div className="flex justify-between items-center px-4 text-sm">
           <div className="flex flex-col md:flex-row items-center gap-2">
-            <div className="text-sm font-semibold">AGNI-S 2025</div>
+            <div className="text-sm font-semibold">AGNI-S 2026</div>
             <div className="hidden md:block">|</div>
             <div className="text-sm">NIT-TRICHY</div>
           </div>
 
           {/* Center Link */}
           <div className="text-sm order-first md:order-none">
-            <a href="https://www.linkedin.com/in/omgupta4510/">
+            <a href="https://www.linkedin.com/in/vidit-pandey-9932b5294/">
               Developed by <strong>BlueAura</strong>
             </a>
           </div>
