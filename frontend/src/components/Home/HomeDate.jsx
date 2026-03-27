@@ -2,10 +2,10 @@ import { useQuery,gql } from "@apollo/client";
 
 export default function ImportantDatesModern() {
     const events = [
-      { date: "Dec. 1, 2025", event: "Full Paper Submission Deadline" },
-      { date: "Dec. 2, 2025", event: "Acceptance Notification Deadline" },
-      { date: "Dec. 3, 2025", event: "Final Paper Submission Deadline" },
-      { date: "Dec. 4, 2025", event: "Conference Registration Deadline" },
+      { date: "Dec. 1, 2026", event: "Full Paper Submission Deadline" },
+      { date: "Dec. 2, 2026", event: "Acceptance Notification Deadline" },
+      { date: "Dec. 3, 2026", event: "Final Paper Submission Deadline" },
+      { date: "Dec. 4, 2026", event: "Conference Registration Deadline" },
     ];
     const {loading,error,data}=useQuery(gql`
       query Query($where: importantDateWhereInput!) {

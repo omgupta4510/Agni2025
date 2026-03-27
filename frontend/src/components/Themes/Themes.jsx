@@ -36,7 +36,7 @@ const Themes = () => {
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white text-center">
-                AGNI-S 2025 Themes
+              AGNI-S 2026 Themes
             </h1>
             </div>
         </div>

@@ -52,7 +52,7 @@ const Authors = () => {
 
         <div className="cfp-text" data-aos="fade-right" data-aos-delay="200">
           <p>
-            🌍 International Conference on <strong>Advances in Green, Net-Zero Innovation - Sustainability (AGNI-S 2025)</strong> is scheduled from <strong>{confdate}</strong>.
+            🌍 International Conference on <strong>Advances in Green, Net-Zero Innovation - Sustainability (AGNI-S 2026)</strong> is scheduled from <strong>{confdate}</strong>.
           </p>
           <br />
           <p>

@@ -61,7 +61,7 @@
 //                 Innovation - Sustainability
 //               </h1>
 //               <p className="text-lg md:text-xl mt-4 font-semibold">
-//                 AGNI-S 2025 <br /> 26–28 December, 2024
+//                 AGNI-S 2026 <br /> 26–28 December, 2024
 //               </p>
 //             </div>
 //           </div>

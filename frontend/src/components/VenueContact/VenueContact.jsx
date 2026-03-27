@@ -40,7 +40,7 @@ const VenueContact= () => {
             <Card className="shadow-lg rounded-2xl" data-aos="fade-right">
                 <CardContent className="p-6">
                 <h2 className="text-xl font-semibold mb-4">Contact</h2>
-                <h3 className="text-lg font-bold">General Chairs  AGNI-S 2025 </h3>
+                <h3 className="text-lg font-bold">General Chairs  AGNI-S 2026 </h3>
                 <p className="text-sm mb-2">National Institute of Technology Trichy</p>
 
                 <div className="flex items-center mb-2">

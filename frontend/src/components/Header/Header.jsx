@@ -24,7 +24,7 @@ const conferncedate=data?.generalInformations[0].desc;
           {/* Left Logo */}
           <img
             src="agni.png"
-            alt="agni 2025 Logo"
+            alt="agni 2026 Logo"
             className="h-[15rem] w-[auto] object-contain"
           />
     

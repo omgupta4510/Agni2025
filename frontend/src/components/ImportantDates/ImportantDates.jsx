@@ -6,22 +6,22 @@ import { CalendarClock } from "lucide-react";
 const Dates = [
   {
     title: 'Application Opens',
-    date: 'May 1, 2025',
+    date: 'May 1, 2026',
     description: 'The application portal will open for new applicants.',
   },
   {
     title: 'Submission Deadline',
-    date: 'June 15, 2025',
+    date: 'June 15, 2026',
     description: 'All applications must be submitted by this date.',
   },
   {
     title: 'Interview Rounds',
-    date: 'July 1 – July 10, 2025',
+    date: 'July 1 – July 10, 2026',
     description: 'Shortlisted candidates will be contacted for interviews.',
   },
   {
     title: 'Final Results',
-    date: 'August 5, 2025',
+    date: 'August 5, 2026',
     description: 'Final selection results will be published on the website.',
   },
 ];

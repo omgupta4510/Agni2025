@@ -2,16 +2,16 @@ import { gql, useQuery } from '@apollo/client';
 import React from 'react';
 
 const notices = [
-  { title: 'List of Selected Students of Summer Internship 2025', isNew: true, date: 'April 19, 2025' },
-  { title: 'Faculty Recruitment 2025', isNew: true, date: 'April 17, 2025' },
-  { title: 'Inviting applications for JRF/PA-II/PA-I (SERB-CRG Project) in Civil Engineering Department, May 02, 2025', isNew: true, date: 'April 16, 2025' },
-  { title: 'Advertisement - Incubation Executive under CEDI NITT', isNew: false, date: 'April 15, 2025' },
-  { title: 'Institute Day 2025', isNew: false, date: 'April 12, 2025' },
-  { title: 'Overall Outstanding Student Award & RECT ’78 Alumni medal for the best outgoing girl student (B.Tech.)', isNew: false, date: 'April 10, 2025' },
-  { title: 'Data submitted by NIT Tiruchirappalli for NIRF', isNew: false, date: 'April 9, 2025' },
-  { title: 'Circular for Summer Internship 2025 (Other than NITT Students)', isNew: true, date: 'April 7, 2025' },
-  { title: 'Inviting Applications for JRF in Department of Chemical Engineering, March 20, 2025', isNew: false, date: 'March 20, 2025' },
-  { title: 'Hostel Fees for EVEN Semester 2024-25 (MS / PHD Admitted)', isNew: false, date: 'March 15, 2025' },
+  { title: 'List of Selected Students of Summer Internship 2026', isNew: true, date: 'April 19, 2026' },
+  { title: 'Faculty Recruitment 2026', isNew: true, date: 'April 17, 2026' },
+  { title: 'Inviting applications for JRF/PA-II/PA-I (SERB-CRG Project) in Civil Engineering Department, May 02, 2026', isNew: true, date: 'April 16, 2026' },
+  { title: 'Advertisement - Incubation Executive under CEDI NITT', isNew: false, date: 'April 15, 2026' },
+  { title: 'Institute Day 2026', isNew: false, date: 'April 12, 2026' },
+  { title: 'Overall Outstanding Student Award & RECT ’78 Alumni medal for the best outgoing girl student (B.Tech.)', isNew: false, date: 'April 10, 2026' },
+  { title: 'Data submitted by NIT Tiruchirappalli for NIRF', isNew: false, date: 'April 9, 2026' },
+  { title: 'Circular for Summer Internship 2026 (Other than NITT Students)', isNew: true, date: 'April 7, 2026' },
+  { title: 'Inviting Applications for JRF in Department of Chemical Engineering, March 20, 2026', isNew: false, date: 'March 20, 2026' },
+  { title: 'Hostel Fees for EVEN Semester 2025-26 (MS / PHD Admitted)', isNew: false, date: 'March 15, 2026' },
 ];
 
 const NoticeBoard = () => {
