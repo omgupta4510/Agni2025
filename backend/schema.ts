@@ -95,6 +95,14 @@ export const lists = {
       photoUrl: text(),
     },
   }),
+  sponsor: list({
+    access: allowAll,
+    fields: {
+      name: text({ validation: { isRequired: true } }),
+      logoUrl: text({ validation: { isRequired: true } }),
+      website: text(),
+    },
+  }),
   sponsorship: list({
     access: allowAll,
     fields: {

@@ -38,7 +38,6 @@ const Sponsorship = () => {
       <div className="flex-grow">
 
         <SponsorshipTable />
-        {/* Hardcoded Sponsors Logos */}
         <Sponsors />
 
         <div className="bg-gray-50 px-4 sm:px-8 lg:px-16 py-8 mt-6 border-t border-gray-300">
