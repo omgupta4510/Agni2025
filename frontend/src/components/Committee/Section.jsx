@@ -12,7 +12,7 @@ const Section = ({ title, members, photoBasePath = "/OC/" }) => {
           >
             {member.photoUrl && (
               <img
-                src={photoBasePath + member.photoUrl}
+                src={member.photoUrl.startsWith("http") ? member.photoUrl : photoBasePath + member.photoUrl}
                 alt={member.name}
                 className="w-32 h-32 object-cover rounded-full mb-4 border-4"
               />
