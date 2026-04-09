@@ -92,6 +92,7 @@ export const lists = {
       designation: text({ validation: { isRequired: true } }),
       dept:text({validation:{isRequired:true}}),
       institute: text({ validation: { isRequired: true } }),
+      photoUrl: text(),
     },
   }),
   sponsorship: list({

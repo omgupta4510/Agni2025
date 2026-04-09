@@ -46,12 +46,14 @@ const Committee = () => {
   else{
     const { loading, error, data } = useQuery(gql`
       query Query {
-  technicalCommittees {
-    name
-    designation
-    dept
-  }
-}
+        technicalCommittees {
+          name
+          designation
+          dept
+          institute
+          photoUrl
+        }
+      }
     `);
   
     if (loading) {
@@ -89,11 +91,12 @@ const Committee = () => {
               {categorizedData.length === 0 && (
                 <div className="text-center text-gray-500 text-lg">yet to be announced...</div>)}
                 {Object.entries(categorizedData).map(([sectionTitle, members]) => (
-                    <Section 
-                        key={sectionTitle} 
-                        title={sectionTitle} 
-                        members={members} 
-                        containerClass="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" // Responsive grid
+                    <Section
+                        key={sectionTitle}
+                        title={sectionTitle}
+                        members={members}
+                        photoBasePath={committeeType === "Organising Committee" ? "/OC/" : "/TC/"}
+                        containerClass="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
                     />
                 ))}
             </div>
