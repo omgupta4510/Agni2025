@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import Section from './Section';
 import Header from '../Header/Header';
@@ -63,16 +63,10 @@ const Committee = () => {
     }
     if (data?.technicalCommittees.length === 0) {
       categorizedData = []; // No data available
-      
+
     }
     else{
-      categorizedData = data?.technicalCommittees.reduce((acc, item) => {
-        if (!acc[item.category]) {
-          acc[item.category] = []; // Initialize the category if it doesn't exist
-        }
-        acc[item.category].push(item); // Add the member to the category
-        return acc;
-      }, {});
+      categorizedData = { "Members": data?.technicalCommittees };
     }
   }
     

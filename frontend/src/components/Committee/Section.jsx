@@ -10,11 +10,13 @@ const Section = ({ title, members }) => {
             className="flex flex-col items-center text-center border rounded-2xl shadow-lg shadow-green-500 p-6 w-[280px] bg-white transition-transform duration-800 hover:scale-105"
             data-aos="flip-left"
           >
-            <img
-              src={"/OC/"+member.photoUrl}
-              alt={member.name}
-              className="w-32 h-32 object-cover rounded-full mb-4 border-4"
-            />
+            {member.photoUrl && (
+              <img
+                src={"/OC/"+member.photoUrl}
+                alt={member.name}
+                className="w-32 h-32 object-cover rounded-full mb-4 border-4"
+              />
+            )}
             <h3 className="font-semibold text-xl text-gray-900">{member.name}</h3>
             <p className="text-base text-gray-600">{member.dept}</p>
           </div>
