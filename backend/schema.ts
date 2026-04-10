@@ -194,6 +194,7 @@ export const lists = {
         fields:{
           title:text({validation:{isRequired:true}}),
           date:text({validation:{isRequired:true}}),
+          link:text(),
           isNew:checkbox({
             defaultValue: false
           }),
